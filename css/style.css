@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
+@media (max-width: 1199px){
+
 body.of{overflow: hidden;}
+
+}
 
 /* 가운데영역 */
 .container{max-width: 1480px; padding: 0 20px; margin: 0 auto;}
@@ -28,6 +32,9 @@ body.of{overflow: hidden;}
 }
 
 /* 헤더 */
+#headerWrap.scroll{box-shadow: 0 10px 40px #EDF4FF;}
+#headerWrap .headerTopWrap{ transition: all .5s;}
+#headerWrap{position: fixed; top:0; left:0; right:0; z-index: 9999; background-color: #fff;}
 #headerWrap .headerTopBox{padding: 22px 0; display: flex; align-items: center; justify-content: space-between;}
 #headerWrap .headerTopBox .logoBox h1 a,
 #headerWrap .headerTopBox .logoBox h1 a img{display: block;}
@@ -52,8 +59,6 @@ body.of{overflow: hidden;}
 #headerWrap .headerTopBox .btnBox .authBox{width: 164px; height: 48px; justify-content: center; display: flex; align-items: center; gap: 0 35px; background:linear-gradient(to right, #454C53, #9AAAB9); border-radius: 16px;}
 #headerWrap .headerTopBox .btnBox .authBox a{display: block; font-size: 14px; font-weight: 700; color: #fff; text-align: center;}
 #headerWrap .headerBottomBox{position: relative;}
-#headerWrap .mobileCloseBtn,
-#headerWrap .mobileBtn{display: none;}
 #headerWrap .mobileBtn,
 #headerWrap .sitemapBtn{border: 1px solid #E8EBED; border-radius: 8px; background: url(../images/common/sitemap_icon.svg)no-repeat center;}
 #headerWrap .sitemapBtn{width: 40px; height: 40px; position: absolute; top: 50%; left:0; transform: translateY(-50%);}
@@ -69,7 +74,7 @@ body.of{overflow: hidden;}
 #headerWrap .headerBottomBox nav .depth01 li h2 a.active::before{width: 100%;}
 
 /* 헤더-서브메뉴 */
-#headerWrap .subMenuWrap{padding: 88px 0;; position: absolute; top:79px; left:0; right:0; min-height: 400px; z-index: 999999; opacity: 0; visibility: hidden; transition: all .5s;}
+#headerWrap .subMenuWrap{padding: 88px 0;; position: absolute; top:79px; left:0; right:0; min-height: 400px; z-index: 99999999999999; opacity: 0; visibility: hidden; transition: all .5s;}
 #headerWrap .subMenuWrap.active{opacity: 1; visibility: visible;}
 #headerWrap .subMenuWrap::after{content: ''; position: absolute; width: 1920px; left:50%; top:1px; bottom: 0; transform: translateX(-50%); border-top: 1px solid #E8EBED; background: linear-gradient(to right, #FFFFFF 60%, #C8DCFF); z-index: -1; } 
 #headerWrap .subMenuWrap .subMenuBox{display: flex; align-items: flex-start;}
@@ -115,6 +120,14 @@ body.of{overflow: hidden;}
  
 #mobileMenuBox{display: none;}
 
+@media (min-width: 1200px){
+
+  #headerWrap .mobileBtn,
+  #headerWrap .mobileCloseBtn{display: none!important;}
+  #headerWrap.scroll .headerTopWrap{margin-top: -100px;}
+
+}
+
 @media (max-width: 1580px){
 
   #headerWrap .subMenuWrap .subMenuBox h2{margin-right: 100px;}
@@ -124,11 +137,12 @@ body.of{overflow: hidden;}
 
 @media (max-width: 1199px){
 
+  #headerWrap .headerTopWrap{display: block!important;}
   #headerWrap .sitemapBtn,
   #headerWrap .headerTopBox .btnBox .authBox,
   #headerWrap .headerBottomWrap{display: none;}
   #headerWrap .headerTopBox{padding: 12px 0;}
-  #headerWrap .mobileCloseBtn,
+  #headerWrap .mobileCloseBtn{display: none; width: 48px; height: 48px;}
   #headerWrap .mobileBtn{display: block; width: 48px; height: 48px;}
   #mobileMenuBox{opacity: 0; display: flex; flex-direction: column; position: fixed; top:72px; right:0; max-width: 512px; width: 100%; min-height: 756px; background: linear-gradient(to bottom, #FFFFFF 60%, #EDF4FF); border-radius: 0 0 0 40px; overflow: hidden; z-index: 9999999;  clip-path: circle(0 at 100% 0);
   transition: clip-path 1.3s ease-out, opacity 0.7s ease-out; visibility: hidden; }
