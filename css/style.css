@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
+body.of{overflow: hidden;}
+
 /* 가운데영역 */
 .container{max-width: 1480px; padding: 0 20px; margin: 0 auto;}
 
 /* 닫기 버튼 */
-.closeBtn{position: relative; width: 40px; height: 40px; border: 1px solid #E8EBED; border-radius: 8px; background: url(../images/common/close_icon.svg)no-repeat center 12px;}
+.closeBtn{position: relative; width: 40px; height: 40px; border: 1px solid #E8EBED; border-radius: 8px; background: url(../images/common/close_icon.svg)no-repeat center;}
 .closeBtn::before {content: ''; position: absolute; top: 50%; left: 50%; width: 100%;
     height: 100%;background: radial-gradient(circle,#ADCBFF 0%,rgba(173, 203, 255, 0.4) 40%,rgba(173, 203, 255, 0) 70% ); border-radius: 50%; transform: translate(-50%, -50%); z-index: -1;}
 
@@ -50,6 +52,7 @@
 #headerWrap .headerTopBox .btnBox .authBox{width: 164px; height: 48px; justify-content: center; display: flex; align-items: center; gap: 0 35px; background:linear-gradient(to right, #454C53, #9AAAB9); border-radius: 16px;}
 #headerWrap .headerTopBox .btnBox .authBox a{display: block; font-size: 14px; font-weight: 700; color: #fff; text-align: center;}
 #headerWrap .headerBottomBox{position: relative;}
+#headerWrap .mobileCloseBtn,
 #headerWrap .mobileBtn{display: none;}
 #headerWrap .mobileBtn,
 #headerWrap .sitemapBtn{border: 1px solid #E8EBED; border-radius: 8px; background: url(../images/common/sitemap_icon.svg)no-repeat center;}
@@ -125,17 +128,21 @@
   #headerWrap .headerTopBox .btnBox .authBox,
   #headerWrap .headerBottomWrap{display: none;}
   #headerWrap .headerTopBox{padding: 12px 0;}
+  #headerWrap .mobileCloseBtn,
   #headerWrap .mobileBtn{display: block; width: 48px; height: 48px;}
-  #mobileMenuBox{display: flex; flex-direction: column; position: fixed; top:72px; right:-3000px; max-width: 512px; width: 100%; min-height: 756px; background: linear-gradient(to bottom, #FFFFFF 60%, #EDF4FF); border-radius: 0 0 0 50px; overflow: hidden;}
+  #mobileMenuBox{opacity: 0; display: flex; flex-direction: column; position: fixed; top:72px; right:0; max-width: 512px; width: 100%; min-height: 756px; background: linear-gradient(to bottom, #FFFFFF 60%, #EDF4FF); border-radius: 0 0 0 40px; overflow: hidden; z-index: 9999999;  clip-path: circle(0 at 100% 0);
+  transition: clip-path 1.3s ease-out, opacity 0.7s ease-out; visibility: hidden; }
+  #mobileMenuBox.active{opacity: 1; visibility: visible; clip-path: circle(180% at 100% 0);}
   #mobileMenuBox .mobileAothBox{position: relative; padding-left: 30px; display: flex; align-items: center; gap: 0 26px;  height: 64px;  background: linear-gradient(120deg, #454C53 0%, #9AA9B9 50%, #454C53 100%); background-size: 200% 100%; z-index: 999999; animation: skeletonShimmer 9s infinite linear;}
-
+  
   @keyframes skeletonShimmer {
 
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 
 }
-
+  .mobilebg{display: none; position: fixed; top:72px; left:0; right:0; bottom: 0; z-index: 99999; background-color: rgba(30, 43, 55, 0.5); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);}
+  .mobilebg.active{display: block;}
   #mobileMenuBox .mobileAothBox .btn{font-size: 14px; font-weight: 700; color: #fff;}
   #mobileMenuBox .mobileDepth01{flex: 1;}
   #mobileMenuBox .mobileDepth01 li h2 a{padding-left: 30px; display: flex; align-items: center; width: 190px; height: 64px; font-size: 20px; color: #9EA4AA; font-weight: 700;}
@@ -161,9 +168,11 @@
   #headerWrap .headerTopBox .btnBox{gap: 0 8px;} 
   #headerWrap .searchBtnBox{width: 40px; height: 40px; background-color: #88B4FF; border: 0; overflow: hidden;}
   #headerWrap .searchBtnBox .searchBtn{width: 100%; height: 100%; border-radius: 0;}
+  #headerWrap .mobileCloseBtn,
   #headerWrap .mobileBtn{width: 40px; height: 40px;}
 
   #mobileMenuBox{top: 64px;}
+  .mobilebg{top: 64px;}
 
   #headerWrap .headerTopBox .logoBox h1 a .logo{gap: 0 9px;}
   #headerWrap .headerTopBox .logoBox h1 a .logo .text .text01{font-size: 19px;}
@@ -181,7 +190,9 @@
 }
 
 /* 헤더-통합검색 */
-#searchContentBox{display: none; padding: 80px 20px; border-top: 1px solid #E8EBED; background: linear-gradient(to right, #FFFFFF 70%, #EDF4FF);}
+#searchContentBox{position: absolute; top:180px; left:0; right:0; padding: 80px 20px; border-top: 1px solid #E8EBED; background: linear-gradient(to right, #FFFFFF 70%, #EDF4FF); max-height: 0; opacity: 0;
+  transform: translateY(-10px); transition:max-height 0.4s ease, opacity 0.3s ease, transform 0.4s ease; z-index: 9999999; overflow: hidden;}
+#searchContentBox.active {max-height: 415px; opacity: 1; transform: translateY(0);}
 #searchContentBox .title{margin-bottom: 24px; text-align: center; color: #454C53; font-size: 38px; font-weight: 500;}
 #searchContentBox .searchInputBox{position: relative; max-width: 480px; margin:0 auto 36px;}
 #searchContentBox .searchInputBox .searchBtn{width: 32px; height: 32px; position: absolute; top: 50%; transform: translateY(-50%); left:16px; background: url(../images/common/search_icon.svg)no-repeat center;}
@@ -191,6 +202,18 @@
 #searchContentBox .sportsList li a{display: block; text-align: center;}
 #searchContentBox .sportsList li a .iconBox{margin: 0 auto; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; width: 48px; height: 48px; border: 1px solid #E8EBED; border-radius: 16px;}
 #searchContentBox .sportsList li a h3{font-weight: 500; color: #454C53; font-size: 14px;}
+
+@media (max-width: 1199px){
+
+  #searchContentBox{top: 72px}
+
+}
+
+@media (max-width: 767px){
+
+  #searchContentBox{top: 64px;}
+
+}
 
 @media (max-width: 480px){
 

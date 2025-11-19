@@ -13,18 +13,32 @@ $(function () {
     $('.subMenuWrap').removeClass('active');
   });
 
-  $('#headerWrap .headerBottomWrap').mouseleave(function () {
+  $('#headerWrap .headerTopWrap').mouseover(function () {
     $('#headerWrap .depth01 li h2 a').removeClass('active');
     $('.subMenuWrap').removeClass('active');
   });
 
+  //검색
+  $('#headerWrap .searchBtnBox .searchBtn').click(function () {
+    $('#searchContentBox').toggleClass('active');
+  });
 
+  //모바일메뉴
+  $('#headerWrap .mobileBtn').click(function () {
+    $(this).hide();
+    $('#headerWrap .mobileCloseBtn').fadeIn();
+    $('#mobileMenuBox').addClass('active');
+    $('.mobilebg').addClass('active');
+    $('body').addClass('of');
+  });
 
-
-
-
-
-
+  $('#headerWrap .mobileCloseBtn').click(function () {
+    $(this).hide();
+    $('#headerWrap .mobileBtn').fadeIn();
+    $('#mobileMenuBox').removeClass('active');
+    $('.mobilebg').removeClass('active');
+    $('body').removeClass('of');
+  });
 
 
 

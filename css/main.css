@@ -212,7 +212,20 @@
 #newsWrap .newsBox .newsImgList li a .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover; transition: all 1s;}
 #newsWrap .newsBox .newsImgList li a .title{margin-bottom: 10px; font-weight: 700; color: #1B1D1F; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 #newsWrap .infoBox{align-self: flex-end; height: 694px; padding: 24px; width: 399px; background-color: #F7F8F9; border-radius: 40px; }
-#newsWrap .infoBox .applicationBox{position: relative; display: flex; flex-direction: column; padding: 24px; margin: 0 auto 30px; max-width: 351px; height: 284px; background:linear-gradient(to bottom, #FC852C, #FDCCA8); border-radius: 30px; z-index: 1;}
+#newsWrap .infoBox .applicationBox{position: relative; display: flex; flex-direction: column; padding: 24px; margin: 0 auto 30px; max-width: 351px; height: 284px; background:linear-gradient(to bottom, #FC852C, #FDCCA8); border-radius: 30px; z-index: 1; animation: glowAni 3s ease-in-out infinite;}
+
+@keyframes glowAni {
+  0% {
+    box-shadow: 0 0 20px rgba(252,133,44,0.3);  
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(252,133,44,0.7);   
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(252,133,44,0.3); 
+  }
+}
+
 #newsWrap .infoBox .applicationBox::after{content: ''; width: 248px; height: 200px; position: absolute; bottom: 0; right:0; background: url(../images/main/img02.png)no-repeat bottom; z-index: -1;}
 #newsWrap .infoBox .applicationBox h4{font-size: 32px; color: #fff; font-family: 'Retrosans'; font-weight: 400; line-height: 1.2;}
 #newsWrap .infoBox .applicationBox span{padding: 14px 10px; display: block; margin-top: auto; text-align: center; border-radius: 50px; color: #1B1D1F; font-weight: 700; border: 1px solid #fff; background: rgba(255, 255, 255, 0.5);
