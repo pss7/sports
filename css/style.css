@@ -205,8 +205,8 @@ body.of{overflow: hidden;}
 
 /* 헤더-통합검색 */
 #searchContentBox{position: absolute; top:180px; left:0; right:0; padding: 80px 20px; border-top: 1px solid #E8EBED; background: linear-gradient(to right, #FFFFFF 70%, #EDF4FF); max-height: 0; opacity: 0;
-  transform: translateY(-10px); transition:max-height 0.4s ease, opacity 0.3s ease, transform 0.4s ease; z-index: 9999999; overflow: hidden;}
-#searchContentBox.active {max-height: 415px; opacity: 1; transform: translateY(0);}
+  transform: translateY(-10px); transition:max-height 0.4s ease, opacity 0.3s ease, transform 0.4s ease; z-index: 9999999; visibility: hidden;}
+#searchContentBox.active {max-height: 415px; opacity: 1; transform: translateY(0); visibility: visible;}
 #searchContentBox .title{margin-bottom: 24px; text-align: center; color: #454C53; font-size: 38px; font-weight: 500;}
 #searchContentBox .searchInputBox{position: relative; max-width: 480px; margin:0 auto 36px;}
 #searchContentBox .searchInputBox .searchBtn{width: 32px; height: 32px; position: absolute; top: 50%; transform: translateY(-50%); left:16px; background: url(../images/common/search_icon.svg)no-repeat center;}

@@ -34,18 +34,8 @@
 #mainSlideWrap .mainSlickBox .textBox p{font-family: 'Retrosans'; font-size: 48px; line-height: 1.1; background: linear-gradient(90deg, #4986F0 10px, #010101 90px);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 #mainSlideWrap .mainSlickBox .textBox p span{display: block; overflow: hidden;}
-#mainSlideWrap .mainSlickBox .textBox p span em{}
-
-
-
-
-
-
-
-
-
-
-
+#mainSlideWrap .mainSlickBox .textBox p{opacity: 0; transform: translateY(50px); visibility: hidden;}
+#mainSlideWrap .mainSlickBox .textBox p.active{opacity: 1; transform: translateY(0); visibility: visible; transition: all 2s;}
 #mainSlideWrap .mainSlickBox .slide{position: relative;}
 #mainSlideWrap .mainSlickBox .slick01 .control{margin-top: 32px; gap: 0 28px; justify-content: center; display: flex; align-items: center; width: 136px; height: 48px; background-color: #fff; border-radius: 30px; background-color: #fff; z-index: 999999;}
 #mainSlideWrap .mainSlickBox .slick01 .control .btnBox{display: flex; gap: 0 16px;}
@@ -131,11 +121,30 @@
 /* 링크 영역 */
 #linkWrap{padding: 105px 0;}
 #linkWrap .linkBox{display: flex; justify-content: space-between;}
-#linkWrap .pageLinkBox{position: relative; width: 586px; height: 145px; justify-content: center; display: flex; align-items: center; gap: 0 16px; border-radius: 64px; background: url(../images/main/bg02.jpg)no-repeat center / cover; box-shadow: 0 4px 40px rgba(0,0,0, .1);  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); z-index: 1; overflow: hidden;}
+#linkWrap .pageLinkBox{position: relative; width: 586px; height: 145px; justify-content: center; display: flex; align-items: center; gap: 0 16px; border-radius: 64px; box-shadow: 0 4px 40px rgba(0,0,0, .1);z-index: 1; overflow: hidden; }
+#linkWrap.active .pageLinkBox::before{transform: scale(1);}
+#linkWrap .pageLinkBox::before{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: url(../images/main/bg02.jpg)no-repeat center / cover; z-index: -1; transform: scale(2); transition: all 7s;}
  #linkWrap .pageLinkBox::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0;background-color: rgba(0,0,0,.5); z-index: -1;}
 #linkWrap .pageLinkBox a,
 #linkWrap .pageLinkBox a img{display: block;}
-#linkWrap .pageLinkBox a{padding: 21px 56px; font-size: 24px; font-weight: 700; color: #fff; border-radius: 64px; border: 1px solid #fff; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); text-align: center;}
+#linkWrap .pageLinkBox a{padding: 21px 56px; font-size: 24px; font-weight: 700; color: #fff; border-radius: 64px; border: 1px solid #fff; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); text-align: center; animation: bubbleFloat 3s ease-in-out infinite;}
+@keyframes bubbleFloat {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  }
+}
+#linkWrap .pageLinkBox a:nth-child(1) {animation-delay: 0s;}
+#linkWrap .pageLinkBox a:nth-child(2) {animation-delay: 0.2s;}
+#linkWrap .pageLinkBox a:nth-child(3) {animation-delay: 0.4s;}
 #linkWrap .infoLinkBox{display: flex; align-items: center; gap: 0 89px;}
 #linkWrap .infoLinkBox span{display: block; margin-bottom: 8px; font-weight: 700; color: #454C53;}
 #linkWrap .infoLinkBox h3{margin-bottom: 24px; font-size: 32px; font-weight: 400; color: #1B1D1F; font-family: 'Retrosans';}

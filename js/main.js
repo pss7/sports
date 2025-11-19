@@ -109,6 +109,36 @@ $(function () {
     nextArrow: $('#partnerWrap .control .next'),
   });
 
+  //스크롤 시 해당 영역 active 클래스 적용
+  $(window).scroll(function () {
+    const scrollPos = $(window).scrollTop();
+
+    $('.scrollElement').each(function () {
+      let elementOffset = $(this).offset().top;
+
+      if (scrollPos + $(window).height() > elementOffset) {
+        $(this).addClass('active');
+      } else {
+        $(this).removeClass('active');
+      }
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
