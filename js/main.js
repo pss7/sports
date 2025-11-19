@@ -1,6 +1,13 @@
 
 $(function () {
 
+  //aos 초기화
+  $(window).load(function () {
+    AOS.init({
+      duration: 2000
+    });
+  });
+
   //메인 슬라이드
   $('#mainSlideWrap .mainSlickBox .slick01').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     let i = (currentSlide ? currentSlide : 0) + 1;
@@ -100,12 +107,7 @@ $(function () {
 
 
 
-  //aos 초기화
-  $(window).load(function () {
-    AOS.init({
-      duration: 2000
-    });
-  });
+
 
   //메인
   $('#mainTitleWrap .slick').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
