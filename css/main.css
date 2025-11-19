@@ -301,8 +301,8 @@
     #orgWrap .orgBox{height: auto; flex-direction: column; gap: 40px 0;}
     #orgWrap .organizationBox .box{width: 100%; min-height: 219px;}
     #orgWrap .organizationBox .box .logoList{justify-content: flex-start;}
-    #orgWrap .orgList{padding: 0; display: flex; gap: 0 40px; overflow-x: auto;}
-    #orgWrap .orgList li{padding-bottom: 24px; flex-shrink: 0; margin: 0; width: 48%;}
+    #orgWrap .orgList{padding: 0; display: flex; gap: 0 40px; overflow-x: auto; direction:initial;}
+    #orgWrap .orgList li{padding-bottom: 24px; flex-shrink: 0; margin: 0; width: 48%; direction:initial;}
     #orgWrap .orgList::-webkit-scrollbar {height: 4px;}
 
 }
