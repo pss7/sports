@@ -8,6 +8,23 @@
 .closeBtn::before {content: ''; position: absolute; top: 50%; left: 50%; width: 100%;
     height: 100%;background: radial-gradient(circle,#ADCBFF 0%,rgba(173, 203, 255, 0.4) 40%,rgba(173, 203, 255, 0) 70% ); border-radius: 50%; transform: translate(-50%, -50%); z-index: -1;}
 
+    
+/* 애니메이션 */
+.fadeEffect{animation: fadeEffect 1.5s .3s both;}
+
+@keyframes fadeEffect {
+
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
 /* 헤더 */
 #headerWrap .headerTopBox{padding: 22px 0; display: flex; align-items: center; justify-content: space-between;}
 #headerWrap .headerTopBox .logoBox h1 a,
@@ -184,18 +201,59 @@
 
 }
 
-/* 애니메이션 */
-.fadeEffect{animation: fadeEffect 1.5s .3s both;}
+/* 푸터 */
+#footerWrap .footerTopBox{padding: 60px 0; background: linear-gradient(
+  to bottom, #FFFFFF,  #E8EBED);}
+#footerWrap .footerRightBox{width: 100%; display: flex; justify-content: space-between;}
+#footerWrap .layoutBox{position: relative; display: flex;}
+#footerWrap .footerLogoBox{margin-right: 119px;}
+#footerWrap .footerLogoBox h1{margin-bottom: 40px;}
+#footerWrap .footerLogoBox h1 .footerLogoImg01{display: block;}
+#footerWrap .footerLogoBox h1 .footerLogoImg02{display: none;}
+#footerWrap .footerLogoBox .footerSNSBox{display: flex; align-items: center; justify-content: flex-end; gap: 0 8px;}
+#footerWrap .footerLogoBox .footerSNSBox img{display: block;}
+#footerWrap .footerInfoBox{padding-top: 29px;}
+#footerWrap .footerInfoBox .box{margin-bottom: 32px;}
+#footerWrap .footerInfoBox .box:last-child{margin-bottom: 0;}
+#footerWrap .footerInfoBox .box span{display: block; font-size: 14px; color: #000; font-family: 'Retrosans';}
+#footerWrap .footerInfoBox .box em{display: block; font-weight: 500; color: #454C53;}#footerWrap .footerApplicationBox{display: flex; flex-direction: column; align-items: flex-end; padding-top: 29px;}
+#footerWrap .footerApplicationBox .applicationBtn{margin-bottom: 72px; display: flex; align-items: center; justify-content: center; gap: 0 16px; width: 243px; height: 96px; border-radius: 40px; background: linear-gradient(to bottom, #727170, #4F5F7A, #4A82E2); color: #fff; font-weight: 700;}
+#footerWrap .footerApplicationBox .applicationBtn::before{content: ''; width: 48px; height: 48px; background: url(../images/common/footer_icon02.svg)no-repeat center; }
+#footerWrap .copy{font-size: 12px;color: #9EA4AA; font-weight: 700;}
 
-@keyframes fadeEffect {
+@media (max-width: 1199px){
 
-  0%{
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100%{
-    opacity: 1;
-    transform: translateY(0);
-  }
+  #footerWrap .footerLogoBox{margin-right: 64px;}
+
+}
+
+@media (max-width: 767px){
   
+  #footerWrap .footerInfoBox{padding: 0;}
+  #footerWrap .footerTopBox{padding: 40px 0;}
+  #footerWrap .footerRightBox{flex-direction: column; gap: 64px 0;}
+  #footerWrap .footerApplicationBox{padding: 0; align-items: flex-start;}
+  #footerWrap .footerApplicationBox .applicationBtn{margin-bottom: 40px;}
+  #footerWrap .footerLogoBox h1 img{width: 154px;}
+  #footerWrap .footerInfoBox .box span{margin-bottom: 3px;}
+  
+}
+
+@media (max-width: 576px){
+
+  #footerWrap .footerLogoBox{margin: 0;}
+  #footerWrap .layoutBox{flex-direction: column; align-items: center; gap: 64px 0;}
+  #footerWrap .footerLogoBox h1 .footerLogoImg01{display: none;}
+  #footerWrap .footerLogoBox h1 .footerLogoImg02{display: block;}
+  #footerWrap .footerLogoBox .footerSNSBox{justify-content: center;}
+  #footerWrap .copy{width: 100%;}
+
+}
+
+@media (max-width: 414px){
+
+  #footerWrap .footerLogoBox h1{margin-bottom: 24px;}
+  #footerWrap .footerRightBox,
+  #footerWrap .layoutBox{gap: 40px 0;}
+
 }
