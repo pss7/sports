@@ -1,5 +1,36 @@
 $(function () {
 
+  //헤더 
+  $('#headerWrap .depth01 li h2 a').mouseover(function () {
+    $('#headerWrap .depth01 li h2 a').removeClass('active');
+    $(this).addClass('active');
+    $('.subMenuWrap').removeClass('active');
+    $(this).parents('li').find('.subMenuWrap').addClass('active');
+  });
+
+  $('#headerWrap .subMenuWrap').mouseleave(function () {
+    $('#headerWrap .depth01 li h2 a').removeClass('active');
+    $('.subMenuWrap').removeClass('active');
+  });
+
+  $('#headerWrap .headerBottomWrap').mouseleave(function () {
+    $('#headerWrap .depth01 li h2 a').removeClass('active');
+    $('.subMenuWrap').removeClass('active');
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //팝업
   $(window).load(function () {
     $('.popupWrap').addClass('active');

@@ -21,6 +21,18 @@
 #mainSlideWrap .mainSlickBox .textBox p{font-family: 'Retrosans'; font-size: 48px; line-height: 1.1; background: linear-gradient(90deg, #4986F0 10px, #010101 90px);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 #mainSlideWrap .mainSlickBox .textBox p span{display: block; overflow: hidden;}
+#mainSlideWrap .mainSlickBox .textBox p span em{}
+
+
+
+
+
+
+
+
+
+
+
 #mainSlideWrap .mainSlickBox .slide{position: relative;}
 #mainSlideWrap .mainSlickBox .slick01 .control{margin-top: 32px; gap: 0 28px; justify-content: center; display: flex; align-items: center; width: 136px; height: 48px; background-color: #fff; border-radius: 30px; background-color: #fff; z-index: 999999;}
 #mainSlideWrap .mainSlickBox .slick01 .control .btnBox{display: flex; gap: 0 16px;}

@@ -8,10 +8,18 @@ $(function () {
     });
   });
 
+  $('#mainSlideWrap .mainSlickBox .slick01').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    $('#mainSlideWrap .mainSlickBox .textBox p').removeClass('active');
+  });
+  $('#mainSlideWrap .mainSlickBox .slick01').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    $('#mainSlideWrap .mainSlickBox .textBox p').addClass('active');
+  });
+
   //메인 슬라이드
   $('#mainSlideWrap .mainSlickBox .slick01').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     let i = (currentSlide ? currentSlide : 0) + 1;
     $('#mainSlideWrap .mainSlickBox .slick01 .count').html('<em>' + i + '</em> / ' + slick.slideCount);
+    $("#mainSlideWrap .mainSlickBox .textBox p").addClass("active");
   });
 
   $('#mainSlideWrap .mainSlickBox .slick01').slick({
