@@ -75,7 +75,24 @@ $(function () {
     ]
   });
 
-
+  //함께 하는 기관 슬라이드
+  $('#partnerWrap .slick').slick({
+    autoplay: false,
+    variableWidth: true,
+    arrows: true,
+    dots: false,
+    accessibility: false,
+    draggable: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    zIndex: 1000,
+    pauseOnHover: false,
+    autoplaySpeed: 5000,
+    speed: 1300,
+    prevArrow: $('#partnerWrap .control .prev'),
+    nextArrow: $('#partnerWrap .control .next'),
+  });
 
 
 

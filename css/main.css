@@ -325,3 +325,34 @@ main{padding-bottom: 1000px;}
     #orgWrap h3{font-size: 30px;}
 
 }
+
+/* 함께하는기관 영역 */
+#partnerWrap .partnerBox{position: relative; overflow: hidden;}
+#partnerWrap .partnerTitleBox{width: 156px;}
+#partnerWrap .partnerTitleBox h3{margin-bottom: 24px; font-size: 24px; font-weight: 700; color: #000;}
+#partnerWrap .partnerListBox{width: 100%; position: absolute; top: 50%; left:328px; transform: translateY(-50%);}
+#partnerWrap .partnerListBox a{margin-right: 8px; display: flex; align-items: center; justify-content: center; width: 216px; height: 80px; border: 1px solid #C9CDD2; border-radius: 16px ;}
+#partnerWrap .partnerTitleBox .control{gap: 0 16px; display: flex; align-items: center; justify-content: center; width: 84px; height: 48px; border-radius: 30px; border: 1px solid #E8EBED;}
+#partnerWrap .partnerTitleBox .control button{width: 11px; height: 17px;}
+#partnerWrap .partnerTitleBox .control .prev{background: url(../images/main/arrow_icon03.svg)no-repeat center;}
+#partnerWrap .partnerTitleBox .control .next{background: url(../images/main/arrow_icon04.svg)no-repeat center;}
+
+@media (max-width: 1199px){
+
+    #partnerWrap .partnerListBox{left: 196px;}
+
+}
+
+@media (max-width: 480px){
+
+    #partnerWrap .partnerTitleBox{margin-bottom: 16px; width: 100%; display: flex; align-items: center; justify-content: space-between;}
+    #partnerWrap .partnerTitleBox h3{margin: 0;}
+    #partnerWrap .partnerListBox{position: static; transform: none;}
+
+}
+
+@media (max-width: 414px){
+
+    #partnerWrap .partnerListBox a{margin-right: 6px; width: 142px; height: 53px;}
+
+}
