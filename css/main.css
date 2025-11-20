@@ -127,7 +127,7 @@
  #linkWrap .pageLinkBox::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0;background-color: rgba(0,0,0,.5); z-index: -1;}
 #linkWrap .pageLinkBox a,
 #linkWrap .pageLinkBox a img{display: block;}
-#linkWrap .pageLinkBox a{padding: 21px 56px; font-size: 24px; font-weight: 700; color: #fff; border-radius: 64px; border: 1px solid #fff; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); text-align: center; animation: bubbleFloat 3s ease-in-out infinite;}
+#linkWrap .pageLinkBox a{padding: 21px 56px; font-size: 24px; font-weight: 700; color: #fff; border-radius: 64px; border: 1px solid #fff; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); text-align: center; animation: bubbleFloat 3s ease-in-out infinite; transition: all .3s;}
 @keyframes bubbleFloat {
   0% {
     transform: translateY(0);
@@ -145,10 +145,12 @@
 #linkWrap .pageLinkBox a:nth-child(1) {animation-delay: 0s;}
 #linkWrap .pageLinkBox a:nth-child(2) {animation-delay: 0.2s;}
 #linkWrap .pageLinkBox a:nth-child(3) {animation-delay: 0.4s;}
+#linkWrap .pageLinkBox a:hover{background: #fff; color: #333;}
 #linkWrap .infoLinkBox{display: flex; align-items: center; gap: 0 89px;}
 #linkWrap .infoLinkBox span{display: block; margin-bottom: 8px; font-weight: 700; color: #454C53;}
 #linkWrap .infoLinkBox h3{margin-bottom: 24px; font-size: 32px; font-weight: 400; color: #1B1D1F; font-family: 'Retrosans';}
 #linkWrap .infoLinkBox .view{display: flex; align-items: center; gap: 0 13px; font-weight: 700; color: #454C53;}
+#linkWrap .infoLinkBox .view:hover{text-decoration: underline;}
 #linkWrap .infoLinkBox .view::after{content: ''; width: 28px; height: 13px; background: url(../images/main/arrow_icon05.svg)no-repeat center; animation: viewAnimation 2s infinite;}
 
 @keyframes viewAnimation {

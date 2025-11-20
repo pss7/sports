@@ -250,7 +250,8 @@ body.of{overflow: hidden;}
 #footerWrap .footerLogoBox h1 .footerLogoImg01{display: block;}
 #footerWrap .footerLogoBox h1 .footerLogoImg02{display: none;}
 #footerWrap .footerLogoBox .footerSNSBox{display: flex; align-items: center; justify-content: flex-end; gap: 0 8px;}
-#footerWrap .footerLogoBox .footerSNSBox img{display: block;}
+#footerWrap .footerLogoBox .footerSNSBox a:hover img{transform: translateY(-7px);}
+#footerWrap .footerLogoBox .footerSNSBox img{display: block; transition: all .3s;}
 #footerWrap .footerInfoBox{padding-top: 29px;}
 #footerWrap .footerInfoBox .box{margin-bottom: 32px;}
 #footerWrap .footerInfoBox .box:last-child{margin-bottom: 0;}
