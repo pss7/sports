@@ -148,8 +148,23 @@
 #linkWrap .infoLinkBox{display: flex; align-items: center; gap: 0 89px;}
 #linkWrap .infoLinkBox span{display: block; margin-bottom: 8px; font-weight: 700; color: #454C53;}
 #linkWrap .infoLinkBox h3{margin-bottom: 24px; font-size: 32px; font-weight: 400; color: #1B1D1F; font-family: 'Retrosans';}
-#linkWrap .infoLinkBox .view{display: flex; align-items: center; gap: 0 16px; font-weight: 700; color: #454C53;}
-#linkWrap .infoLinkBox .view::after{content: ''; margin-top: -1px; width: 28px; height: 13px; background: url(../images/main/arrow_icon05.svg)no-repeat center;}
+#linkWrap .infoLinkBox .view{display: flex; align-items: center; gap: 0 13px; font-weight: 700; color: #454C53;}
+#linkWrap .infoLinkBox .view::after{content: ''; width: 28px; height: 13px; background: url(../images/main/arrow_icon05.svg)no-repeat center; animation: viewAnimation 2s infinite;}
+
+@keyframes viewAnimation {
+
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(8px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
 #linkWrap .infoLinkBox .imgBox img{display: block;}
 
 @media (max-width: 1440px){
@@ -211,7 +226,8 @@
 #newsWrap .titleBox .snsBox{position: absolute; top: 50%; transform: translateY(-50%); right:0; display: flex; align-items: center;}
 #newsWrap .titleBox .snsBox h4{margin-right: 20px; font-size: 20px; font-weight: 700; color: #000;}
 #newsWrap .titleBox .snsBox .snsLinkBox{display: flex; gap: 0 8px;}
-#newsWrap .titleBox .snsBox .snsLinkBox a img{display: block;}
+#newsWrap .titleBox .snsBox .snsLinkBox a:hover img{transform: translateY(-7px);}
+#newsWrap .titleBox .snsBox .snsLinkBox a img{display: block; transition: all .3s;}
 #newsWrap .layoutBox{display: flex; gap: 0 3.5%;}
 #newsWrap .newsBox{width: 68.7%;}
 #newsWrap .newsBox .topBox{display: flex; justify-content: space-between; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid #F7F8F9;}
