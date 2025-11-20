@@ -111,17 +111,19 @@ $(function () {
 
   //스크롤 시 해당 영역 active 클래스 적용
   $(window).scroll(function () {
+
     const scrollPos = $(window).scrollTop();
+    const winH = $(window).height();
 
     $('.scrollElement').each(function () {
       let elementOffset = $(this).offset().top;
-
-      if (scrollPos + $(window).height() > elementOffset) {
+      if (scrollPos > elementOffset - winH / 1.2) {
         $(this).addClass('active');
       } else {
         $(this).removeClass('active');
       }
     });
+
   });
 
   //뉴스 탭 
