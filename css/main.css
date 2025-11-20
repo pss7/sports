@@ -276,8 +276,9 @@
 
 #newsWrap .infoBox .applicationBox::after{content: ''; width: 248px; height: 200px; position: absolute; bottom: 0; right:0; background: url(../images/main/img02.png)no-repeat bottom; z-index: -1;}
 #newsWrap .infoBox .applicationBox h4{font-size: 32px; color: #fff; font-family: 'Retrosans'; font-weight: 400; line-height: 1.2;}
-#newsWrap .infoBox .applicationBox span{padding: 14px 10px; display: block; margin-top: auto; text-align: center; border-radius: 50px; color: #1B1D1F; font-weight: 700; border: 1px solid #fff; background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px);}
+#newsWrap .infoBox .applicationBox span{position: relative; padding: 14px 10px; display: block; margin-top: auto; text-align: center; border-radius: 50px; color: #1B1D1F; font-weight: 700; border: 1px solid #fff; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); overflow: hidden;}
+#newsWrap .infoBox .applicationBox span::before{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; width: 0; background-color: #fff; transition: all .3s; z-index: -1;}
+#newsWrap .infoBox .applicationBox:hover span::before{width: 100%;}
 #newsWrap .infoBox .sportsList{margin-bottom: 44px; display: flex; flex-wrap: wrap; gap: 12px 0;}
 #newsWrap .infoBox .sportsList li{width: 33.33%;}
 #newsWrap .infoBox .sportsList li a{display: block;}
