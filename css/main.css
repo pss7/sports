@@ -340,9 +340,8 @@
 #orgWrap .orgBox{display: flex; justify-content: space-between; padding: 46px; height: 394px; border-radius: 60px; background: linear-gradient(
   to bottom, #4D8FFF, #88B4FF);}
 #orgWrap .orgList{padding-left: 40px; height: 300px; overflow-y: auto;  direction: rtl;}
-#orgWrap .orgList::-webkit-scrollbar {width: 4px;}
-#orgWrap .orgList::-webkit-scrollbar-track {background: #2A4F8C; border-radius: 10px;}
-#orgWrap .orgList::-webkit-scrollbar-thumb {background: #FFFFFF; border-radius: 10px;}
+#orgWrap .orgList::-webkit-scrollbar-track{background: #2A4F8C;}
+#orgWrap .orgList::-webkit-scrollbar-thumb{background: #FFFFFF;}
 #orgWrap .orgList li{margin-bottom: 40px; direction: ltr;}
 #orgWrap .orgList li:last-child{margin-bottom: 0;}
 #orgWrap .orgList li .topInfoBox{margin-bottom: 16px; display: flex; align-items: center; gap: 0 8px;}

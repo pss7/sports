@@ -1,13 +1,20 @@
 @charset "UTF-8";
 
+body.sitemapNonScroll{overflow: hidden;}
+
 @media (max-width: 1199px){
 
-body.of{overflow: hidden;}
+body.mobileNonScroll{overflow: hidden;}
 
 }
 
 /* 가운데영역 */
 .container{max-width: 1480px; padding: 0 20px; margin: 0 auto;}
+
+/* 스크롤 */
+.customScroll::-webkit-scrollbar {width: 4px;}
+.customScroll::-webkit-scrollbar-track{background: #4D8FFF; border-radius: 10px;}
+.customScroll::-webkit-scrollbar-thumb{background: #F7F8F9; border-radius: 10px;}
 
 /* 닫기 버튼 */
 .closeBtn{position: relative; width: 40px; height: 40px; border: 1px solid #E8EBED; border-radius: 8px; background: url(../images/common/close_icon.svg)no-repeat center;}
@@ -91,6 +98,7 @@ body.of{overflow: hidden;}
 #sitemapBox{opacity: 0; padding: 82px 0; position: fixed; top: 0; left:0; right:0; bottom: 0; z-index: 999999;background: linear-gradient(to right, #FFFFFF 60%, #EDF4FF); clip-path: circle(0 at 100% 0); transition: clip-path 1.3s ease-out, opacity 0.7s ease-out; }
 #sitemapBox.active{opacity: 1; clip-path: circle(180% at 100% 0);}
 #sitemapBox .container{position: relative;}
+#sitemapBox nav{padding-right: 24px; max-width: 1126px; height: calc(100vh - 267px); overflow-y: auto;}
 #sitemapBox .sitemapTitleBox{margin-bottom: 55px;}
 #sitemapBox .sitemapTitleBox h3{font-size: 32px; color: #9EA4AA; font-weight: 400; font-family: 'Retrosans'; letter-spacing:5px;}
 #sitemapBox .sitemapDepth01 > li{margin-bottom: 80px; display: flex; gap: 0 104px;}
@@ -99,7 +107,7 @@ body.of{overflow: hidden;}
 #sitemapBox .sitemapDepth01 li .leftBox h2 a{display: block; font-size: 24px; color: #203C6B; font-family: 'Retrosans'; font-weight: 400;}
 #sitemapBox .sitemapDepth01 li .leftBox .imgBox{width: 200px; height: 80px; border-radius: 15px; overflow: hidden;}
 #sitemapBox .sitemapDepth01 li .leftBox .imgBox img{display: block; width: 100%; height: 100%; object-fit: cover;}
-#sitemapBox .sitemapDepth02{margin-top: 40px; width: calc(100% - 646px);}
+#sitemapBox .sitemapDepth02{margin-top: 40px; width: 100%;}
 #sitemapBox .sitemapDepth02 > li{border-bottom: 1px solid #E8EBED; }
 #sitemapBox .sitemapDepth02 li .depthLayoutBox{display: flex; align-items: center; gap: 10px 87px; }
 #sitemapBox .sitemapDepth02 li h3 a{padding: 22px 0; display: block; background: linear-gradient(90deg, #454C53, #9EA4AA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 20px; font-weight: 500;}

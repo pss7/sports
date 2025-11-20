@@ -47,7 +47,7 @@ $(function () {
     $('#headerWrap .mobileCloseBtn').fadeIn();
     $('#mobileMenuBox').addClass('active');
     $('.mobilebg').addClass('active');
-    $('body').addClass('of');
+    $('body').addClass('mobileNonScroll');
   });
 
   $('#headerWrap .mobileCloseBtn').click(function () {
@@ -55,7 +55,7 @@ $(function () {
     $('#headerWrap .mobileBtn').fadeIn();
     $('#mobileMenuBox').removeClass('active');
     $('.mobilebg').removeClass('active');
-    $('body').removeClass('of');
+    $('body').removeClass('mobileNonScroll');
   });
 
   $('#mobileMenuBox .mobileDepth01 > li').first().find('.mobileDepth02').show();
@@ -85,9 +85,11 @@ $(function () {
 
   //사이트맵
   $('#headerWrap .sitemapBtn').click(function () {
+    $('body').addClass('sitemapNonScroll');
     $('#sitemapBox').addClass('active');
   });
   $('#headerWrap .sitemapCloseBtn ').click(function () {
+    $('body').removeClass('sitemapNonScroll');
     $('#sitemapBox').removeClass('active');
   });
 
