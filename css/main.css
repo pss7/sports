@@ -219,12 +219,20 @@
 
 /* 뉴스 영역 */
 #newsWrap{padding: 0 0 96px;}
-#newsWrap .titleBox{position: relative; margin-bottom: 24px; display: flex; align-items: center;}
+#newsWrap .titleBox{position: relative; margin-bottom: 12px; display: flex; align-items: center;}
 #newsWrap .titleBox h3{margin-right: 32px; font-size: 48px; color: #1B1D1F; font-family: 'Retrosans'; font-weight: 400;}
-#newsWrap .titleBox .box{display: flex; align-items: center; gap: 0 16px;}
-#newsWrap .titleBox .box .infoText01{padding: 8px; font-weight: 700; color: #fff; border-radius: 8px; background: linear-gradient(
-  to right, #203C6B, #4D8FFF,#203C6B);}
-#newsWrap .titleBox .box .infoText02{font-weight: 700; color: #9EA4AA;}
+#newsWrap .titleBox .tabBox{display: flex; align-items: center; gap: 0 16px;}
+#newsWrap .titleBox .tabBox .tabBtn.active{font-weight: 700; color: #fff; background: linear-gradient(
+  to right, #203C6B, #4D8FFF,#203C6B); background-size: 300% 300%; animation: gradientMove 3.5s ease infinite;}
+#newsWrap .titleBox .tabBox .tabBtn{padding: 8px;  font-weight: 700; color: #9EA4AA; border-radius: 8px; }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#newsWrap .newsContentBox .newsContent{display: none;}
 #newsWrap .titleBox .snsBox{position: absolute; top: 50%; transform: translateY(-50%); right:0; display: flex; align-items: center;}
 #newsWrap .titleBox .snsBox h4{margin-right: 20px; font-size: 20px; font-weight: 700; color: #000;}
 #newsWrap .titleBox .snsBox .snsLinkBox{display: flex; gap: 0 8px;}
@@ -300,9 +308,9 @@
 
 @media (max-width: 576px){
 
-    #newsWrap .titleBox h3{margin: 0 0 24px;}
+    #newsWrap .titleBox h3{margin: 0 0 12px;}
     #newsWrap .newsBox .newsList{margin-bottom: 40px;}
-    #newsWrap .titleBox{flex-direction: column; align-items: flex-start;}
+    #newsWrap .titleBox{margin-bottom: 24px; flex-direction: column; align-items: flex-start;}
     #newsWrap .titleBox .snsBox{top: auto; bottom: 0; transform: none;}
     #newsWrap .newsBox .newsImgList li{width: 100%; margin-bottom: 20px;}
     #newsWrap .newsBox .newsImgList li:last-child{margin-bottom: 0;}
@@ -319,7 +327,7 @@
     #newsWrap .titleBox .snsBox .snsLinkBox{flex-direction: column; gap: 8px 0;}
     #newsWrap .newsBox .topBox .text{display: block; width: 100%; text-align: center; word-break: keep-all;}
     #newsWrap .newsBox .topBox{padding-bottom: 16px; flex-direction: column; align-items: center; gap: 16px 0;}
-    #newsWrap .newsBox .newsListBox{padding: 24px 16px;}
+    #newsWrap .newsBox .newsListBox{padding: 24px 16px; border-radius: 26px;}
     #newsWrap .titleBox h3{margin: 0 0 12px; font-size: 32px;}
     #newsWrap .newsBox .newsList li a{font-size: 20px;}
 
