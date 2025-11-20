@@ -83,8 +83,13 @@ $(function () {
   });
   $('#mobileMenuBox .mobileDepth02 li:has(ul)').children('h3').addClass('depth03');
 
-
-
+  //사이트맵
+  $('#headerWrap .sitemapBtn').click(function () {
+    $('#sitemapBox').addClass('active');
+  });
+  $('#headerWrap .sitemapCloseBtn ').click(function () {
+    $('#sitemapBox').removeClass('active');
+  });
 
 
 

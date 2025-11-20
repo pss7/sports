@@ -88,7 +88,8 @@ body.of{overflow: hidden;}
 #headerWrap .subMenuWrap .subMenuBox .imgBox p{color: #454C53; text-align: right; font-family: 'Retrosans';}
 
 /* 헤더-사이트맵 */
-#sitemapBox{display: none; padding: 82px 0; position: fixed; top: 0; left:0; right:0; bottom: 0; z-index: 999999;background: linear-gradient(to right, #FFFFFF 60%, #EDF4FF);}
+#sitemapBox{opacity: 0; padding: 82px 0; position: fixed; top: 0; left:0; right:0; bottom: 0; z-index: 999999;background: linear-gradient(to right, #FFFFFF 60%, #EDF4FF); clip-path: circle(0 at 100% 0); transition: clip-path 1.3s ease-out, opacity 0.7s ease-out; }
+#sitemapBox.active{opacity: 1; clip-path: circle(180% at 100% 0);}
 #sitemapBox .container{position: relative;}
 #sitemapBox .sitemapTitleBox{margin-bottom: 55px;}
 #sitemapBox .sitemapTitleBox h3{font-size: 32px; color: #9EA4AA; font-weight: 400; font-family: 'Retrosans'; letter-spacing:5px;}
@@ -138,15 +139,15 @@ body.of{overflow: hidden;}
 @media (max-width: 1199px){
 
   #headerWrap .headerTopWrap{display: block!important;}
+  #headerWrap #sitemapBox,
   #headerWrap .sitemapBtn,
   #headerWrap .headerTopBox .btnBox .authBox,
-  #headerWrap .headerBottomWrap{display: none;}
+  #headerWrap .headerBottomWrap{display: none!important;}
   #headerWrap .headerTopBox{padding: 12px 0;}
   #headerWrap .mobileCloseBtn{display: none; width: 48px; height: 48px;}
   #headerWrap .mobileBtn{display: block; width: 48px; height: 48px;}
-  #mobileMenuBox{opacity: 0; display: flex; flex-direction: column; position: fixed; top:72px; right:0; max-width: 512px; width: 100%; min-height: 756px; background: linear-gradient(to bottom, #FFFFFF 60%, #EDF4FF); border-radius: 0 0 0 40px; overflow: hidden; z-index: 9999999;  clip-path: circle(0 at 100% 0);
-  transition: clip-path 1.3s ease-out, opacity 0.7s ease-out; visibility: hidden; }
-  #mobileMenuBox.active{opacity: 1; visibility: visible; clip-path: circle(180% at 100% 0);}
+  #mobileMenuBox{opacity: 0; display: flex; flex-direction: column; position: fixed; top:72px; right:0; max-width: 512px; width: 100%; min-height: 756px; background: linear-gradient(to bottom, #FFFFFF 60%, #EDF4FF); border-radius: 0 0 0 40px; overflow: hidden; z-index: 9999999;  clip-path: circle(0 at 100% 0); transition: clip-path 1.3s ease-out, opacity 0.7s ease-out;}
+  #mobileMenuBox.active{opacity: 1; clip-path: circle(180% at 100% 0);}
   #mobileMenuBox .mobileAothBox{position: relative; padding-left: 30px; display: flex; align-items: center; gap: 0 26px;  height: 64px;  background: linear-gradient(120deg, #454C53 0%, #9AA9B9 50%, #454C53 100%); background-size: 200% 100%; z-index: 999999; animation: skeletonShimmer 9s infinite linear;}
   
   @keyframes skeletonShimmer {
@@ -206,8 +207,7 @@ body.of{overflow: hidden;}
 }
 
 /* 헤더-통합검색 */
-#searchContentBox{position: absolute; top:180px; left:0; right:0; padding: 80px 20px; border-top: 1px solid #E8EBED; background: linear-gradient(to right, #FFFFFF 70%, #EDF4FF); max-height: 0; opacity: 0;
-  transform: translateY(-10px); transition:max-height 0.4s ease, opacity 0.3s ease, transform 0.4s ease; z-index: 9999999; visibility: hidden;}
+#searchContentBox{position: absolute; top:180px; left:0; right:0; padding: 80px 20px; border-top: 1px solid #E8EBED; background: linear-gradient(to right, #FFFFFF 70%, #EDF4FF); max-height: 0; opacity: 0; transform: translateY(-10px); transition:max-height 0.4s ease, opacity 0.3s ease, transform 0.4s ease; z-index: 9999999; visibility: hidden;}
 #searchContentBox.active {max-height: 415px; opacity: 1; transform: translateY(0); visibility: visible;}
 #searchContentBox .title{margin-bottom: 24px; text-align: center; color: #454C53; font-size: 38px; font-weight: 500;}
 #searchContentBox .searchInputBox{position: relative; max-width: 480px; margin:0 auto 36px;}
