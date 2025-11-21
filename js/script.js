@@ -9,8 +9,8 @@ $(function () {
     }
   });
 
+  $('#headerWrap').addClass('active');
   $(window).load(function () {
-    $('#headerWrap').addClass('active');
     setInterval(function () {
       $('#headerWrap').removeClass('active');
       setTimeout(function () {
