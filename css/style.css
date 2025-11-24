@@ -38,6 +38,20 @@ body.mobileNonScroll{overflow: hidden;}
   
 }
 
+main{padding-top: 180px;}
+
+@media (max-width: 1199px){
+
+    main{padding-top: 72px;}
+
+}
+
+@media (max-width: 767px){
+
+    main{padding-top: 64px;}
+
+}
+
 /* 헤더 */
 #headerWrap.scroll{box-shadow: 0 10px 40px #EDF4FF;}
 #headerWrap .headerTopWrap{ transition: all .5s;}

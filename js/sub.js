@@ -2,12 +2,7 @@
 $(function () {
 
   $(window).load(function () {
-    $('.introduceBox .top').addClass('active');
-    AOS.init({
-      duration: 2000
-    });
-    $('.productDetailBox .titleBox_01').addClass('active');
-    $('#subWrap .topBox').addClass('active');
+    $('.subVisualBox .visualBox').addClass('active');
   });
 
   //선택

@@ -1,1 +1,126 @@
 @charset "UTF-8";
+
+#wrap{height: 100%; display: flex; flex-direction: column;}
+#subWrap{flex: 1;}
+
+.contentBox{padding: 80px 0; min-height: 600px;}
+
+@media (max-width: 480px){
+
+  .contentBox{padding: 50px 0;}
+
+}
+
+/* 그라데이션 텍스트 */
+.gradientText{background: linear-gradient(to right, #203c6b,
+    #4d8fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+
+/* 상단 영역 */    
+.subVisualBox {padding-bottom: 64px; background: linear-gradient(to bottom,rgba(255, 255, 255, 1),rgba(237, 244, 255, 1),rgba(255, 255, 255, 1));}
+.subVisualBox .visualBox{margin-bottom: 24px; position: relative; height: 164px; border-radius: 65px; overflow: hidden;}
+.subVisualBox .visualBox.active img{transform: scale(1);}
+.subVisualBox .visualBox img{display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.5); transition: all 5.5s;}
+.subVisualBox .visualBox .title{padding: 0 40px; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 30px; color: #fff; font-family: 'Retrosans'; z-index: 9; letter-spacing: 20px; text-align: center; word-break: keep-all;}
+.subVisualBox .visualBox .title em{display: inline-block;}
+.subVisualBox .visualBox .title em:nth-child(1){animation-delay: .3s;}
+.subVisualBox .visualBox .title em:nth-child(2){animation-delay: .35s;}
+.subVisualBox .visualBox .title em:nth-child(3){animation-delay: .4s;}
+.subVisualBox .visualBox .title em:nth-child(4){animation-delay: .45s;}
+.subVisualBox .visualBox .title em:nth-child(5){animation-delay: .5s;}
+.subVisualBox .visualBox .title em:nth-child(6){animation-delay: .55s;}
+.subVisualBox .visualBox .title em:nth-child(7){animation-delay: .6s;}
+.subVisualBox .visualBox .title em:nth-child(8){animation-delay: .65s;}
+.subVisualBox .visualBox .title em:nth-child(9){animation-delay: .7s;}
+.subVisualBox .visualBox .title em:nth-child(10){animation-delay: .75s;}
+.subVisualBox .visualBox .title em:nth-child(11){animation-delay: .8s;}
+.subVisualBox .subMenuBox{display: flex; justify-content: center;}
+.subVisualBox .subMenuBox .title01{margin: 0 auto; padding: 7px 16px; font-size: 18px; font-weight: 500; color: #454C53; border-radius: 50px; background-color:#fff;}
+.subDepthBox{padding-bottom: 18px; border-bottom: 1px solid #E8EBED;}
+.subDepthBox .container{position: relative;}
+.subDepthBox .breadcrumbsList{margin-bottom: 24px; padding: 2px 8px; display: inline-flex; align-items: center; background-color: #F7F8F9; border-radius: 10px;}
+.subDepthBox .breadcrumbsList li a{display: flex; align-items: center; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.subDepthBox .breadcrumbsList li a::after{content: ''; margin: 0 5px; width: 4px; height: 1px; background-color: #9EA4AA;}
+.subDepthBox .breadcrumbsList li:last-child a{ color: #454C53; font-weight: 700;}
+.subDepthBox .breadcrumbsList li:last-child a::after{display: none;}
+.subDepthBox .title01{margin-bottom: 20px; font-weight: 400; font-family: 'Retrosans'; font-size: 38px;}
+.subDepthBox .title02{font-weight: 700; color: #9EA4AA; font-size: 24px;}
+.subDepthBox .shareBox{position: absolute; top:0; right:20px; display: flex; gap: 0 8px;}
+.subDepthBox .shareBox a{position: relative; display: block; width: 64px; height: 54px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 40px rgba(0,0,0,.1);}
+.subDepthBox .shareBox a::after{content: ''; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
+.subDepthBox .shareBox .shareBtn::after{width: 24px; height: 24px; background: url(../images/sub/share_icon.svg)no-repeat center;}
+.subDepthBox .shareBox .printerBtn::after{width: 22px; height: 21px; background: url(../images/sub/printer_icon.svg)no-repeat center;}
+
+@media (max-width: 767px){
+
+  .subVisualBox .visualBox .title{font-size: 20px;}
+  .subDepthBox .shareBox{display: none;}
+
+}
+
+@media (max-width: 480px){
+
+  .subVisualBox{padding-bottom: 48px;}
+  .subVisualBox .visualBox{margin-bottom: 16px;}
+  .subVisualBox .visualBox .title{font-size: 16px; letter-spacing: 10px;}
+  .subVisualBox .subMenuBox .title01{font-size: 16px;}
+
+  .subDepthBox{padding-bottom: 8px;}
+  .subDepthBox .breadcrumbsList{margin-bottom: 20px;}
+  .subDepthBox .title01{margin: 0;}
+  .subDepthBox .title02{display: none;}
+
+}
+
+/* 인사말 */
+.greetingsBox{position: relative;}
+.greetingsBox::after{content: ''; width: 176px; height: 847px; position: absolute; top:0; right:0; background: url(../images/sub/bg02.png)no-repeat right top;}
+.greetingsBox .layoutBox{display: flex; align-items: flex-start; gap: 0 77px;}
+.greetingsBox .imgBox{position: relative; padding:104px 87px 0 0;}
+.greetingsBox .imgBox img{display: block; max-width: 100%;}
+.greetingsBox .imgBox img.m{display: none;}
+.greetingsBox .imgBox::before{content: ''; position: absolute; top:0; left:-240px; right:0; bottom: 0; background: url(../images/sub/bg01.png)no-repeat right top; background-size: cover; z-index: -1;border-radius: 0 160px 0 0;}
+.greetingsBox .textBox .title{margin-bottom: 38px; color: #1B1D1F; font-weight: 700; font-size: 40px; line-height: 1.4;}
+.greetingsBox .textBox .text{margin-bottom: 30px; color: #454C53; font-size: 18px; word-break: keep-all;}
+
+@media (max-width: 1440px){
+
+  .greetingsBox::after{display: none;}  
+
+}
+
+@media (max-width: 1199px){
+
+  .greetingsBox .layoutBox{gap: 0 40px;}
+  .greetingsBox .imgBox{flex-shrink: 0; padding: 102px 44px 0 0;}
+  .greetingsBox .imgBox img{width: 380px;}
+  .greetingsBox .textBox .title{font-size: 32px;}
+  
+}
+
+@media (max-width: 1024px){
+
+
+  .greetingsBox .imgBox img{width: 265px;}
+  .greetingsBox .imgBox{padding: 124px 17px 0 0;}
+  .greetingsBox .textBox .title{font-size: 28px;}
+  .greetingsBox .textBox .text{margin-bottom: 28px; font-size: 16px;}
+  
+}
+
+@media (max-width: 767px){
+
+  .greetingsBox .textBox .text br{display: none;}
+  .greetingsBox .layoutBox{flex-direction: column; gap: 64px 0;}
+  .greetingsBox .imgBox{padding: 0; width: 100%;}
+  .greetingsBox .imgBox::before{ top: 85px; left: -20px; right:-20px; border-radius: 0 120px 0 0;}
+  .greetingsBox .imgBox img.m{display: block; width: auto; margin: 0 auto;}
+  .greetingsBox .imgBox img.pc{display: none;}
+
+}
+
+
+@media (max-width: 480px){
+
+  .greetingsBox .imgBox::before{ top: 17.71vw; left: -20px; right:-20px; border-radius: 0 25vw 0 0;}
+
+}
