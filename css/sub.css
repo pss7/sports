@@ -5,7 +5,7 @@
 
 .contentBox{padding: 80px 0; min-height: 600px;}
 
-@media (max-width: 480px){
+@media (max-width: 767px){
 
   .contentBox{padding: 50px 0;}
 
@@ -79,8 +79,8 @@
 .greetingsBox .imgBox img{display: block; max-width: 100%;}
 .greetingsBox .imgBox img.m{display: none;}
 .greetingsBox .imgBox::before{content: ''; position: absolute; top:0; left:-240px; right:0; bottom: 0; background: url(../images/sub/bg01.png)no-repeat right top; background-size: cover; z-index: -1;border-radius: 0 160px 0 0;}
-.greetingsBox .textBox .title{margin-bottom: 38px; color: #1B1D1F; font-weight: 700; font-size: 40px; line-height: 1.4;}
-.greetingsBox .textBox .text{margin-bottom: 30px; color: #454C53; font-size: 18px; word-break: keep-all;}
+.greetingsBox .textBox .title{margin-bottom: 38px; color: #1B1D1F; font-weight: 700; font-size: 48px; line-height: 1.4;}
+.greetingsBox .textBox .text{margin-bottom: 35px; color: #454C53; font-size: 18px; word-break: keep-all; line-height: 1.7;}
 
 @media (max-width: 1440px){
 
