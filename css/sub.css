@@ -14,6 +14,7 @@
 /* 그라데이션 텍스트 */
 .gradientText{background: linear-gradient(to right, #203c6b,
     #4d8fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.gradientBG{background: radial-gradient(circle at center, #ADCBFF, #F7F8F9);}
 
 /* 상단 영역 */    
 .subVisualBox {padding-bottom: 64px; background: linear-gradient(to bottom,rgba(255, 255, 255, 1),rgba(237, 244, 255, 1),rgba(255, 255, 255, 1));}
@@ -117,10 +118,24 @@
   .greetingsBox .imgBox img.pc{display: none;}
 
 }
-
-
+ 
 @media (max-width: 480px){
 
   .greetingsBox .imgBox::before{ top: 17.71vw; left: -20px; right:-20px; border-radius: 0 25vw 0 0;}
 
 }
+
+/* 로그인 */
+.signinBox{padding: 64px; max-width: 720px; margin: 0 auto; border: 1px solid #E8EBED; border-radius: 64px; background-color: #fff;}
+.signinBox .title{margin-bottom: 44px; font-size: 24px; font-weight: 500; color: #454C53; text-align: left;}
+.signinBox h4{margin-bottom: 16px; font-size: 14px; font-weight: 700; color: #454C53;}
+.signinBox .snsLoginLink{margin-bottom: 26px;}
+.signinBox .snsLoginLink a{padding: 21px 10px 21px 16px; margin-bottom: 8px; display: flex; align-items: center; gap: 0 8px; border-radius: 8px; border: 1px solid #E8EBED; color: #454C53;}
+.signinBox .snsLoginLink a::before{content: ''; width: 28px; height: 28px;}
+.signinBox .snsLoginLink a.kakaoLogin:before{content: ''; background: url(../images/sub/kakao_icon.svg)no-repeat center;}
+.signinBox .snsLoginLink a.naverLogin:before{content: ''; background: url(../images/sub/naver_icon.svg)no-repeat center;}
+.signinBox .snsLoginLink a:last-child{margin-bottom: 0;}
+.signinBox .infoBox{padding-right: 20px; display: flex; align-items: center; gap: 0 0; justify-content: space-between;}
+.signinBox .infoBox p{font-weight: 500; color: #9EA4AA; font-size: 14px;}
+.signinBox .infoBox a{display: flex; align-items: center; gap: 0 8px; font-size: 14px; font-weight: 700; color: #454C53;}
+.signinBox .infoBox a::before{content: ''; margin-top: -1px; width: 7px; height: 10px; background: url(../images/sub/arrow_icon01.svg)no-repeat center;}
