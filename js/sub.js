@@ -1,22 +1,47 @@
 
 $(function () {
 
+  //상단
   $(window).load(function () {
     $('.subVisualBox .visualBox').addClass('active');
   });
 
-  //선택
-  $('.selectBox .selectBtn').click(function () {
+  //로그인 탭
+  $('.signinBox .selectBtn').first().addClass('active');
+  $('.signinBox .tabContentBox').hide();
+  $('.signinBox .tabContentBox').first().show();
 
-    if ($(this).hasClass('active')) {
-      $(this).removeClass('active');
-      $(this).next().slideUp();
-    } else {
-      $(this).addClass('active');
-      $(this).next().slideDown();
-    }
+  $('.signinBox .selectBtn').click(function () {
 
-  })
+    $('.signinBox .selectBtn').removeClass('active');
+    $(this).addClass('active');
+
+    let idx = $(this).index();
+
+    $('.signinBox .tabContentBox').hide();
+    $('.signinBox .tabContentBox').eq(idx).show();
+
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   //수상 슬라이드 영역 
   $(".newsBox .slick").slick({

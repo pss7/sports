@@ -1367,37 +1367,89 @@
     <!-- //headerWrap -->
 
     <main id="subWrap">
-
-      <div class="contentBox gradientBG">
-
+      <div class="contentBox gradientBG"> <!-- gradientBG 클래스 > 원 가운데 연한 파랑색 배경-->
         <div class="signinBox">
 
-          <p class="title">
-            역시 와주셨군요! <br>
-            오늘도 <strong class="gradientText">시작</strong>해볼까요?
-          </p>
+          <div class="container">
 
-          <h4>
-            시민 로그인
-          </h4>
+            <div class="comContentBox">
+              <p class="title">
+                역시 와주셨군요! <br>
+                오늘도 <strong class="gradientText">시작</strong>해볼까요?
+              </p>
 
-          <div class="snsLoginLink">
-            <a href="#" class="kakaoLogin">
-              카카오로그인
-            </a>
-            <a href="#" class="naverLogin">
-              네이버 로그인
-            </a>
-          </div>
+              <div class="box">
+                <div class="selectBox">
+                  <span>
+                    로그인 유형 선택해주세요
+                  </span>
+                  <div class="selectBtnBox">
+                    <button class="selectBtn active">
+                      시민
+                    </button>
+                    <button class="selectBtn">
+                      단체
+                    </button>
+                  </div>
+                </div>
 
-          <div class="infoBox">
-            <p>
-              원활한 이용을 위하여 SNS 로그인으로 통합되었습니다
-            </p>
+                <div class="signinTabBox">
+                  <div class="tabContentBox">
 
-            <a href="#">
-              메인으로 돌아가기
-            </a>
+                    <h4>
+                      시민 로그인
+                    </h4>
+
+                    <div class="snsLoginLink">
+                      <a href="#" class="kakaoLogin">
+                        카카오로그인
+                      </a>
+                      <a href="#" class="naverLogin">
+                        네이버 로그인
+                      </a>
+                    </div>
+
+                  </div>
+
+                  <div class="tabContentBox">
+
+                    <h4>
+                      단체 로그인
+                    </h4>
+
+                    <div class="inputTextBox">
+                      <input id="id" type="text" placeholder="아이디를 입력해주세요">
+                      <label for="id" class="blind">
+                        아이디 입력
+                      </label>
+                    </div>
+
+                    <div class="inputTextBox">
+                      <input id="password" type="text" placeholder="비밀번호를 입력해주세요">
+                      <label for="password" class="blind">
+                        비밀번호 입력
+                      </label>
+                    </div>
+
+                    <button class="loginBtn comBtn">
+                      로그인
+                    </button>
+
+                  </div>
+                </div>
+
+                <div class="infoBox">
+                  <p>
+                    원활한 이용을 위하여 SNS 로그인으로 통합되었습니다
+                  </p>
+
+                  <a href="../index.html">
+                    메인으로 돌아가기
+                  </a>
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>

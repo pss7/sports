@@ -3,7 +3,7 @@
 #wrap{height: 100%; display: flex; flex-direction: column;}
 #subWrap{flex: 1;}
 
-.contentBox{padding: 80px 0; min-height: 600px;}
+.contentBox{padding: 80px 0;}
 
 @media (max-width: 767px){
 
@@ -11,12 +11,47 @@
 
 }
 
-/* 그라데이션 텍스트 */
+/* 공통 - 폼 */
+.customSelectBox .selectBtn,
+input[type="text"]{ width: 100%; padding: 0 20px 0 16px; height: 48px; border: 1px solid #E8EBED; border-radius: 8px; font-weight: 500; font-size: 14px; background-color: #fff;}
+input[type="text"]::placeholder{color: #9EA4AA;}
+.customSelectBox{position: relative;}
+.customSelectBox .selectBtn{padding: 0 36px 0 16px; text-align: left;}
+.customSelectBox .selectBtn.active::after{transform: translateY(-50%) rotate(90deg);}
+.customSelectBox .selectBtn::after{content: ''; width: 7px; height: 10px; position: absolute; top: 50%; transform: translateY(-50%) rotate(-90deg); right:16px; background: url(../images/sub/arrow_icon01.svg)no-repeat center;}
+.customSelectBox .selectList{display: none; padding: 10px 0; position: absolute; top:56px; left:0; right:0; border: 1px solid #E8EBED; border-radius: 8px; background-color: #fff; z-index: 99;}
+.customSelectBox .selectList li .btn{padding: 10px 10px 10px 16px; display: block; width: 100%; text-align: left; font-weight: 500; font-size: 14px; transition: all .3s;}
+.customSelectBox .selectList li .btn:hover{background-color: #4D8FFF; color: #fff;}
+input[type="radio"] + label{padding-left: 16px; height: 48px; display: flex; align-items: center; gap: 0 8px; font-size: 14px; font-weight: 500; color: #454C53; font-weight: 500; border: 1px solid #E8EBED; border-radius: 8px; cursor: pointer;}
+input[type="radio"]:checked + label{background-color: #4D8FFF; color: #fff; font-weight: 700;}
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/radio_icon.svg)no-repeat center / contain;}
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before{ background: url(../images/sub/radio_on_icon.svg)no-repeat center / contain;}
+
+/* 공통 - 여백 */
+.mb30{margin-bottom: 30px!important;}
+.mb50{margin-bottom: 50px!important;}
+.mb60{margin-bottom: 60px!important;}
+
+/* 공통 - 버튼 */
+.comBtn{width: 100%; height: 56px; padding: 0 10px; background-color: #454C53; border-radius: 16px; text-align: center; color: #fff; font-weight:700;}
+.comBtn.garyBtnColor{background-color: #9EA4AA;}
+
+@media (max-width: 767px){
+
+  .comBtn{height: 45px; border-radius: 8px;}
+
+}
+
+/* 공통 - 그라데이션 텍스트 */
 .gradientText{background: linear-gradient(to right, #203c6b,
     #4d8fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-.gradientBG{background: radial-gradient(circle at center, #ADCBFF, #F7F8F9);}
 
-/* 상단 영역 */    
+/* 공통 - 그라데이션 배경색 */
+.gradientBG{background: radial-gradient(ellipse 40% 48% at center,rgba(173, 203, 255, 0.5) 0%, rgba(173, 203, 255, 0.5) 60%,#F7F8F9 100% );}
+
+/* 공통 - 상단 영역 */    
 .subVisualBox {padding-bottom: 64px; background: linear-gradient(to bottom,rgba(255, 255, 255, 1),rgba(237, 244, 255, 1),rgba(255, 255, 255, 1));}
 .subVisualBox .visualBox{margin-bottom: 24px; position: relative; height: 164px; border-radius: 65px; overflow: hidden;}
 .subVisualBox .visualBox.active img{transform: scale(1);}
@@ -126,16 +161,131 @@
 }
 
 /* 로그인 */
-.signinBox{padding: 64px; max-width: 720px; margin: 0 auto; border: 1px solid #E8EBED; border-radius: 64px; background-color: #fff;}
-.signinBox .title{margin-bottom: 44px; font-size: 24px; font-weight: 500; color: #454C53; text-align: left;}
-.signinBox h4{margin-bottom: 16px; font-size: 14px; font-weight: 700; color: #454C53;}
-.signinBox .snsLoginLink{margin-bottom: 26px;}
-.signinBox .snsLoginLink a{padding: 21px 10px 21px 16px; margin-bottom: 8px; display: flex; align-items: center; gap: 0 8px; border-radius: 8px; border: 1px solid #E8EBED; color: #454C53;}
-.signinBox .snsLoginLink a::before{content: ''; width: 28px; height: 28px;}
-.signinBox .snsLoginLink a.kakaoLogin:before{content: ''; background: url(../images/sub/kakao_icon.svg)no-repeat center;}
-.signinBox .snsLoginLink a.naverLogin:before{content: ''; background: url(../images/sub/naver_icon.svg)no-repeat center;}
-.signinBox .snsLoginLink a:last-child{margin-bottom: 0;}
-.signinBox .infoBox{padding-right: 20px; display: flex; align-items: center; gap: 0 0; justify-content: space-between;}
-.signinBox .infoBox p{font-weight: 500; color: #9EA4AA; font-size: 14px;}
-.signinBox .infoBox a{display: flex; align-items: center; gap: 0 8px; font-size: 14px; font-weight: 700; color: #454C53;}
-.signinBox .infoBox a::before{content: ''; margin-top: -1px; width: 7px; height: 10px; background: url(../images/sub/arrow_icon01.svg)no-repeat center;}
+.comContentBox{position: relative; padding: 64px; max-width: 720px; margin: 0 auto; border: 1px solid #E8EBED; border-radius: 64px; background-color: #fff;}
+.comContentBox .title{margin-bottom: 44px; font-size: 24px; font-weight: 500; color: #454C53; text-align: left;}
+
+.signinBox .box h4{margin-bottom: 16px; font-size: 14px; font-weight: 700; color: #454C53;}
+.signinBox .box .snsLoginLink{margin-bottom: 26px;}
+.signinBox .box .snsLoginLink a{height: 72px; padding: 21px 10px 21px 16px; margin-bottom: 8px; display: flex; align-items: center; gap: 0 8px; border-radius: 8px; border: 1px solid #E8EBED; color: #454C53;}
+.signinBox .box .snsLoginLink a:hover{border: 2px solid #454C53; font-weight: 700; color: #454C53;}
+.signinBox .box .snsLoginLink a::before{content: ''; width: 28px; height: 28px;}
+.signinBox .box .snsLoginLink a.kakaoLogin:before{content: ''; background: url(../images/sub/kakao_icon.svg)no-repeat center;}
+.signinBox .box .snsLoginLink a.naverLogin:before{content: ''; background: url(../images/sub/naver_icon.svg)no-repeat center;}
+.signinBox .box .snsLoginLink a:last-child{margin-bottom: 0;}
+.signinBox .box .infoBox{padding-right: 20px; display: flex; align-items: center; gap: 0 0; justify-content: space-between;}
+.signinBox .box .infoBox p{font-weight: 500; color: #9EA4AA; font-size: 14px;}
+.signinBox .box .infoBox a{display: flex; align-items: center; gap: 0 8px; font-size: 14px; font-weight: 700; color: #454C53;}
+.signinBox .box .infoBox a::before{content: ''; margin-top: -1px; width: 7px; height: 10px; background: url(../images/sub/arrow_icon01.svg)no-repeat center;}
+.signinBox .box .selectBox span{display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.signinBox .box .selectBox .selectBtnBox{padding: 4px; display: flex; align-items: center; width: 142px; height: 44px; border-radius: 16px; background-color: #F7F8F9;} 
+.signinBox .box .selectBox .selectBtnBox .selectBtn{display: flex; align-items: center; justify-content: center; width: 67px; height: 36px; border-radius: 16px; color: #9EA4AA; font-weight: 700;}
+.signinBox .box .selectBox .selectBtnBox .selectBtn.active{background-color: #4D8FFF; color: #fff;}
+.signinBox .box .selectBox{position: absolute; top:64px; right:64px;}
+.signinBox .box .inputTextBox{margin-bottom: 10px;}
+.signinBox .box .inputTextBox input{padding-left: 49px; width: 100%; border: 1px solid #E8EBED; height: 72px; background-color: #F7F8F9; border-radius: 8px; font-weight: 500;}
+.signinBox .box .inputTextBox input::placeholder{color: #9EA4AA;}
+.signinBox .box .inputTextBox input#id{background: url(../images/sub/id_icon.svg)no-repeat 21px center;}
+.signinBox .box .inputTextBox input#password{background: url(../images/sub/pw_icon.svg)no-repeat 21px center;}
+.signinBox .box .loginBtn{display: block; margin-bottom: 26px; width: 100%; height: 72px; font-size: 20px;}
+
+@media (max-width: 1199px){
+
+  .comContentBox .title{font-size: 22px;}
+
+}
+
+@media (max-width: 767px){
+
+  .comContentBox .title{font-size: 20px;}
+  
+  .comContentBox{padding: 55px 30px 40px; border-radius: 30px;}
+  .signinBox .box .loginBtn,
+  .signinBox .box .inputTextBox input,
+  .signinBox .box .snsLoginLink a{height: 65px;}
+  .signinBox .box .loginBtn{font-size: 18px;}
+  .signinBox .box .inputTextBox input#id{background: url(../images/sub/id_icon.svg)no-repeat 17px center;}
+  .signinBox .box .inputTextBox input#password{background: url(../images/sub/pw_icon.svg)no-repeat 17px center;}
+
+}
+
+@media (max-width: 480px){
+
+  .comContentBox .title{margin-bottom: 20px; font-size: 18px; text-align: center;}
+
+  .comContentBox{padding: 45px 20px 40px; }
+
+  .signinBox .box .selectBox{margin-bottom: 30px; position: static; text-align: center;}
+  .signinBox .box .selectBox .selectBtnBox{margin: 0 auto;}
+  .signinBox .box .infoBox{flex-direction: column; gap: 15px 0;}
+  .signinBox .box .snsLoginLink a{font-size: 14px;}
+
+}
+
+/* 회원가입 */
+.signupBox h4{margin-bottom: 16px; font-size: 18px;}
+.signupBox .label{display: block; margin-bottom: 14px; font-weight: 700; color: #454C53;}
+.signupBox .label .required{color: #FF8539;}
+.signupBox .phoneBox{display: flex; flex-wrap: wrap; align-items: center; gap: 8px;}
+.signupBox .phoneBox .inputTextBox{width: calc(100% - 98px);}
+.signupBox .phoneBox .comBtn{padding: 0; width: 90px; height: 48px; font-size: 14px; border-radius: 8px;}
+.signupBox .emailBox{display: flex; align-items: center; flex-wrap: wrap; gap:8px .95%;}
+.signupBox .emailBox span{font-weight: 500; color: #454C53;}
+.signupBox .emailBox .customSelectBox{width: calc(100% - 477px);}
+.signupBox .btnBox{display: flex; gap: 8px; justify-content: center;} 
+.signupBox .btnBox .comBtn{width: 108px;}
+.signupBox .genderBox{display: flex;flex-wrap: wrap; gap:8px;}
+.signupBox .genderBox .inputRadioBox{flex: 1;}
+.signupBox .signupInfoBox{margin-top: 16px;}
+.signupBox .signupInfoBox .infoText01{padding: 6px 0 6px 16px; font-size: 14px; font-weight: 700; color: #203C6B; background-color: #EDF4FF; border-radius: 8px;}
+.signupBox .signupInfoBox .infoBox{padding: 16px; display: flex; align-items: center; justify-content: space-between; background-color: #FFF2E8; border-radius: 8px;}
+.signupBox .signupInfoBox .infoBox .infoText02{margin-bottom: 6px; font-size: 14px; font-weight: 700; color: #6A340C; } 
+.signupBox .signupInfoBox .infoBox .mailText{display: flex; align-items: center; gap: 0 8px; font-size: 14px; color: #454C53; font-weight: 500;}
+.signupBox .signupInfoBox .infoBox .mailText::before{content: ''; width: 20px; height: 20px; }
+.signupBox .signupInfoBox .infoBox .mailText.kakao::before{background: url(../images/sub/kakao_icon.svg)no-repeat center / contain;}
+.signupBox .signupInfoBox .infoBox .mailText.naver::before{background: url(../images/sub/naver_icon.svg)no-repeat center / contain;}
+.signupBox .signupInfoBox .infoBox .link{display: block; padding: 6px 8px; background-color: #fff; border-radius: 8px; font-size: 14px; color: #454C53; font-weight: 700;}
+.signupBox .loginInfoBox{padding: 21px 20px 21px 16px; display: flex; align-items: center; gap: 0 16px; border: 1px solid #E8EBED; border-radius: 8px;}
+.signupBox .loginInfoBox span{width: 71px; height: 22px; line-height: 22px; text-align: center; background-color: #EDF4FF; color: #203C6B; font-weight: 700; font-size: 12px;}
+.signupBox .loginInfoBox em{display: flex; align-items: center; gap: 0 8px; font-weight: 500; color: #454C53;}
+.signupBox .loginInfoBox em::before{content: ''; width: 28px; height: 28px;}
+.signupBox .loginInfoBox em.kakao::before{background: url(../images/sub/kakao_icon.svg)no-repeat center;}
+.signupBox .loginInfoBox em.naver::before{background: url(../images/sub/naver_icon.svg)no-repeat center;}
+.signupBox .agreeBox{padding: 24px; border: 2px solid #C8DCFF; border-radius: 16px;} 
+.signupBox .agreeBox .agreeTitle{margin-bottom: 16px; padding-bottom: 16px; color: #454C53; font-size: 15px; border-bottom: 1px solid #E8EBED; text-align: left;}
+.signupBox .agreeBox .title01{margin-bottom: 8px; color: #1B1D1F; font-size: 16px;}
+.signupBox .agreeBox .title02{margin-bottom: 4px; color: #454C53; font-size: 14px;}
+.signupBox .agreeBox .list01{margin-bottom: 8px;}
+.signupBox .agreeBox .list01 li{padding-left: 4px; display: flex; align-items: center; gap: 0 8px; font-size: 14px; color: #454C53;}
+.signupBox .agreeBox .list01 li::before{content: ''; margin-top: -1px; width: 6px; height: 6px; border-radius: 50%; background-color: #D9D9D9;}
+.signupBox .agreeBox .agreeInputChkBox{margin-top: 16px; padding: 17px 10px 17px 16px; background-color: #F7F8F9; border-radius: 8px;}
+.signupBox .agreeBox .agreeInputChkBox label{display: flex; gap: 0 8px; font-size: 14px; color: #454C53; font-weight: 500; cursor: pointer;}
+.signupBox .birthDateBox{position: relative;}
+.signupBox .birthDateBox .calendarBtn{position: absolute; top: 50%; transform: translateY(-50%); right:19px;}
+.signupBox .birthDateBox .calendarBtn img{display: block;}
+.signupBox .birthDateBox input[type="text"]{padding: 0 54px 0 16px;}
+.signupBox form{margin-bottom: 64px;}
+
+@media (max-width: 767px){
+
+  .signupBox .emailBox{flex-direction: column; gap: 5px 0;}
+  .signupBox .emailBox .customSelectBox,
+  .signupBox .emailBox .inputTextBox{width: 100%;}
+
+  .signupBox .phoneBox{flex-direction: column;}
+  .signupBox .phoneBox .inputTextBox{width: 100%;}
+  .signupBox .phoneBox .comBtn{width:100%;}
+  .signupBox .agreeBox{border-radius: 8px;}
+  .signupBox .genderBox{flex-direction: column;}
+
+  .signupBox .btnBox{flex-direction: column;}
+  .signupBox .btnBox .comBtn{width: 100%;}
+
+  .signupBox form{margin-bottom: 40px;}
+  
+}
+
+@media (max-width: 480px){
+
+  .signupBox .loginInfoBox{flex-direction: column; gap: 8px 0; padding: 15px 10px 15px 15px;}
+
+}
