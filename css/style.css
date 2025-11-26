@@ -12,9 +12,9 @@ body.mobileNonScroll{overflow: hidden;}
 .container{max-width: 1480px; padding: 0 20px; margin: 0 auto;}
 
 /* 스크롤 */
-.customScroll::-webkit-scrollbar {width: 4px;}
-.customScroll::-webkit-scrollbar-track {background-color: #F7F8F9;}
-.customScroll::-webkit-scrollbar-thumb {background-color: #4D8FFF; border-radius: 10px;}
+.customScroll::-webkit-scrollbar{width: 4px; height: 4px;}
+.customScroll::-webkit-scrollbar-track{background-color: #F7F8F9;}
+.customScroll::-webkit-scrollbar-thumb{background-color: #4D8FFF; border-radius: 10px;}
 
 /* 닫기 버튼 */
 .closeBtn{position: relative; width: 40px; height: 40px; border: 1px solid #E8EBED; border-radius: 8px; background: url(../images/common/close_icon.svg)no-repeat center;}
