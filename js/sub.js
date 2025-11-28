@@ -23,25 +23,21 @@ $(function () {
 
   });
 
+  //스크롤 그라데이션 
+  $('.applyListWrap').scroll(function () {
 
+    let $wrap = $(this);
+    let scrollTop = $wrap.scrollTop();
+    let wrapHeight = $wrap.innerHeight();
+    let scrollHeight = this.scrollHeight;
 
+    if (scrollTop + wrapHeight >= scrollHeight - 5) {
+      $wrap.addClass('scrollEnd');
+    } else {
+      $wrap.removeClass('scrollEnd');
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  });
 
   //수상 슬라이드 영역 
   $(".newsBox .slick").slick({
