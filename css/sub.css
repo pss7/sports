@@ -11,6 +11,27 @@
 
 }
 
+/* 공통 - 제목 */
+.titleBox .title{color: #454C53; font-size: 32px; font-weight: 500;}
+
+@media (max-width: 1199px){
+
+  .titleBox .title{font-size: 26px;}
+
+}
+
+@media (max-width: 767px){
+
+  .titleBox .title{font-size: 22px;}
+
+}
+
+@media (max-width: 480px){
+
+  .titleBox .title{font-size: 20px;}
+
+}
+
 /* 공통 - 폼 */
 .customSelectBox .selectBtn,
 input[type="text"]{ width: 100%; padding: 0 20px 0 16px; height: 48px; border: 1px solid #E8EBED; border-radius: 8px; font-weight: 500; font-size: 14px; background-color: #fff;}
@@ -170,7 +191,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 }
 
 /* 로그인 */
-.comContentBox{position: relative; padding: 64px; max-width: 720px; margin: 0 auto; border: 1px solid #E8EBED; border-radius: 64px; background-color: #fff;}
+.comContentBox{position: relative; padding: 64px; max-width: 720px; width: 100%; margin: 0 auto; border: 1px solid #E8EBED; border-radius: 64px; background-color: #fff;}
 .comContentBox .title{margin-bottom: 44px; font-size: 24px; font-weight: 500; color: #454C53; text-align: left;}
 
 .signinBox .box h4{margin-bottom: 16px; font-size: 14px; font-weight: 700; color: #454C53;}
@@ -323,41 +344,42 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .mypageBox .rightBox .stateList li .stateBtn{font-size: 14px; font-weight: 500; color: #454C53;}
 .mypageBox .rightBox .stateList li .number{min-width: 17px; color: #454C53; font-size: 14px; font-weight: 500; border-radius: 4px; background-color: #E8EBED; text-align: center;} 
 .mypageBox .rightBox h4{margin-bottom: 16px; font-size: 24px; color: #454C53; font-weight: 700;}
-.mypageBox .rightBox .applyListWrap {position: relative; max-height: 528px; overflow-y: auto;
+
+.comListWrap{position: relative; max-height: 528px; overflow-y: auto;
   overflow-x: hidden;}
-.mypageBox .rightBox .applyListWrap::after {content: ''; position: absolute; left: 0;
+.comListWrap::after {content: ''; position: absolute; left: 0;
   right: 0; bottom: 0; height: 99px; background: linear-gradient(to bottom,
     rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 40%,rgba(255,255,255,1) 100%);
-  z-index: 9; opacity: 1; transition: all .3s;}
-.mypageBox .rightBox .applyListWrap.scrollEnd::after {opacity: 0;}
-.mypageBox .rightBox .applyListBox .list li {border-bottom: 1px solid #E8EBED;}
-.mypageBox .rightBox .applyListBox .list li a{position: relative; display: grid; grid-template-columns: 144px auto 125px 60px; align-items: center; min-height: 88px; z-index: 1; z-index: 1;}
-.mypageBox .rightBox .applyListBox .list li a::after{content: ''; width: 0; position: absolute; top:0; right:0; bottom: 0; background: linear-gradient(to right, #FFFFFF 65%, #EDF4FF); z-index: -1; transition: all .3s;} 
-.mypageBox .rightBox .applyListBox .list li a:hover::after{width: 100%;}
-.mypageBox .rightBox .applyListBox .list .dateBox{padding-left: 28px; position: relative; display: flex; flex-direction: column;
+  z-index: 9; opacity: 1; transition: all .3s; pointer-events: none;}
+.comListWrap.scrollEnd::after {opacity: 0;}
+.comListBox .list li {border-bottom: 1px solid #E8EBED;}
+.comListBox .list li a{position: relative; display: grid; grid-template-columns: 144px auto 125px 60px; align-items: center; min-height: 88px; z-index: 1; z-index: 1;}
+.comListBox .list li a::after{content: ''; width: 0; position: absolute; top:0; right:0; bottom: 0; background: linear-gradient(to right, #FFFFFF 65%, #EDF4FF); z-index: -1; transition: all .3s;} 
+.comListBox .list li a:hover::after{width: 100%;}
+.comListBox .list .dateBox{padding-left: 28px; position: relative; display: flex; flex-direction: column;
   gap: 6px 0;}
-.mypageBox .rightBox .applyListBox .list .dateBox::before {content: ''; position: absolute; top: 50%; left: 0;
+.comListBox .list .dateBox::before {content: ''; position: absolute; top: 50%; left: 0;
   transform: translateY(-50%); width: 12px; height: 12px; border-radius: 50%;}
-.mypageBox .rightBox .applyListBox .list .dateBox.secondHalf::before {background: url(../images/sub/icon01.svg) no-repeat center;}
-.mypageBox .rightBox .applyListBox .list .dateBox.firstHalf::before {background: url(../images/sub/icon02.svg) no-repeat center;}
-.mypageBox .rightBox .applyListBox .list .dateBox .date {font-size: 14px; font-weight: 500; color: #454C53;}
-.mypageBox .rightBox .applyListBox .list .dateBox em {font-size: 14px; color: #9EA4AA; font-weight: 500;}
-.mypageBox .rightBox .applyListBox .list .sportBox {display: flex; align-items: center;}
-.mypageBox .rightBox .applyListBox .list .sportBox img {margin-right: 16px;}
-.mypageBox .rightBox .applyListBox .list .sportBox .sport{margin-right: 8px; font-weight: 700; color: #454C53;}
-.mypageBox .rightBox .applyListBox .list .sportBox .time{padding: 4px 8px; font-size: 12px; font-weight: 700; color: #203C6B;
+.comListBox .list .dateBox.secondHalf::before {background: url(../images/sub/icon01.svg) no-repeat center;}
+.comListBox .list .dateBox.firstHalf::before {background: url(../images/sub/icon02.svg) no-repeat center;}
+.comListBox .list .dateBox .date {font-size: 14px; font-weight: 500; color: #454C53;}
+.comListBox .list .dateBox em {font-size: 14px; color: #9EA4AA; font-weight: 500;}
+.comListBox .list .sportBox {display: flex; align-items: center;}
+.comListBox .list .sportBox img {margin-right: 16px;}
+.comListBox .list .sportBox .sport{margin-right: 8px; font-weight: 700; color: #454C53;}
+.comListBox .list .sportBox .time{padding: 4px 8px; font-size: 12px; font-weight: 700; color: #203C6B;
   border-radius: 4px; background-color: #EDF4FF;}
-.mypageBox .rightBox .applyListBox .list .attendanceBox {display: flex; flex-direction: column; gap: 4px 0;}
-.mypageBox .rightBox .applyListBox .list .attendanceBox span {font-weight: 500; color: #454C53; font-size: 14px;}
-.mypageBox .rightBox .applyListBox .list .attendanceBox em {font-weight: 700;  color: #9EA4AA; font-size: 14px;}
-.mypageBox .rightBox .applyListBox .list .stateBox {text-align: center;}
-.mypageBox .rightBox .applyListBox .list .stateBox .state {padding: 4px 8px; font-size: 12px; font-weight: 500; border-radius: 8px;}
-.mypageBox .rightBox .applyListBox .list .stateBox .state.approval { border: 1px solid #4D8FFF; color: #4D8FFF;}
-.mypageBox .rightBox .applyListBox .list .stateBox .state.atmosphere {background-color: #E8EBED; color: #454C53;}
-.mypageBox .rightBox .applyListBox .listHead{position: sticky; display: grid; grid-template-columns: 144px auto 125px 60px; align-items: center; height: 32px; background-color: #F7F8F9; border-radius: 8px; font-size: 12px; font-weight: 700; color: #9EA4AA; top: 0; z-index: 9;}
-.mypageBox .rightBox .applyListBox .listHead .col{display: flex; align-items: center;}
-.mypageBox .rightBox .applyListBox .listHead .colDate{padding-left: 28px;}
-.mypageBox .rightBox .applyListBox .listHead .colStatus {text-align: center; justify-content: center;}
+.comListBox .list .attendanceBox {display: flex; flex-direction: column; gap: 4px 0;}
+.comListBox .list .attendanceBox span {font-weight: 500; color: #454C53; font-size: 14px;}
+.comListBox .list .attendanceBox em {font-weight: 700;  color: #9EA4AA; font-size: 14px;}
+.comListBox .list .stateBox {text-align: center;}
+.comListBox .list .stateBox .state {padding: 4px 8px; font-size: 12px; font-weight: 500; border-radius: 8px;}
+.comListBox .list .stateBox .state.approval { border: 1px solid #4D8FFF; color: #4D8FFF;}
+.comListBox .list .stateBox .state.atmosphere {background-color: #E8EBED; color: #454C53;}
+.comListBox .listHead{position: sticky; display: grid; grid-template-columns: 144px auto 125px 60px; align-items: center; height: 32px; background-color: #F7F8F9; border-radius: 8px; font-size: 12px; font-weight: 700; color: #9EA4AA; top: 0; z-index: 9;}
+.comListBox .listHead .col{display: flex; align-items: center;}
+.comListBox .listHead .colDate{padding-left: 28px;}
+.comListBox .listHead .colStatus {text-align: center; justify-content: center;}
 
 @media (max-width: 1199px){
 
@@ -368,7 +390,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .mypageBox .leftBox .topBox .text01{font-size: 28px;}
   .mypageBox .rightBox h4{font-size: 22px;}
 
-  .mypageBox .rightBox .applyListWrap::after { background: linear-gradient(to bottom,
+  .comListWrap::after { background: linear-gradient(to bottom,
     rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 90%,rgba(255,255,255,1) 100%);}
 
 }
@@ -380,19 +402,18 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .mypageBox .rightBox h4{font-size: 20px;}
   .mypageBox .rightBox .stateList{position: static; margin-bottom: 20px;}
 
-  .mypageBox .rightBox .applyListBox .list li a,
-  .mypageBox .rightBox .applyListBox .listHead{grid-template-columns: 144px auto 80px 60px;}
+  .comListBox .list li a,
+  .comListBox .listHead{grid-template-columns: 144px auto 80px 60px;}
 
 }
 
 @media (max-width: 576px){
 
-  .mypageBox .rightBox table{width: 576px;}
-  .mypageBox .rightBox .applyListBox .list li a,
-  .mypageBox .rightBox .applyListBox .listHead{grid-template-columns: 130px auto 80px 60px;}
-  .mypageBox .rightBox .applyListWrap{max-height: none; overflow-x: auto; overflow-y: hidden;}
-  .mypageBox .rightBox .applyListBox{width: 576px;}
-  .mypageBox .rightBox .applyListWrap::after{display: none!important;}
+  .comListBox .list li a,
+  .comListBox .listHead{grid-template-columns: 130px auto 80px 60px;}
+  .comListWrap{max-height: none; overflow-x: auto; overflow-y: hidden;}
+  .comListBox{width: 576px;}
+  .comListWrap::after{display: none!important;}
 }
 
 @media (max-width: 480px){
@@ -407,7 +428,122 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .mypageBox .leftBox .memberInfoBox .box em{font-size: 14px;}
 
   .mypageBox .rightBox h4{font-size: 18px;}
-  .mypageBox .rightBox .applyListBox .list .sportBox .sport{font-size: 14px;}
-  .mypageBox .rightBox .applyListBox .list .sportBox img{margin-right: 12px; width: 30px;}
+  .comListBox .list .sportBox .sport{font-size: 14px;}
+  .comListBox .list .sportBox img{margin-right: 12px; width: 30px;}
+
+}
+
+/* 마이페이지 - 상세 */
+.contentLayoutBox{display: flex; gap: 0 8px;}
+.contentLayoutBox .comContentBox{max-width: 1212px; margin: 0;}
+.contentLayoutBox aside{width: 220px;}
+
+@media (max-width: 1199px){
+
+  .contentLayoutBox{flex-direction: column-reverse; gap: 30px 0;}
+  .contentLayoutBox aside{width: 100%;}
+
+}
+
+.viewBox .titleBox{margin-bottom: 24px;}
+.viewBox .topInfoBox{margin-bottom: 64px; display: flex; align-items: center; padding: 9px 8px; background-color: #EDF4FF; border-radius: 16px;}
+.viewBox .topInfoBox .text{flex-shrink: 0; margin-right: 8px; padding: 3px 8px; border: 1px solid #4D8FFF; background-color: #fff; font-size: 14px; font-weight: 500; color: #4D8FFF; border-radius: 8px;}
+.viewBox .topInfoBox .date01{margin-right: 8px; font-size: 14px; font-weight: 500; color: #4D8FFF;}
+.viewBox .topInfoBox .date02{font-weight: 500; color: #454C53;}
+.viewBox .sportBox{margin-bottom: 64px; display: flex; gap: 0 64px;}
+.viewBox .sportBox .sportInfoBox01{width: 100%;}
+.viewBox .sportBox .sportInfoBox01 .topText{margin-bottom: 8px; font-weight: 500; color: #454C53;}
+.viewBox .sportBox .sportInfoBox01 .sportTitle{margin-bottom: 23px; display: flex; align-items: center; gap: 0 8px;}
+.viewBox .sportBox .sportInfoBox01 .sportTitle h4{font-weight: 700; color: #1B1D1F; font-size: 32px;}
+.viewBox .sportBox .sportInfoBox01 .sportTitle em{padding: 4px 8px; font-size: 12px; font-weight: 700; color: #203C6B; background-color: #EDF4FF; border-radius: 4px;}
+.viewBox .sportBox .sportInfoBox01 .dateInfoBox{display: flex; align-items: center; gap: 0 16px; padding: 8px 20px 8px 8px; border-radius: 8px; background: linear-gradient(to right, #223D69, #444B53);}
+.viewBox .sportBox .sportInfoBox01 .dateInfoBox .text{flex-shrink: 0; padding: 3px 4px; font-size: 14px; font-weight: 700; color: #454C53; border-radius: 4px; background-color: #fff;}
+.viewBox .sportBox .sportInfoBox01 .dateInfoBox .date{font-weight: 700; color: #fff;}
+.viewBox .sportBox .sportInfoBox02{flex-shrink: 0; width: 338px;}
+.viewBox .sportBox .sportInfoBox02 h4{margin-bottom: 16px; font-size: 18px; color: #454C53; font-weight: 700;}
+.viewBox .sportBox .sportInfoBox02 .recruitBox{margin-bottom: 8px; padding: 20px; display: flex; justify-content: space-between; margin-bottom: 8px; border: 1px solid #E8EBED; border-radius: 20px;}
+.viewBox .sportBox .sportInfoBox02 .recruitBox h4{font-size: 14px; font-weight: 700; color: #9EA4AA;}
+.viewBox .sportBox .sportInfoBox02 .recruitBox .box .recruitText01{display: flex; justify-content: flex-end; align-items: center; gap: 0 10px;}
+.viewBox .sportBox .sportInfoBox02 .recruitBox .box .recruitText01 strong{font-size: 24px; color: #1B1D1F;}
+.viewBox .sportBox .sportInfoBox02 .recruitBox .box .recruitText01 span{ font-weight: 500; color: #9EA4AA;}
+.viewBox .sportBox .sportInfoBox02 .recruitBox .box .recruitText02{display: block; font-size: 14px; font-weight: 500; color: #454C53;}
+.viewBox .sportBox .sportInfoBox02 .recruitBox .box .recruitText02 em{padding: 3px; background-color: #E8EBED; border-radius: 4px; font-size: 14px; font-weight: 500; color: #454C53;}
+.viewBox .sportBox .sportInfoBox02 .infoText{position: relative; padding-left: 32px; font-size: 14px; color: #454C53;}
+.viewBox .sportBox .sportInfoBox02 .infoText::before{content: ''; position: absolute; top:0; left:4px; width: 20px; height: 20px; background: url(../images/sub/icon03.svg)no-repeat center;}
+.viewBox .sportBox .sportInfoBox02 .infoText strong{background: linear-gradient(to right, #9EA4AA,
+    #F6503B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.viewBox .programBox{margin-bottom: 64px;}
+.viewBox .programBox h4{margin-bottom: 16px; font-size: 18px; font-weight: 700; color: #454C53;}
+.viewBox .programBox .programList{display: flex; gap: 0 8px;}
+.viewBox .programBox .programList > li{flex: 1; display: flex; flex-direction: column; gap: 8px 0; padding: 20px; border: 1px solid #E8EBED; border-radius: 20px;}
+.viewBox .programBox .programList li span{display: block; font-size: 14px; font-weight: 700; color: #9EA4AA;}
+.viewBox .programBox .programList li em{font-weight: 500; color: #454C53;}
+.viewBox .programBox .programList li em strong{font-weight: 500; color: #4D8FFF;}
+.viewBox .programBox .programList li .dateList{display: flex; flex-wrap: wrap; gap: 4px;}
+.viewBox .programBox .programList li .dateList li{width: 28px; height: 28px; line-height: 28px; font-weight: 700; font-size: 14px; color: #454C53; background-color: #E8EBED; border-radius: 8px; text-align: center;}
+.viewBox .operatingLocationBox h4{font-size: 18px; font-weight: 700; color: #454C53;}
+.viewBox .operatingLocationBox .map img{display: block; width: 100%;}
+.viewBox aside .attendanceBox{margin-bottom: 8px; padding: 24px; background-color: #fff; border-radius: 40px; border: 1px solid #E8EBED;}
+.viewBox aside .attendanceBox h4{margin-bottom: 20px; color: #454C53; font-size: 18px; text-align: center;}
+.viewBox aside .attendanceBox .percentBox{margin-bottom: 22px;}
+.viewBox aside .attendanceBox .percentBox .box{margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;}
+.viewBox aside .attendanceBox .percentBox .box span{font-weight: 500; color: #454C53; font-size: 14px;}
+.viewBox aside .attendanceBox .percentBox .box strong{font-weight: 700; color: #9EA4AA;}
+.viewBox aside .attendanceBox .percentBox .percent{display: block; height: 8px; border-radius: 8px; background-color: #E8EBED; overflow: hidden;}
+.viewBox aside .attendanceBox .percentBox .percent em{display: block; height: 100%; background: linear-gradient(to right, #4D8FFF, #72787F);}
+.viewBox aside .attendanceBox .attendanceInfoBox{display: flex; gap: 0 16px;}
+.viewBox aside .attendanceBox .attendanceInfoBox .textBox{display: flex; gap: 0 4px;}
+.viewBox aside .attendanceBox .attendanceInfoBox .textBox span{font-size: 14px; font-weight: 500; color: #454C53;}
+.viewBox aside .attendanceBox .attendanceInfoBox .textBox em{padding: 0 4px; font-size: 14px; font-weight: 500; color: #454C53; background-color: #E8EBED; border-radius: 4px; text-align: center;}
+.viewBox aside .progressBox{background-color: #fff; border-radius: 40px; border: 1px solid #E8EBED; overflow: hidden;}
+.viewBox aside .progressBox .progressTopBox{display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 70px; text-align: center;}
+.viewBox aside .progressBox .progressTopBox span{color: #454C53; font-weight: 500;}
+.viewBox aside .progressBox .progressTopBox strong{color: #4D8FFF;}
+.viewBox aside .progressBox .progressList{height: 486px; padding-bottom: 38px; border-top: 1px solid #E8EBED; overflow-y: auto;}
+.viewBox aside .progressBox .progressList li{padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #E8EBED;}
+.viewBox aside .progressBox .progressList li .box .text{display: block; margin-bottom: 4px; font-size: 14px; font-weight: 700; color: #454C53;}
+.viewBox aside .progressBox .progressList li .box .date{display: block; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.viewBox aside .progressBox .progressList li .state{width: 37px; height: 22px; line-height: 22px; font-size: 12px; font-weight: 500; border-radius: 8px; text-align: center;}
+.viewBox aside .progressBox .progressList li .state.attendance{border: 1px solid #4D8FFF; color: #4D8FFF;}
+.viewBox aside .progressBox .progressList li .state.canceled{background-color: #E8EBED; color: #454C53;}
+.viewBox aside .progressBox .progressList li .state.absence{background-color: #E8EBED; color: #454C53;}
+.viewBox aside .progressBox .progressList li .state.expected{border: 1px solid #9EA4AA; color: #9EA4AA;}
+
+@media (max-width: 1199px){
+
+  .viewBox .topInfoBox{margin-bottom: 40px;}
+  .viewBox .sportBox{flex-direction: column; gap: 30px 0;} 
+  .viewBox .sportBox .sportInfoBox02{width: 100%;}
+  .viewBox .sportBox .sportInfoBox01 .sportTitle{margin-bottom: 15px;}
+  .viewBox .sportBox .sportInfoBox01 .sportTitle h4{font-size: 28px;}
+
+  .viewBox .programBox .programList{flex-wrap: wrap; gap: 10px;}
+  .viewBox .programBox .programList > li{flex: none; width: calc((100% - 20px) / 3);}
+
+}
+
+@media (max-width: 767px){
+
+  .viewBox aside .attendanceBox,
+  .viewBox aside .progressBox{border-radius: 30px;}
+
+  .viewBox .sportBox .sportInfoBox01 .sportTitle h4{font-size: 24px;}
+  .viewBox .sportBox .sportInfoBox02 .recruitBox .box .recruitText01 strong{font-size: 22px;}
+
+}
+
+@media (max-width: 480px){
+
+  .viewBox .topInfoBox{flex-direction: column; gap: 3px 0; border-radius: 8px;}
+  .viewBox .topInfoBox .date02{font-size: 14px;}
+  .viewBox .sportBox .sportInfoBox01 .dateInfoBox .date{font-size: 14px;}
+  .viewBox .programBox .programList > li{flex: none; width: calc((100% - 10px) / 2); border-radius: 10px;}
+  .viewBox .programBox .programList li em{font-size: 14px;}
+
+}
+
+@media (max-width:320px){
+
+  .viewBox .programBox .programList > li{width: 100%;}
 
 }

@@ -24,7 +24,7 @@ $(function () {
   });
 
   //스크롤 그라데이션 
-  $('.applyListWrap').scroll(function () {
+  $('.comListWrap').scroll(function () {
 
     let $wrap = $(this);
     let scrollTop = $wrap.scrollTop();
