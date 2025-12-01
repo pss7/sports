@@ -240,7 +240,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 
   .comContentBox .title{font-size: 20px;}
   
-  .comContentBox{padding: 55px 30px 40px; border-radius: 30px;}
+  .comContentBox{padding: 55px 30px 40px; border-radius: 20px;}
   .signinBox .box .loginBtn,
   .signinBox .box .inputTextBox input,
   .signinBox .box .snsLoginLink a{height: 65px;}
@@ -537,7 +537,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 @media (max-width: 767px){
 
   .viewBox aside .attendanceBox,
-  .viewBox aside .progressBox{border-radius: 30px;}
+  .viewBox aside .progressBox{border-radius: 20px;}
 
   .viewBox .sportBox .sportInfoBox01 .sportTitle h4{font-size: 24px;}
   .viewBox .sportBox .sportInfoBox02 .recruitBox .box .recruitText01 strong{font-size: 22px;}
@@ -561,12 +561,18 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 }
 
 /* 프로그램 상세 */
-.applicationBtnBox .btn{width: 100%; display: flex; justify-content: center; align-items: center; height: 67px; border-radius: 40px; font-weight: 700; color: #fff;} 
+.applicationBtnBox .btn{width: 100%; display: flex; justify-content: center; align-items: center; height: 67px; border-radius: 40px; font-weight: 700; color: #fff; border: 1px solid #fff; box-shadow: inset 0 0 100px rgba(0, 0, 0,.2);}  
 .applicationBtnBox .btn.application{background: linear-gradient(to bottom, #787775, #4D8FFF);}
+.applicationBtnBox .btn.notPossible{background: linear-gradient(to bottom, #787775, #F6503B); }
+.applicationBtnBox .applicationInfoBox{position: relative; margin-bottom: 8px; padding: 24px; background-color: #fff;  border: 1px solid transparent; border-radius: 40px; background: linear-gradient(#ffffff, #ffffff) padding-box,linear-gradient(90deg, #9EA4AA, #F6503B) border-box;}
+.applicationBtnBox .applicationInfoBox p{position: relative; padding-top: 30px; font-weight: 500; color: #454C53; text-align: center; line-height: 1.6;}
+.applicationBtnBox .applicationInfoBox p::before{content: ''; position: absolute; top:0; left:50%; transform: translateX(-50%); width: 20px; height: 20px; background: url(../images/sub/icon03.svg)no-repeat center;}
+.applicationBtnBox .applicationInfoBox p strong{background: linear-gradient(to right, #9EA4AA,#F6503B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 
 @media (max-width: 767px){
 
   .applicationBtnBox .btn{height: 55px; border-radius: 20px;}
+  .applicationBtnBox .applicationInfoBox{border-radius: 20px;}
 
 }
 
