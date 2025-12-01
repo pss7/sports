@@ -104,8 +104,9 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .subVisualBox .visualBox .title em:nth-child(9){animation-delay: .7s;}
 .subVisualBox .visualBox .title em:nth-child(10){animation-delay: .75s;}
 .subVisualBox .visualBox .title em:nth-child(11){animation-delay: .8s;}
-.subVisualBox .subMenuBox{display: flex; justify-content: center;}
-.subVisualBox .subMenuBox .title01{margin: 0 auto; padding: 7px 16px; font-size: 18px; font-weight: 500; color: #454C53; border-radius: 50px; background-color:#fff;}
+.subVisualBox .subMenuList{display: flex; justify-content: center; gap: 0 8px;}
+.subVisualBox .subMenuList li a{padding: 10px 16px; font-size: 18px; font-weight: 500; color: #454C53; border-radius: 50px; background-color:#fff;}
+.subVisualBox .subMenuList li a.active{background-color: #4D8FFF; font-weight: 700; color: #fff;}
 .subDepthBox{padding-bottom: 18px; border-bottom: 1px solid #E8EBED;}
 .subDepthBox .container{position: relative;}
 .subDepthBox .breadcrumbsList{margin-bottom: 24px; padding: 2px 8px; display: inline-flex; align-items: center; background-color: #F7F8F9; border-radius: 10px;}
@@ -133,7 +134,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .subVisualBox{padding-bottom: 48px;}
   .subVisualBox .visualBox{margin-bottom: 16px;}
   .subVisualBox .visualBox .title{font-size: 16px; letter-spacing: 10px;}
-  .subVisualBox .subMenuBox .title01{font-size: 16px;}
+  .subVisualBox .subMenuList li a{font-size: 16px;}
 
   .subDepthBox{padding-bottom: 8px;}
   .subDepthBox .breadcrumbsList{margin-bottom: 20px;}
