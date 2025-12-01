@@ -14,7 +14,7 @@
 /* 공통 - 제목 */
 .titleBox .title{color: #454C53; font-size: 32px; font-weight: 500;}
 .titleBox{display: flex; align-items: flex-end; gap: 0 27px;}
-.titleBox .btnBox{position: relative; top: -8px; display: flex; gap: 0 4px;}
+.titleBox .btnBox{flex-shrink: 0; position: relative; top: -8px; display: flex; gap: 0 4px;}
 .titleBox .btnBox .comBtn{height: 36px; border-radius: 8px; font-size: 14px;}
 
 @media (max-width: 1199px){
@@ -458,10 +458,24 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 }
 
 .viewBox .titleBox{margin-bottom: 24px;}
-.viewBox .topInfoBox{margin-bottom: 64px; display: flex; align-items: center; padding: 9px 8px; background-color: #EDF4FF; border-radius: 16px;}
-.viewBox .topInfoBox .text{flex-shrink: 0; margin-right: 8px; padding: 3px 8px; border: 1px solid #4D8FFF; background-color: #fff; font-size: 14px; font-weight: 500; color: #4D8FFF; border-radius: 8px;}
+
+
+.viewBox .topInfoBox{margin-bottom: 64px; display: flex; align-items: center; padding: 9px 8px; border-radius: 16px;}
+.viewBox .topInfoBox .text{flex-shrink: 0; margin-right: 8px; padding: 3px 8px;  background-color: #fff; font-size: 14px; font-weight: 500; border-radius: 8px;}
 .viewBox .topInfoBox .date01{margin-right: 8px; font-size: 14px; font-weight: 500; color: #4D8FFF;}
 .viewBox .topInfoBox .date02{font-weight: 500; color: #454C53;}
+.viewBox .topInfoBox.recruiting{background-color: #EDF4FF;}
+.viewBox .topInfoBox.recruiting .text{color: #4D8FFF; border: 1px solid #4D8FFF;}
+.viewBox .topInfoBox.recruiting .date01{color: #4D8FFF;}
+.viewBox .topInfoBox.waitingRecruitment{background-color: #FFF2E8;}
+.viewBox .topInfoBox.waitingRecruitment .text{color: #FC7C1D; border: 1px solid #FC7C1D;}
+.viewBox .topInfoBox.waitingRecruitment .date01{color: #FC7C1D;}
+.viewBox .topInfoBox.deadline{background-color: #F7F8F9;}
+.viewBox .topInfoBox.deadline .text{color: #454C53; border: 1px solid #454C53;}
+.viewBox .topInfoBox.deadline .date01{color: #454C53;}
+.viewBox .topInfoBox.expected{background-color: #F7F8F9;}
+.viewBox .topInfoBox.expected .text{color: #454C53; border: 1px solid #454C53;}
+.viewBox .topInfoBox.expected .date01{color: #454C53;}
 .viewBox .sportBox{margin-bottom: 64px; display: flex; gap: 0 64px;}
 .viewBox .sportBox .sportInfoBox01{width: 100%;}
 .viewBox .sportBox .sportInfoBox01 .topText{margin-bottom: 8px; font-weight: 500; color: #454C53;}
@@ -563,16 +577,18 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 /* 프로그램 상세 */
 .applicationBtnBox .btn{width: 100%; display: flex; justify-content: center; align-items: center; height: 67px; border-radius: 40px; font-weight: 700; color: #fff; border: 1px solid #fff; box-shadow: inset 0 0 100px rgba(0, 0, 0,.2);}  
 .applicationBtnBox .btn.application{background: linear-gradient(to bottom, #787775, #4D8FFF);}
-.applicationBtnBox .btn.notPossible{background: linear-gradient(to bottom, #787775, #F6503B); }
-.applicationBtnBox .applicationInfoBox{position: relative; margin-bottom: 8px; padding: 24px; background-color: #fff;  border: 1px solid transparent; border-radius: 40px; background: linear-gradient(#ffffff, #ffffff) padding-box,linear-gradient(90deg, #9EA4AA, #F6503B) border-box;}
-.applicationBtnBox .applicationInfoBox p{position: relative; padding-top: 30px; font-weight: 500; color: #454C53; text-align: center; line-height: 1.6;}
-.applicationBtnBox .applicationInfoBox p::before{content: ''; position: absolute; top:0; left:50%; transform: translateX(-50%); width: 20px; height: 20px; background: url(../images/sub/icon03.svg)no-repeat center;}
-.applicationBtnBox .applicationInfoBox p strong{background: linear-gradient(to right, #9EA4AA,#F6503B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.applicationBtnBox .btn.notPossible{background: linear-gradient(to bottom, #787775, #F6503B);}
+
+.applicationInfoBox{position: relative; margin-bottom: 8px; padding: 24px; background-color: #fff;  border: 1px solid transparent; border-radius: 40px; background: linear-gradient(#ffffff, #ffffff) padding-box,linear-gradient(90deg, #9EA4AA, #F6503B) border-box;}
+.applicationInfoBox p{position: relative; padding-top: 30px; font-weight: 500; color: #454C53; text-align: center; line-height: 1.6;}
+.applicationInfoBox p::before{content: ''; position: absolute; top:0; left:50%; transform: translateX(-50%); width: 20px; height: 20px; background: url(../images/sub/icon03.svg)no-repeat center;}
+.applicationInfoBox p strong{background: linear-gradient(to right, #9EA4AA,#F6503B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 
 @media (max-width: 767px){
 
   .applicationBtnBox .btn{height: 55px; border-radius: 20px;}
-  .applicationBtnBox .applicationInfoBox{border-radius: 20px;}
+
+  .applicationInfoBox{border-radius: 20px;}
 
 }
 
