@@ -13,6 +13,9 @@
 
 /* 공통 - 제목 */
 .titleBox .title{color: #454C53; font-size: 32px; font-weight: 500;}
+.titleBox{display: flex; align-items: flex-end; gap: 0 27px;}
+.titleBox .btnBox{position: relative; top: -8px; display: flex; gap: 0 4px;}
+.titleBox .btnBox .comBtn{height: 36px; border-radius: 8px; font-size: 14px;}
 
 @media (max-width: 1199px){
 
@@ -22,6 +25,8 @@
 
 @media (max-width: 767px){
 
+  .titleBox{display: block;}
+  .titleBox .btnBox{margin-top: 20px;}
   .titleBox .title{font-size: 22px;}
 
 }
