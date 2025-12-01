@@ -575,9 +575,16 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 }
 
 /* 프로그램 상세 */
-.applicationBtnBox .btn{width: 100%; display: flex; justify-content: center; align-items: center; height: 67px; border-radius: 40px; font-weight: 700; color: #fff; border: 1px solid #fff; box-shadow: inset 0 0 100px rgba(0, 0, 0,.2);}  
+.applicationBtnBox .btn{width: 100%; display: flex; justify-content: center; align-items: center; height: 67px; border-radius: 40px; font-weight: 700; color: #fff; border: 1px solid #fff; box-shadow: inset 0 0 100px rgba(0, 0, 0,.3);}  
 .applicationBtnBox .btn.application{background: linear-gradient(to bottom, #787775, #4D8FFF);}
 .applicationBtnBox .btn.notPossible{background: linear-gradient(to bottom, #787775, #F6503B);}
+.applicationBtnBox .btn.applicationDeadline{background: linear-gradient(to bottom, #787775, #C9CDD2);}
+
+
+
+
+
+
 
 .applicationInfoBox{position: relative; margin-bottom: 8px; padding: 24px; background-color: #fff;  border: 1px solid transparent; border-radius: 40px; background: linear-gradient(#ffffff, #ffffff) padding-box,linear-gradient(90deg, #9EA4AA, #F6503B) border-box;}
 .applicationInfoBox p{position: relative; padding-top: 30px; font-weight: 500; color: #454C53; text-align: center; line-height: 1.6;}
