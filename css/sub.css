@@ -552,3 +552,19 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .viewBox .programBox .programList > li{width: 100%;}
 
 }
+
+/* 프로그램 상세 */
+.applicationBtnBox .btn{width: 100%; display: flex; justify-content: center; align-items: center; height: 67px; border-radius: 40px; font-weight: 700; color: #fff;} 
+.applicationBtnBox .btn.application{background: linear-gradient(to bottom, #787775, #4D8FFF);}
+
+@media (max-width: 767px){
+
+  .applicationBtnBox .btn{height: 55px; border-radius: 20px;}
+
+}
+
+@media (max-width: 480px){
+
+  .applicationBtnBox .btn{border-radius: 10px;}
+
+}
