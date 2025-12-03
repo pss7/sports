@@ -1447,295 +1447,1017 @@
       <!-- //subDepthBox -->
 
       <div class="contentBox gradientBG"> <!-- gradientBG 클래스 > 원 가운데 연한 파랑색 배경-->
-        <div class="applicationBox">
+        <div class="programBox">
 
           <div class="container">
 
-            <div class="viewBox">
 
-              <div class="titleBox">
-                <p class="title">
-                  <strong class="gradientText">홍길동</strong>님은 <br>
-                  해당 프로그램의 <strong class="gradientText">대기 순위 2번째</strong>입니다.
+
+            <div class="programListWrap">
+
+              <aside>
+                <h4>
+                  2025년 하반기 <br>
+                  프로그램
+                </h4>
+                <div class="sportBtnBox">
+                  <button class="btn totalBtn active" data-text="전체">전체</button>
+                  <button class="btn sportBtn ballGame" data-text="구기">
+                    구기
+                    <span class="number">
+                      8
+                    </span>
+                  </button>
+                  <button class="btn sportBtn racket" data-text="라켓">
+                    라켓
+                    <span class="number">
+                      5
+                    </span>
+                  </button>
+                  <button class="btn sportBtn martialArts" data-text="무술">
+                    무술
+                    <span class="number">
+                      4
+                    </span>
+                  </button>
+                  <button class="btn sportBtn dance" data-text="댄스">
+                    댄스
+                    <span class="number">
+                      7
+                    </span>
+                  </button>
+                  <button class="btn sportBtn fitness" data-text="피티니스">
+                    피티니스
+                    <span class="number">
+                      9
+                    </span>
+                  </button>
+                  <button class="btn sportBtn ice" data-text="레저·빙상">
+                    레저·빙상
+                    <span class="number">
+                      6
+                    </span>
+                  </button>
+                </div>
+                <div class="stateBtnBox">
+                  <button class="btn active">전체</button>
+                  <button class="btn">신청가능</button>
+                  <button class="btn">접수예정</button>
+                  <button class="btn">마감</button>
+                </div>
+              </aside>
+
+              <!-- //
+               .programList li 
+              a태그에 상태 별 클래스 적용
+               .recruiting > 모집중
+               .waitingRecruitment > 대기모집
+               .deadline > 마감
+               .notPossible > 신청불가
+               .expected > 접수예정
+              -->
+
+              <div class="programListBox">
+                <p class="programInfoText">
+                  최근 2년동안 <strong>동일 종목 신청이 제한</strong>됩니다.
                 </p>
-                <div class="btnBox">
-                  <button class="comBtn garyBtnColor">신청취소</button>
-                  <a href="#" class="comBtn">이전으로</a>
-                </div>
-              </div>
 
-              <div class="contentLayoutBox">
-                <div class="comContentBox">
+                <ul class="programList">
+                  <li>
+                    <a href="#" class="recruiting">
 
-                  <div class="topInfoBox recruiting">
-                    <span class="text">모집중</span>
-                    <span class="date01">D-14</span>
-                    <span class="date02">~ 2025-08-31 까지</span>
-                  </div>
-
-                  <!-- 신청유형 
-                  <div class="topInfoBox waitingRecruitment">
-                    <span class="text">대기모집</span>
-                    <span class="date01">D-14</span>
-                    <span class="date02">~ 2025-08-31 까지</span>
-                  </div>
-
-                  <div class="topInfoBox deadline">
-                    <span class="text">마감</span>
-                    <span class="date02">신청종료</span>
-                  </div>
-
-                  <div class="topInfoBox expected">
-                    <span class="text">접수예정</span>
-                    <span class="date01">D-3</span>
-                    <span class="date02">2025-08-13 부터</span>
-                  </div>
-                  -->
-
-                  <div class="sportBox">
-                    <div class="sportInfoBox01">
-                      <span class="topText">2025하반기</span>
-                      <div class="sportTitle">
+                      <div class="titleBox">
                         <h4>
-                          복싱
+                          배드민턴
                         </h4>
-                        <em>
-                          1분반
-                        </em>
+                        <span>1분반</span>
                       </div>
-                      <div class="dateInfoBox">
-                        <span class="text">운영중</span>
-                        <span class="date">
-                          2025-08-13 ~ 2025-08-31
-                        </span>
-                      </div>
-                    </div>
 
-                    <div class="sportInfoBox02">
-                      <h4>
-                        모집현황
-                      </h4>
-                      <div class="recruitBox">
-                        <h4>정원</h4>
+                      <div class="topInfoBox">
+                        <span class="text">모집중</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
                         <div class="box">
-                          <span class="recruitText01">
-                            <strong>25</strong>
-                            /
-                            <span>25명</span>
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
                           </span>
-                          <span class="recruitText02">
-                            현재 대기 인원 <em>20</em>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="recruiting">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">모집중</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
                           </span>
                         </div>
                       </div>
-                      <p class="infoText">
-                        모집 종료 후에는 대기자는 <strong>자동 취소</strong>됩니다.
-                      </p>
-                    </div>
-                  </div>
 
-                  <div class="programBox">
-                    <h4>
-                      프로그램정보
-                    </h4>
-                    <ul class="programList">
-                      <li>
-                        <span>
-                          정원(대기)
-                        </span>
-                        <em>
-                          <strong>25</strong>(20)명
-                        </em>
-                      </li>
-                      <li>
-                        <span>
-                          접수형태
-                        </span>
-                        <em>
-                          선착순 접수
-                        </em>
-                      </li>
-                      <li>
-                        <span>
-                          참가비
-                        </span>
-                        <em>
-                          무료
-                        </em>
-                      </li>
-                      <li>
-                        <span>
-                          회차
-                        </span>
-                        <em>
-                          36회
-                        </em>
-                      </li>
-                      <li>
-                        <span>
-                          운영요일
-                        </span>
-                        <ul class="dayList">
-                          <li>
-                            월
-                          </li>
-                          <li>
-                            화
-                          </li>
-                          <li>
-                            수
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <span>
-                          운영시간
-                        </span>
-                        <em>
-                          10:00~12:00
-                        </em>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="operatingLocationBox">
-                    <h4>
-                      운영장소
-                    </h4>
-                    <div class="map">
-                      <img src="../images/sub/map.png" alt="">
-                    </div>
-                  </div>
-
-                </div>
-                <aside>
-                  <div class="attendanceBox">
-                    <h4>
-                      출석율
-                    </h4>
-                    <div class="percentBox">
-                      <div class="box">
-                        <span>5/36</span>
-                        <strong>16%</strong>
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
                       </div>
-                      <span class="percent">
-                        <em style="width: 16%;"></em>
-                      </span>
-                    </div>
 
-                    <div class="attendanceInfoBox">
-                      <div class="textBox">
-                        <span>
-                          결석
-                        </span>
-                        <em>
-                          1
-                        </em>
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
                       </div>
-                      <div class="textBox">
-                        <span>
-                          휴강
-                        </span>
-                        <em>
-                          1
-                        </em>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="progressBox">
-                    <div class="progressTopBox">
-                      <span>
-                        36회 중 <strong>6회</strong> 진행
-                      </span>
-                    </div>
-                    <ul class="progressList customScroll">
-                      <li>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="waitingRecruitment">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">대기모집</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
                         <div class="box">
-                          <span class="text">1회차</span>
-                          <em class="date">
-                            08-31(월)
-                          </em>
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
                         </div>
-                        <span class="state attendance">
-                          츨석
-                        </span>
-                      </li>
-                      <li>
                         <div class="box">
-                          <span class="text">2회차</span>
-                          <em class="date">
-                            08-31(월)
-                          </em>
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
                         </div>
-                        <span class="state attendance">
-                          츨석
-                        </span>
-                      <li>
+                      </div>
+
+                      <div class="personnelBox">
                         <div class="box">
-                          <span class="text">3회차</span>
-                          <em class="date">
-                            08-31(월)
-                          </em>
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              15
+                            </em>
+                          </span>
                         </div>
-                        <span class="state attendance">
-                          츨석
-                        </span>
-                      </li>
-                      <li>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="notPossible">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">신청불가</span>
+                        <span class="date02">동일 종목 수강 제한</span>
+                      </div>
+
+                      <div class="operateInfoBox">
                         <div class="box">
-                          <span class="text">4회차</span>
-                          <em class="date">
-                            08-31(월)
-                          </em>
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
                         </div>
-                        <span class="state canceled">
-                          휴강
-                        </span>
-                      </li>
-                      <li>
                         <div class="box">
-                          <span class="text">5회차</span>
-                          <em class="date">
-                            08-31(월)
-                          </em>
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
                         </div>
-                        <span class="state absence">
-                          결석
-                        </span>
-                      </li>
-                      <li>
+                      </div>
+
+                      <div class="personnelBox">
                         <div class="box">
-                          <span class="text">6회차</span>
-                          <em class="date">
-                            08-31(월)
-                          </em>
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
                         </div>
-                        <span class="state expected">
-                          예정
-                        </span>
-                      </li>
-                      <li>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="expected">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">접수예정</span>
+                        <span class="date01">D-3</span>
+                        <span class="date02">~ 2025-08-13 부터</span>
+                      </div>
+
+                      <div class="operateInfoBox">
                         <div class="box">
-                          <span class="text">6회차</span>
-                          <em class="date">
-                            08-31(월)
-                          </em>
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
                         </div>
-                        <span class="state expected">
-                          예정
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </aside>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>0</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              0
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 0;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="expected">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">접수예정</span>
+                        <span class="date01">D-3</span>
+                        <span class="date02">~ 2025-08-13 부터</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>0</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              0
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 0;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="deadline">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">마감</span>
+                        <span class="date02">신청 종료</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              25
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 100%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="waitingRecruitment">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">대기모집</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 100%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="recruiting">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">모집중</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="recruiting">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">모집중</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="recruiting">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">모집중</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="recruiting">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">모집중</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="recruiting">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">모집중</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="recruiting">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">모집중</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="recruiting">
+
+                      <div class="titleBox">
+                        <h4>
+                          배드민턴
+                        </h4>
+                        <span>1분반</span>
+                      </div>
+
+                      <div class="topInfoBox">
+                        <span class="text">모집중</span>
+                        <span class="date01">D-14</span>
+                        <span class="date02">~ 2025-08-31 까지</span>
+                      </div>
+
+                      <div class="operateInfoBox">
+                        <div class="box">
+                          <h5>운영요일</h5>
+                          <ul class="dayList">
+                            <li>
+                              월
+                            </li>
+                            <li>
+                              화
+                            </li>
+                            <li>
+                              수
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <h5>운영시간</h5>
+                          <span class="time">
+                            10:00 ~ 12:00
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="personnelBox">
+                        <div class="box">
+                          <span class="text01">
+                            정원 25명 / <strong>25</strong>
+                          </span>
+                          <span class="text02">
+                            대기인원
+                            <em>
+                              20
+                            </em>
+                          </span>
+                        </div>
+                        <div class="percentBox">
+                          <span style="width: 20%;"></span>
+                        </div>
+                      </div>
+
+                      <div class="iconBox">
+                        <img src="../images/sub/racket_icon.svg" alt="라켓아이콘">
+                      </div>
+
+                    </a>
+                  </li>
+                </ul>
+
               </div>
             </div>
-
           </div>
-
         </div>
-        <!-- //applicationBox -->
+        <!-- //programBox -->
 
       </div>
       <!-- //contentBox -->

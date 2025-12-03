@@ -436,8 +436,8 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .viewBox .programBox .programList li span{display: block; font-size: 14px; font-weight: 700; color: #9EA4AA;}
 .viewBox .programBox .programList li em{font-weight: 500; color: #454C53;}
 .viewBox .programBox .programList li em strong{font-weight: 500; color: #4D8FFF;}
-.viewBox .programBox .programList li .dateList{display: flex; flex-wrap: wrap; gap: 4px;}
-.viewBox .programBox .programList li .dateList li{width: 28px; height: 28px; line-height: 28px; font-weight: 700; font-size: 14px; color: #454C53; background-color: #E8EBED; border-radius: 8px; text-align: center;}
+.viewBox .programBox .programList li .dayList{display: flex; flex-wrap: wrap; gap: 4px;}
+.viewBox .programBox .programList li .dayList li{width: 28px; height: 28px; line-height: 28px; font-weight: 700; font-size: 14px; color: #454C53; background-color: #E8EBED; border-radius: 8px; text-align: center;}
 .viewBox .operatingLocationBox h4{font-size: 18px; font-weight: 700; color: #454C53;}
 .viewBox .operatingLocationBox .map img{display: block; width: 100%;}
 .viewBox aside .attendanceBox{margin-bottom: 8px; padding: 24px; background-color: #fff; border-radius: 40px; border: 1px solid #E8EBED;}
@@ -505,6 +505,158 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 
 }
 
+/* 프로그램 목록 */
+.programListWrap{display: flex; gap: 0 80px;}
+.programListWrap .programInfoText{display: flex; flex-wrap: wrap; gap:8px; margin-bottom: 98px; font-size: 14px; color: #454C53;}
+.programListWrap .programInfoText strong{background: linear-gradient(to right,
+    #F6503B, #9EA4AA); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.programListWrap .programInfoText::before{content: ''; width: 20px; height: 20px; background: url(../images/sub/icon03.svg)no-repeat center;}
+.programListWrap aside{flex-shrink: 0; width: 286px;}
+.programListWrap aside h4{margin-bottom: 65px; font-size: 32px; color: #1B1D1F;}
+.programListWrap aside .sportBtnBox{margin-bottom: 24px;}
+.programListWrap aside .sportBtnBox .btn{margin-bottom: 8px; height: 48px; border-radius: 16px; border: 1px solid #E8EBED; font-size: 14px; color: #454C53; font-weight: 500; background-color: #fff;}
+.programListWrap aside .sportBtnBox .btn.active { position: relative; font-weight: 700; border: 1px solid transparent;
+  background:linear-gradient(#ffffff, #ffffff) padding-box,linear-gradient(to right,#203c6b 0%,
+            #4d8fff 50%,#203c6b 100%); color: transparent; overflow: hidden;}
+.programListWrap aside .sportBtnBox .btn.active::before{content: attr(data-text); position: absolute;
+    inset: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(
+        to right,#203c6b 0%,#4d8fff 50%,#203c6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none;}
+.programListWrap aside .sportBtnBox .btn:last-child{margin-bottom: 0;}
+.programListWrap aside .sportBtnBox .btn.totalBtn{width: 57px;}
+.programListWrap aside .sportBtnBox .btn.sportBtn{display: flex; align-items: center; gap: 0 8px; padding: 0 16px 0 8px;}
+.programListWrap aside .sportBtnBox .btn.sportBtn::before{content: ''; width: 32px; height: 32px; background-size: contain!important;}
+.programListWrap aside .sportBtnBox .btn.ballGame::before{background: url(../images/sub/ballgame_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.racket::before{ background: url(../images/sub/racket_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.martialArts::before{ background: url(../images/sub/martialarts_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.dance::before{ background: url(../images/sub/dance_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.fitness::before{ background: url(../images/sub/fitness_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.ice::before{ background: url(../images/sub/ice_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.sportBtn .number{padding: 4px 8px; border-radius: 8px; background-color: #E8EBED; font-size: 14px; color: #454C53; font-weight: 500;}
+.programListWrap aside .stateBtnBox{flex-wrap: wrap; width: 150px; padding: 24px; background-color: #fff; border-radius: 20px; border: 1px solid #E8EBED;}
+.programListWrap aside .stateBtnBox .btn{margin-bottom: 16px; display: flex; align-items: center; gap: 0 8px; color: #454C53; font-size: 14px; font-weight: 500;}
+.programListWrap aside .stateBtnBox .btn:last-child{margin-bottom: 0;}
+.programListWrap aside .stateBtnBox .btn::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/radio_icon.svg)no-repeat center;}
+.programListWrap aside .stateBtnBox .btn.active{color: #4D8FFF; font-weight: 700;}
+.programListWrap aside .stateBtnBox .btn.active::before{content: ''; background: url(../images/sub/radio_on_icon.svg)no-repeat center;}
+.programListWrap aside .stateBtnBox .btn:hover{color: #4D8FFF; font-weight: 700;}
+.programListWrap aside .stateBtnBox .btn:hover::before{content: ''; background: url(../images/sub/radio_on_icon.svg)no-repeat center;}
+.programListWrap .programListBox{padding-top: 30px;}
+.programListWrap .programList{display: flex; flex-wrap: wrap; gap: 80px 2.3%;}
+.programListWrap .programList li{width: 31.8%;}
+.programListWrap .programList li a{position: relative; padding: 40px 32px 32px; display: block; border-radius: 40px; background-color: #fff; border: 1px solid #E8EBED;}
+.programListWrap .programList li a .titleBox{margin-bottom: 17px; display: flex; align-items: center; gap: 0 8px;}
+.programListWrap .programList li a .titleBox h4{font-size: 24px; color: #1B1D1F;}
+.programListWrap .programList li a .titleBox span{padding: 4px 8px; font-weight: 700; font-size: 12px; border-radius: 4px; }
+.programListWrap .programList li a .topInfoBox{margin-bottom: 30px; display: flex; align-items: center; padding: 10px 20px 10px 8px; border-radius: 16px;}
+.programListWrap .programList li a .topInfoBox .text{flex-shrink: 0; margin-right: 8px; padding: 3px 8px;  background-color: #fff; font-size: 12px; font-weight: 500; border-radius: 8px;}
+.programListWrap .programList li a .topInfoBox .date01{margin-right: 8px; font-size: 14px; font-weight: 500; color: #4D8FFF;}
+.programListWrap .programList li a .topInfoBox .date02{font-weight: 500; font-size: 14px; color: #454C53;}
+.programListWrap .programList li a::after{content: ''; position: absolute; top:24px; right:24px; width: 12px; height: 12px;}
+
+/* 모집중 */
+.programListWrap .programList li a.recruiting .topInfoBox{background-color: #EDF4FF;}
+.programListWrap .programList li a.recruiting .topInfoBox .text{color: #4D8FFF; border: 1px solid #4D8FFF;}
+.programListWrap .programList li a.recruiting .topInfoBox .date01{color: #4D8FFF;}
+.programListWrap .programList li a.recruiting .personnelBox .percentBox span{background: linear-gradient(to right, #4D8FFF, #72787F);}
+.programListWrap .programList li a.recruiting .titleBox span{ background-color: #EDF4FF; color: #203C6B; }
+.programListWrap .programList li a.recruiting::after{background: url(../images/sub/icon01.svg)no-repeat center;}
+
+/* 대기모집 */
+.programListWrap .programList li a.waitingRecruitment .topInfoBox{background-color: #FFF2E8;}
+.programListWrap .programList li a.waitingRecruitment .topInfoBox .text{color: #FC7C1D; border: 1px solid #FC7C1D;}
+.programListWrap .programList li a.waitingRecruitment .topInfoBox .date01{color: #FC7C1D;}
+.programListWrap .programList li a.waitingRecruitment .personnelBox .percentBox span{background: linear-gradient(to right, #FB7C1E, #72787F);}
+.programListWrap .programList li a.waitingRecruitment .titleBox span{background-color: #FFF2E8; color: #6A340C;}
+.programListWrap .programList li a.waitingRecruitment::after{background: url(../images/sub/icon02.svg)no-repeat center;}
+
+/* 마감 */
+.programListWrap .programList li a.deadline{background-color: #E8EBED; border: 0; pointer-events: none;}
+.programListWrap .programList li a.deadline .topInfoBox{background-color: #F7F8F9;}
+.programListWrap .programList li a.deadline .topInfoBox .text{color: #454C53; border: 1px solid #454C53;}
+.programListWrap .programList li a.deadline .topInfoBox .date01{color: #454C53;}
+.programListWrap .programList li a.deadline .personnelBox .percentBox span{background: linear-gradient(to right, #4D8FFF, #72787F);}
+.programListWrap .programList li a.deadline .titleBox span{ background-color: #EDF4FF; color: #203C6B; }
+.programListWrap .programList li a.deadline::after{background: url(../images/sub/icon04.svg)no-repeat center;}
+
+/* 신청불가 */
+.programListWrap .programList li a.notPossible .topInfoBox{background-color: #F7F8F9;}
+.programListWrap .programList li a.notPossible .topInfoBox .text{color: #F6503B; border: 1px solid #F6503B;}
+.programListWrap .programList li a.notPossible .topInfoBox .date01{color: #454C53;}
+.programListWrap .programList li a.notPossible .titleBox span{ background-color: #EDF4FF; color: #203C6B; }
+.programListWrap .programList li a.notPossible .personnelBox .percentBox span{background: linear-gradient(to right, #4D8FFF, #72787F);}
+.programListWrap .programList li a.notPossible::after{background: url(../images/sub/icon04.svg)no-repeat center;}
+
+/* 접수예정 */
+.programListWrap .programList li a.expected .titleBox h4{color: #9EA4AA;}
+.programListWrap .programList li a.expected .topInfoBox{background-color: #F3F3F3;}
+.programListWrap .programList li a.expected .titleBox span{ background-color: #F3F3F3; color: #9EA4AA; }
+.programListWrap .programList li a.expected .topInfoBox .text{color: #454C53; border: 1px solid #454C53;}
+.programListWrap .programList li a.expected .topInfoBox .date01{color: #454C53;}
+.programListWrap .programList li a.expected .personnelBox .percentBox span{background: linear-gradient(to right, #4D8FFF, #72787F);}
+.programListWrap .programList li a.expected::after{background: url(../images/sub/icon04.svg)no-repeat center;}
+.programListWrap .programList li a .iconBox{position: absolute; top:-24px; left:32px; display: flex; align-items: center; justify-content: center; background-color: #fff; width: 48px; height: 48px; border: 1px solid #E8EBED; border-radius: 16px;}
+.programListWrap .programList li a .iconBox img{display: block;}
+.programListWrap .operateInfoBox{margin-bottom: 40px; display: flex; justify-content: space-between;}
+.programListWrap .operateInfoBox h5{margin-bottom: 6px; font-size: 14px; color: #9EA4AA;}
+.programListWrap .operateInfoBox .time{font-weight: 500; color: #454C53;}
+.programListWrap .operateInfoBox .box .dayList{display: flex; flex-wrap: wrap; gap: 4px;}
+.programListWrap .operateInfoBox .box .dayList li{width: 28px; height: 28px; line-height: 28px; font-weight: 700; font-size: 14px; color: #454C53; background-color: #E8EBED; border-radius: 8px; text-align: center;}
+.programListWrap .programList li a .personnelBox{padding: 10px 20px 16px; border-radius: 16px; background: linear-gradient(to right, #1D1F21, #444B51);}
+.programListWrap .programList li a .personnelBox .box{margin-bottom: 5px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 5px;}
+.programListWrap .programList li a .personnelBox .text01{display: flex; gap: 0 8px; align-items: center; font-weight: 500; color: #9EA4AA; font-size: 14px;}
+.programListWrap .programList li a .personnelBox .text01 strong{color: #fff; font-size: 20px;}
+.programListWrap .programList li a .personnelBox .text02{display: flex; align-items: center; gap: 0 4px; font-size: 14px; font-weight: 500; color: #fff;}
+.programListWrap .programList li a .personnelBox .text02 em{padding: 0 4px; min-width: 17px; height: 17px; line-height: 17px; font-size: 14px; font-weight: 500; color: #454C53; border-radius: 4px; background-color: #E8EBED; text-align: center;}
+.programListWrap .programList li a .personnelBox .percentBox{position: relative; height: 4px; border-radius: 8px; background-color: #E8EBED; overflow: hidden;}
+.programListWrap .programList li a .personnelBox .percentBox span{position: absolute; top:0; left:0; right:0; bottom: 0;}
+
+@media (max-width: 1480px){
+
+  .programListWrap aside{width: 200px;}
+
+}
+
+@media (max-width: 1199px){
+
+  .programListWrap{flex-direction: column; gap: 20px 0;}
+  .programListWrap aside{width: 100%;}
+  .programListWrap aside h4{margin-bottom: 30px; font-size: 28px; text-align: center;}
+  .programListWrap aside .sportBtnBox{display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 10px;}
+  .programListWrap aside .stateBtnBox{padding: 15px 20px; display: flex; justify-content: center; align-items: center; width: 100%; gap: 10px 20px;}
+  .programListWrap aside .sportBtnBox .btn,
+  .programListWrap aside .stateBtnBox .btn{margin: 0;}
+  .programListWrap .programList li a .titleBox h4{font-size: 22px;}
+  .programListWrap .programList{gap: 50px 2%;}
+  .programListWrap .programList li{width: 49%;}
+
+
+}
+
+@media (max-width: 767px){
+
+  .programListWrap aside .sportBtnBox .btn,
+  .programListWrap aside .stateBtnBox{border-radius: 10px;}
+  .programListWrap .programList li{width: 100%;}
+  .programListWrap aside h4{font-size: 26px;}
+  .programListWrap .programList li a .titleBox h4{font-size: 20px;}
+  .programListWrap .programList li a{border-radius: 20px;}
+  .programListWrap .programList li a .personnelBox .text01 strong{font-size: 18px;}
+
+}
+
+@media (max-width: 480px){
+
+  .programListWrap aside h4{font-size: 22px;}
+  .programListWrap .programList li a{border-radius: 10px;}    
+  .programListWrap aside .sportBtnBox .btn{height: 40px;}
+  .programListWrap aside .sportBtnBox .btn.sportBtn{padding: 0 10px 0 8px;}
+  .programListWrap aside .sportBtnBox .btn.sportBtn::before{width: 24px; height: 24px;}
+  .programListWrap .programList li a .iconBox{top: -20px; width: 40px; height: 40px; border-radius: 10px;}
+  .programListWrap .programList li a .iconBox img{width: 26px;}
+  .programListWrap .programInfoText{margin-bottom: 70px;}
+
+}
+
 /* 프로그램 상세 */
 .applicationBtnBox .btn{width: 100%; display: flex; justify-content: center; align-items: center; height: 67px; border-radius: 40px; font-weight: 700; color: #fff; border: 1px solid #fff; box-shadow: inset 0 0 100px rgba(0, 0, 0,.3);}  
 .applicationBtnBox .btn.application{background: linear-gradient(to bottom, #787775, #4D8FFF);}
@@ -546,15 +698,13 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   z-index: 9; opacity: 1; transition: all .3s; pointer-events: none;}
 .applicationListWrap .applicationScrollBox.scrollEnd::after {opacity: 0;}
 .applicationListWrap .applicationListBox .applicationList li {border-bottom: 1px solid #E8EBED;}
-.applicationListWrap .applicationListBox .applicationList li a{position: relative; display: grid; grid-template-columns: 144px auto 125px 60px; align-items: center; min-height: 88px; z-index: 1; z-index: 1;}
+.applicationListWrap .applicationListBox .applicationList li a{padding-left: 28px; position: relative; display: grid; grid-template-columns: 115px auto 125px 60px; align-items: center; min-height: 88px; z-index: 1; z-index: 1;}
 .applicationListWrap .applicationListBox .applicationList li a::after{content: ''; width: 0; position: absolute; top:0; right:0; bottom: 0; background: linear-gradient(to right, #FFFFFF 65%, #EDF4FF); z-index: -1; transition: all .3s;} 
 .applicationListWrap .applicationListBox .applicationList li a:hover::after{width: 100%;}
-.applicationListWrap .applicationListBox .applicationList .dateBox{padding-left: 28px; position: relative; display: flex; flex-direction: column;
-  gap: 6px 0;}
-.applicationListWrap .applicationListBox .applicationList .dateBox::before {content: ''; position: absolute; top: 50%; left: 0;
-  transform: translateY(-50%); width: 12px; height: 12px; border-radius: 50%;}
-.applicationListWrap .applicationListBox .applicationList .dateBox.secondHalf::before {background: url(../images/sub/icon01.svg) no-repeat center;}
-.applicationListWrap .applicationListBox .applicationList .dateBox.firstHalf::before {background: url(../images/sub/icon02.svg) no-repeat center;}
+.applicationListWrap .applicationListBox .applicationList li a::before{content: ''; content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 12px; height: 12px; border-radius: 50%;}
+.applicationListWrap .applicationListBox .applicationList .dateBox{display: flex; flex-direction: column; gap: 6px 0;}
+.applicationListWrap .applicationListBox .applicationList li a.waitingRecruitment::before {background: url(../images/sub/icon01.svg) no-repeat center;}
+.applicationListWrap .applicationListBox .applicationList li a.recruiting::before {background: url(../images/sub/icon02.svg) no-repeat center;}
 .applicationListWrap .applicationListBox .applicationList .dateBox .date {font-size: 14px; font-weight: 500; color: #454C53;}
 .applicationListWrap .applicationListBox .applicationList .dateBox em {font-size: 14px; color: #9EA4AA; font-weight: 500;}
 .applicationListWrap .applicationListBox .applicationList .sportBox {display: flex; align-items: center;}
@@ -589,14 +739,14 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .applicationListWrap h4{font-size: 20px;}
   .applicationListWrap .applicationStateList{position: static; margin-bottom: 20px;}
 
-  .applicationListWrap .applicationListBox .applicationList li a,
+  .applicationListWrap .applicationListBox .applicationList li a{grid-template-columns: 115px auto 80px 60px;}
   .applicationListWrap .applicationListBox .applicationListHead{grid-template-columns: 144px auto 80px 60px;}
 
 }
 
 @media (max-width: 576px){
 
-  .applicationListWrap .applicationListBox .applicationList li a,
+  .applicationListWrap .applicationListBox .applicationList li a{grid-template-columns: 100px auto 80px 60px;}
   .applicationListWrap .applicationListBox .applicationListHead{grid-template-columns: 130px auto 80px 60px;}
   .applicationListWrap .applicationScrollBox{max-height: none; overflow-x: auto; overflow-y: hidden;}
   .applicationListWrap .applicationListBox{width: 576px;}
@@ -611,5 +761,13 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 
   .applicationListWrap .applicationListBox .applicationList .sportBox .sport{font-size: 14px;}
   .applicationListWrap .applicationListBox .applicationList .sportBox img{margin-right: 12px; width: 30px;}
+  .programListWrap .programList li a .personnelBox,
+  .programListWrap .programList li a .topInfoBox{border-radius: 10px;}
+
+}
+
+@media (max-width: 414px){
+
+  .programListWrap .programList li a .topInfoBox{flex-direction: column; gap: 8px 0;}
 
 }
