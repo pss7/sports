@@ -37,6 +37,21 @@
 
 }
 
+/* 공통 - 페이지네이션 */
+.paginationBox{margin: 60px 0 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 4px;}
+.paginationBox .pageLink{display: flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: 5px; background-color: #F7F8F9; font-size: 14px; font-weight: 700; color: #454C53; border-radius: 16px;}
+.paginationBox .pageLink.active{color: #fff; background-color: #4D8FFF;}
+.paginationBox .pageLinkFirst,
+.paginationBox .pageLinkLast{background-color: #E8EBED; font-size: 12px;}
+.paginationBox .pageLinkPrev{width: 11px; height: 17px; background: url(../images/sub/arrow_icon02.svg)no-repeat center;}
+.paginationBox .pageLinkNext{width: 11px; height: 17px; background: url(../images/sub/arrow_icon03.svg)no-repeat center;}
+
+@media (max-width: 480px){
+
+  .paginationBox .pageLink{min-width: 30px; min-height: 30px; border-radius: 10px;}
+
+}
+
 /* 공통 - 폼 */
 .customSelectBox .selectBtn,
 input[type="text"]{ width: 100%; padding: 0 20px 0 16px; height: 48px; border: 1px solid #E8EBED; border-radius: 8px; font-weight: 500; font-size: 14px; background-color: #fff;}
@@ -773,60 +788,87 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 }
 
 /* 공지사항 */
-
 .noticeBox .tit{margin-bottom: 20px; font-size: 32px; color: #1B1D1F;}
+.noticeBox .topBox{position: relative;}
+.noticeBox .topBox .comBtn{position: absolute; width: 72px; height: 36px; bottom: 0; right:0; border-radius: 8px; font-size: 14px;}
+.noticeBox .noticeSearchBox{position: relative;  width: 368px;  margin-bottom: 40px; }
+.noticeBox .noticeSearchBox .searchBtn{width: 32px; height: 32px; position: absolute; top: 50%; transform: translateY(-50%); left:8px; background: url(../images/sub/search_icon.svg)no-repeat center; z-index: 9;}
+.noticeBox .noticeSearchBox .inputTextBox{height: 100%;}
+.noticeBox .noticeSearchBox .inputTextBox input{padding:0 10px 0 46px; position: relative; height: 48px; border: 2px solid #C8DCFF; border-radius: 16px; overflow: hidden; font-size: 16px; font-weight: 600; color: #9EA4AA;}
+.noticeBox .postInfoWrap{margin-bottom: 29px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 0;}
+.noticeBox .postInfoWrap .postInfoBox{display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
+.noticeBox .postInfoWrap .postInfoBox span{padding: 3px 9px; background-color: #E8EBED; border-radius: 8px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.noticeBox .postInfoWrap .postInfoBox span strong{color: #454C53;}
+.noticeBox .postInfoWrap .postInfoBox p{color: #454C53; font-weight: 500;}
+.noticeBox .postInfoWrap .postInfoList{display: flex; flex-wrap: wrap; gap: 8px 16px;}
+.noticeBox .postInfoWrap .postInfoList .btn{display: flex; align-items: center; gap: 0 4px; font-size: 14px; color: #454C53; font-weight: 500; line-height: 1;}
+.noticeBox .postInfoWrap .postInfoList .btn.active{font-weight: 700; color: #4D8FFF;}
+.noticeBox .postInfoWrap .postInfoList .btn.active .number{background-color: #4D8FFF; color: #fff;}
+.noticeBox .postInfoWrap .postInfoList .btn .number{padding: 3px 5px; font-size: 14px; font-weight: 500; color: #454C53; border-radius: 4px; background-color: #E8EBED;}
 
-.noticeSearchBox{position: relative;  width: 368px;  margin-bottom: 40px; }
-.noticeSearchBox .searchBtn{width: 32px; height: 32px; position: absolute; top: 50%; transform: translateY(-50%); left:8px; background: url(../images/sub/search_icon.svg)no-repeat center; z-index: 9;}
-.noticeSearchBox .inputTextBox{height: 100%;}
-.noticeSearchBox .inputTextBox input{padding:0 10px 0 46px; position: relative; height: 48px; border: 2px solid #C8DCFF; border-radius: 16px; overflow: hidden; font-size: 16px; font-weight: 600; color: #9EA4AA;}
-
-
-
-
-
-
-
-.postInfoWrap{margin-bottom: 29px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 0;}
-.postInfoWrap .postInfoBox{display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
-.postInfoWrap .postInfoBox span{padding: 3px 9px; background-color: #E8EBED; border-radius: 8px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
-.postInfoWrap .postInfoBox span strong{color: #454C53;}
-.postInfoWrap .postInfoBox p{color: #454C53; font-weight: 500;}
-.postInfoWrap .postInfoList{display: flex; flex-wrap: wrap; gap: 8px 16px;}
-.postInfoWrap .postInfoList li{display: flex; align-items: center; gap: 0 4px; font-size: 14px; color: #454C53; font-weight: 500; line-height: 1;}
-.postInfoWrap .postInfoList li.active{font-weight: 700; color: #4D8FFF;}
-.postInfoWrap .postInfoList li.active .number{background-color: #4D8FFF; color: #fff;}
-.postInfoWrap .postInfoList li .number{padding: 3px 5px; font-size: 14px; font-weight: 500; color: #454C53; border-radius: 4px; background-color: #E8EBED;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 공통 - 테이블 */
 .comTableBox{margin-bottom: 64px;}
-.comTable{width: 100%;}
+.comTable{width: 100%; table-layout: fixed;}
 .comTable colgroup .id{width: 72px;}
 .comTable colgroup .category{width: 108px;}
 .comTable colgroup .title{width: auto;}
 .comTable colgroup .author{width: 180px;}
 .comTable colgroup .date{width: 108px;}
+.comTable thead tr th:first-child{border-radius: 8px 0 0 8px;}
+.comTable thead tr th:last-child{border-radius: 0 8px 8px 0;}
 .comTable thead tr th{padding-left: 8px; height: 32px; font-size: 12px; font-weight: 700; color: #9EA4AA; text-align: left; background-color: #F7F8F9;}
 .comTable tbody tr td{padding-left: 8px; border-bottom: 1px solid #E8EBED; background-color: #fff;}
 .comTable tbody tr td .id{font-size: 14px; font-weight: 500; color: #9EA4AA;}
 .comTable tbody tr td .category{padding: 4px 8px; font-size: 14px; font-weight: 700; color: #203C6B; background-color: #EDF4FF; border-radius: 4px;}
-.comTable tbody tr td .title{padding: 28px 10px 28px 0; font-size: 18px; font-weight: 500; color: #454C53; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-.comTable tbody tr td .title.file{display: flex; align-items: center; flex-wrap: wrap; gap:8px;}
-.comTable tbody tr td .title.file::after{content: ''; width: 16px; height: 16px; background: url(../images/sub/file_icon.svg)no-repeat center;}
+.comTable tbody tr td .link{display: block; padding: 28px 28px 28px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.comTable tbody tr td .link.file{display: inline-flex; align-items: center; max-width: 100%;}
+.comTable tbody tr td .link.file::after{content: ''; margin-left: 8px; flex: 0 0 16px; width: 16px; height: 16px; background: url(../images/sub/file_icon.svg)no-repeat center;}
+.comTable tbody tr td .link .titleText{flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 500; color: #454C53;}
 .comTable tbody tr td .authorBox{display: flex; align-items: center; gap: 0 4px;}
 .comTable tbody tr td .authorBox .logoBox{display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border: 1px solid #E8EBED; background-color: #fff; border-radius: 8px;}
 .comTable tbody tr td .authorBox .author{display: flex; align-items: center; gap: 0 4px; font-weight: 500; color: #454C53; font-size: 16px;}
 .comTable tbody tr td .date{font-size: 14px; font-weight: 500; color: #9EA4AA;}
+
+@media (max-width: 1199px){
+
+  .noticeBox .noticeSearchBox{margin-bottom: 20px; width: 100%;}
+
+  .noticeBox .topBox .comBtn{margin-bottom: 20px; position: static;}
+  .noticeBox .tit{font-size: 28px;}
+
+}
+
+@media (max-width: 767px){
+  
+  .noticeBox .postInfoWrap{flex-direction: column; align-items: flex-start; gap: 20px 0;}
+  .noticeBox .noticeSearchBox .inputTextBox input{border-radius: 10px;}
+  .noticeBox .tit{font-size: 24px;}
+
+  .comTable tbody tr td .title{font-size: 16px;}
+  .comTable tbody tr td .link{padding: 10px 0 10px;}
+  .comTable tbody tr td .link .titleText{font-size: 16px;}
+  .comTable{border-top: 2px solid #000!important;}
+  .comTable thead{display: none;}
+  .comTable,
+  .comTable tbody,
+  .comTable td{display: block;}
+  .comTable tr{display: flex; flex-wrap: wrap; padding: 10px 0; border-bottom: 1px solid #E8EBED!important;}
+  .comTable tbody tr td{padding: 5px 0; border: 0;}
+  .comTable tbody tr td.title{flex-basis: 100%; width: 100%;}
+  .comTable tbody tr td .date,
+  .comTable tbody tr td .category{margin-left: 10px;}
+
+}
+
+@media (max-width: 480px){
+
+  .noticeBox .tit{margin-bottom: 15px; font-size: 22px;}
+  .noticeBox .postInfoWrap .postInfoBox{gap: 8px;}
+  .noticeBox .postInfoWrap .postInfoBox p{font-size: 14px;}
+  .noticeBox .noticeSearchBox .inputTextBox input{font-size: 14px;}
+  
+  .comTable tbody tr td .authorBox .author,
+  .comTable tbody tr td .link .titleText{font-size: 14px;}
+  
+
+}
