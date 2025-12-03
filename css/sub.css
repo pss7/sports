@@ -801,10 +801,10 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .noticeBox .postInfoWrap .postInfoBox span strong{color: #454C53;}
 .noticeBox .postInfoWrap .postInfoBox p{color: #454C53; font-weight: 500;}
 .noticeBox .postInfoWrap .postInfoList{display: flex; flex-wrap: wrap; gap: 8px 16px;}
-.noticeBox .postInfoWrap .postInfoList .btn{display: flex; align-items: center; gap: 0 4px; font-size: 14px; color: #454C53; font-weight: 500; line-height: 1;}
-.noticeBox .postInfoWrap .postInfoList .btn.active{font-weight: 700; color: #4D8FFF;}
-.noticeBox .postInfoWrap .postInfoList .btn.active .number{background-color: #4D8FFF; color: #fff;}
-.noticeBox .postInfoWrap .postInfoList .btn .number{padding: 3px 5px; font-size: 14px; font-weight: 500; color: #454C53; border-radius: 4px; background-color: #E8EBED;}
+.noticeBox .postInfoWrap .postInfoList li .btn{display: flex; align-items: center; gap: 0 4px; font-size: 14px; color: #454C53; font-weight: 500; line-height: 1;}
+.noticeBox .postInfoWrap .postInfoList li .btn.active{font-weight: 700; color: #4D8FFF;}
+.noticeBox .postInfoWrap .postInfoList li .btn.active .number{background-color: #4D8FFF; color: #fff;}
+.noticeBox .postInfoWrap .postInfoList li .btn .number{padding: 3px 5px; font-size: 14px; font-weight: 500; color: #454C53; border-radius: 4px; background-color: #E8EBED;}
 
 /* 공통 - 테이블 */
 .comTableBox{margin-bottom: 64px;}
@@ -817,9 +817,13 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .comTable thead tr th:first-child{border-radius: 8px 0 0 8px;}
 .comTable thead tr th:last-child{border-radius: 0 8px 8px 0;}
 .comTable thead tr th{padding-left: 8px; height: 32px; font-size: 12px; font-weight: 700; color: #9EA4AA; text-align: left; background-color: #F7F8F9;}
-.comTable tbody tr td{padding-left: 8px; border-bottom: 1px solid #E8EBED; background-color: #fff;}
-.comTable tbody tr td .id{font-size: 14px; font-weight: 500; color: #9EA4AA;}
-.comTable tbody tr td .category{padding: 4px 8px; font-size: 14px; font-weight: 700; color: #203C6B; background-color: #EDF4FF; border-radius: 4px;}
+.comTable tbody tr:hover td{background-color: #EDF4FF;}
+.comTable tbody tr:hover td .id{font-weight: 700; color: #203C6B;}
+.comTable tbody tr:hover td .category{background-color: #4D8FFF; color: #fff;}
+
+.comTable tbody tr td{padding-left: 8px; border-bottom: 1px solid #E8EBED; background-color: #fff; transition: all .3s;}
+.comTable tbody tr td .id{font-size: 14px; font-weight: 500; color: #9EA4AA; transition: all .3s;}
+.comTable tbody tr td .category{padding: 4px 8px; font-size: 14px; font-weight: 700; color: #203C6B; background-color: #EDF4FF; border-radius: 4px; transition: all .3s;}
 .comTable tbody tr td .link{display: block; padding: 28px 28px 28px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .comTable tbody tr td .link.file{display: inline-flex; align-items: center; max-width: 100%;}
 .comTable tbody tr td .link.file::after{content: ''; margin-left: 8px; flex: 0 0 16px; width: 16px; height: 16px; background: url(../images/sub/file_icon.svg)no-repeat center;}
@@ -866,9 +870,14 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .noticeBox .postInfoWrap .postInfoBox{gap: 8px;}
   .noticeBox .postInfoWrap .postInfoBox p{font-size: 14px;}
   .noticeBox .noticeSearchBox .inputTextBox input{font-size: 14px;}
-  
+  .noticeBox .postInfoWrap .postInfoList{padding: 20px 0; gap: 20px 0; width: 100%; background-color: #fbfbfb; border-radius: 10px;}
+  .noticeBox .postInfoWrap .postInfoList li{width: 33.33%;}
+  .noticeBox .postInfoWrap .postInfoList li .btn{width: 100%; justify-content: center;}
+
   .comTable tbody tr td .authorBox .author,
   .comTable tbody tr td .link .titleText{font-size: 14px;}
+
+
   
 
 }
