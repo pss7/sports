@@ -348,50 +348,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .mypageBox .leftBox .memberInfoBox .box:last-child{margin-bottom: 0;}
 .mypageBox .leftBox .memberInfoBox .box span{flex-shrink: 0; width: 56px; font-weight: 700; color: #9EA4AA; font-size: 14px;}
 .mypageBox .leftBox .memberInfoBox .box em{font-weight: 500; color: #454C53;}
-.mypageBox .rightBox{position: relative; width: 840px; min-height: 674px; padding: 48px; background-color: #fff; border: 1px solid #E8EBED; border-radius: 64px;}
-.mypageBox .rightBox .stateList{position: absolute; top:55px; right:48px; display: flex; align-items: center; gap: 0 16px;}
-.mypageBox .rightBox .stateList li{display: flex; align-items: center; gap: 0 4px;}
-.mypageBox .rightBox .stateList li.active .stateBtn{font-weight: 700; color: #4D8FFF;}
-.mypageBox .rightBox .stateList li.active .number{background-color: #4D8FFF; color: #fff;}
-.mypageBox .rightBox .stateList li .stateBtn{font-size: 14px; font-weight: 500; color: #454C53;}
-.mypageBox .rightBox .stateList li .number{min-width: 17px; color: #454C53; font-size: 14px; font-weight: 500; border-radius: 4px; background-color: #E8EBED; text-align: center;} 
-.mypageBox .rightBox h4{margin-bottom: 16px; font-size: 24px; color: #454C53; font-weight: 700;}
-
-.comListWrap{position: relative; max-height: 528px; overflow-y: auto;
-  overflow-x: hidden;}
-.comListWrap::after {content: ''; position: absolute; left: 0;
-  right: 0; bottom: 0; height: 99px; background: linear-gradient(to bottom,
-    rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 40%,rgba(255,255,255,1) 100%);
-  z-index: 9; opacity: 1; transition: all .3s; pointer-events: none;}
-.comListWrap.scrollEnd::after {opacity: 0;}
-.comListBox .list li {border-bottom: 1px solid #E8EBED;}
-.comListBox .list li a{position: relative; display: grid; grid-template-columns: 144px auto 125px 60px; align-items: center; min-height: 88px; z-index: 1; z-index: 1;}
-.comListBox .list li a::after{content: ''; width: 0; position: absolute; top:0; right:0; bottom: 0; background: linear-gradient(to right, #FFFFFF 65%, #EDF4FF); z-index: -1; transition: all .3s;} 
-.comListBox .list li a:hover::after{width: 100%;}
-.comListBox .list .dateBox{padding-left: 28px; position: relative; display: flex; flex-direction: column;
-  gap: 6px 0;}
-.comListBox .list .dateBox::before {content: ''; position: absolute; top: 50%; left: 0;
-  transform: translateY(-50%); width: 12px; height: 12px; border-radius: 50%;}
-.comListBox .list .dateBox.secondHalf::before {background: url(../images/sub/icon01.svg) no-repeat center;}
-.comListBox .list .dateBox.firstHalf::before {background: url(../images/sub/icon02.svg) no-repeat center;}
-.comListBox .list .dateBox .date {font-size: 14px; font-weight: 500; color: #454C53;}
-.comListBox .list .dateBox em {font-size: 14px; color: #9EA4AA; font-weight: 500;}
-.comListBox .list .sportBox {display: flex; align-items: center;}
-.comListBox .list .sportBox img {margin-right: 16px;}
-.comListBox .list .sportBox .sport{margin-right: 8px; font-weight: 700; color: #454C53;}
-.comListBox .list .sportBox .time{padding: 4px 8px; font-size: 12px; font-weight: 700; color: #203C6B;
-  border-radius: 4px; background-color: #EDF4FF;}
-.comListBox .list .attendanceBox {display: flex; flex-direction: column; gap: 4px 0;}
-.comListBox .list .attendanceBox span {font-weight: 500; color: #454C53; font-size: 14px;}
-.comListBox .list .attendanceBox em {font-weight: 700;  color: #9EA4AA; font-size: 14px;}
-.comListBox .list .stateBox {text-align: center;}
-.comListBox .list .stateBox .state {padding: 4px 8px; font-size: 12px; font-weight: 500; border-radius: 8px;}
-.comListBox .list .stateBox .state.approval { border: 1px solid #4D8FFF; color: #4D8FFF;}
-.comListBox .list .stateBox .state.atmosphere {background-color: #E8EBED; color: #454C53;}
-.comListBox .listHead{position: sticky; display: grid; grid-template-columns: 144px auto 125px 60px; align-items: center; height: 32px; background-color: #F7F8F9; border-radius: 8px; font-size: 12px; font-weight: 700; color: #9EA4AA; top: 0; z-index: 9;}
-.comListBox .listHead .col{display: flex; align-items: center;}
-.comListBox .listHead .colDate{padding-left: 28px;}
-.comListBox .listHead .colStatus {text-align: center; justify-content: center;}
+.mypageBox .rightBox{ width: 840px; }
 
 @media (max-width: 1199px){
 
@@ -400,48 +357,24 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .mypageBox .mypageLayoutBox{flex-direction: column; gap: 35px 0;}
 
   .mypageBox .leftBox .topBox .text01{font-size: 28px;}
-  .mypageBox .rightBox h4{font-size: 22px;}
-
-  .comListWrap::after { background: linear-gradient(to bottom,
-    rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 90%,rgba(255,255,255,1) 100%);}
 
 }
 
 @media (max-width: 767px){
 
-  .mypageBox .rightBox{padding: 30px; border-radius: 20px;}
   .mypageBox .leftBox .topBox .text01{font-size: 24px;}
-  .mypageBox .rightBox h4{font-size: 20px;}
-  .mypageBox .rightBox .stateList{position: static; margin-bottom: 20px;}
 
-  .comListBox .list li a,
-  .comListBox .listHead{grid-template-columns: 144px auto 80px 60px;}
-
-}
-
-@media (max-width: 576px){
-
-  .comListBox .list li a,
-  .comListBox .listHead{grid-template-columns: 130px auto 80px 60px;}
-  .comListWrap{max-height: none; overflow-x: auto; overflow-y: hidden;}
-  .comListBox{width: 576px;}
-  .comListWrap::after{display: none!important;}
 }
 
 @media (max-width: 480px){
 
   .mypageBox .mypageLayoutBox{gap: 25px 0;}
-  .mypageBox .leftBox .memberInfoBox,
-  .mypageBox .rightBox{border-radius: 10px;}
+  .mypageBox .leftBox .memberInfoBox{border-radius: 10px;}
   .mypageBox .leftBox .memberInfoBox .box{gap: 0 10px;}
   .mypageBox .leftBox .topBox{margin-bottom: 45px;}
   .mypageBox .leftBox .topBox .text01{margin-bottom: 15px; text-align: center; font-size: 22px;}
   .mypageBox .leftBox .topBox .infoBox{margin: 20px 0; position: static; justify-content: center;}
   .mypageBox .leftBox .memberInfoBox .box em{font-size: 14px;}
-
-  .mypageBox .rightBox h4{font-size: 18px;}
-  .comListBox .list .sportBox .sport{font-size: 14px;}
-  .comListBox .list .sportBox img{margin-right: 12px; width: 30px;}
 
 }
 
@@ -458,8 +391,6 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 }
 
 .viewBox .titleBox{margin-bottom: 24px;}
-
-
 .viewBox .topInfoBox{margin-bottom: 64px; display: flex; align-items: center; padding: 9px 8px; border-radius: 16px;}
 .viewBox .topInfoBox .text{flex-shrink: 0; margin-right: 8px; padding: 3px 8px;  background-color: #fff; font-size: 14px; font-weight: 500; border-radius: 8px;}
 .viewBox .topInfoBox .date01{margin-right: 8px; font-size: 14px; font-weight: 500; color: #4D8FFF;}
@@ -579,13 +510,6 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .applicationBtnBox .btn.application{background: linear-gradient(to bottom, #787775, #4D8FFF);}
 .applicationBtnBox .btn.notPossible{background: linear-gradient(to bottom, #787775, #F6503B);}
 .applicationBtnBox .btn.applicationDeadline{background: linear-gradient(to bottom, #787775, #C9CDD2);}
-
-
-
-
-
-
-
 .applicationInfoBox{position: relative; margin-bottom: 8px; padding: 24px; background-color: #fff;  border: 1px solid transparent; border-radius: 40px; background: linear-gradient(#ffffff, #ffffff) padding-box,linear-gradient(90deg, #9EA4AA, #F6503B) border-box;}
 .applicationInfoBox p{position: relative; padding-top: 30px; font-weight: 500; color: #454C53; text-align: center; line-height: 1.6;}
 .applicationInfoBox p::before{content: ''; position: absolute; top:0; left:50%; transform: translateX(-50%); width: 20px; height: 20px; background: url(../images/sub/icon03.svg)no-repeat center;}
@@ -602,5 +526,90 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 @media (max-width: 480px){
 
   .applicationBtnBox .btn{border-radius: 10px;}
+
+}
+
+/* 신청목록 */
+.applicationListWrap{position: relative; min-height: 674px; padding: 48px; background-color: #fff; border: 1px solid #E8EBED; border-radius: 64px;}
+.applicationListWrap .applicationStateList{position: absolute; top:55px; right:48px; display: flex; align-items: center; gap: 0 16px;}
+.applicationListWrap .applicationStateList li{display: flex; align-items: center; gap: 0 4px;}
+.applicationListWrap .applicationStateList li.active .stateBtn{font-weight: 700; color: #4D8FFF;}
+.applicationListWrap .applicationStateList li.active .number{background-color: #4D8FFF; color: #fff;}
+.applicationListWrap .applicationStateList li .stateBtn{font-size: 14px; font-weight: 500; color: #454C53;}
+.applicationListWrap .applicationStateList li .number{min-width: 17px; color: #454C53; font-size: 14px; font-weight: 500; border-radius: 4px; background-color: #E8EBED; text-align: center;} 
+.applicationListWrap h4{margin-bottom: 16px; font-size: 24px; color: #454C53; font-weight: 700;}
+.applicationListWrap .applicationScrollBox{position: relative; max-height: 528px; overflow-y: auto;
+  overflow-x: hidden;}
+.applicationListWrap .applicationScrollBox::after {content: ''; position: absolute; left: 0;
+  right: 0; bottom: 0; height: 99px; background: linear-gradient(to bottom,
+    rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 40%,rgba(255,255,255,1) 100%);
+  z-index: 9; opacity: 1; transition: all .3s; pointer-events: none;}
+.applicationListWrap .applicationScrollBox.scrollEnd::after {opacity: 0;}
+.applicationListWrap .applicationListBox .applicationList li {border-bottom: 1px solid #E8EBED;}
+.applicationListWrap .applicationListBox .applicationList li a{position: relative; display: grid; grid-template-columns: 144px auto 125px 60px; align-items: center; min-height: 88px; z-index: 1; z-index: 1;}
+.applicationListWrap .applicationListBox .applicationList li a::after{content: ''; width: 0; position: absolute; top:0; right:0; bottom: 0; background: linear-gradient(to right, #FFFFFF 65%, #EDF4FF); z-index: -1; transition: all .3s;} 
+.applicationListWrap .applicationListBox .applicationList li a:hover::after{width: 100%;}
+.applicationListWrap .applicationListBox .applicationList .dateBox{padding-left: 28px; position: relative; display: flex; flex-direction: column;
+  gap: 6px 0;}
+.applicationListWrap .applicationListBox .applicationList .dateBox::before {content: ''; position: absolute; top: 50%; left: 0;
+  transform: translateY(-50%); width: 12px; height: 12px; border-radius: 50%;}
+.applicationListWrap .applicationListBox .applicationList .dateBox.secondHalf::before {background: url(../images/sub/icon01.svg) no-repeat center;}
+.applicationListWrap .applicationListBox .applicationList .dateBox.firstHalf::before {background: url(../images/sub/icon02.svg) no-repeat center;}
+.applicationListWrap .applicationListBox .applicationList .dateBox .date {font-size: 14px; font-weight: 500; color: #454C53;}
+.applicationListWrap .applicationListBox .applicationList .dateBox em {font-size: 14px; color: #9EA4AA; font-weight: 500;}
+.applicationListWrap .applicationListBox .applicationList .sportBox {display: flex; align-items: center;}
+.applicationListWrap .applicationListBox .applicationList .sportBox img {margin-right: 16px;}
+.applicationListWrap .applicationListBox .applicationList .sportBox .sport{margin-right: 8px; font-weight: 700; color: #454C53;}
+.applicationListWrap .applicationListBox .applicationList .sportBox .time{padding: 4px 8px; font-size: 12px; font-weight: 700; color: #203C6B;
+  border-radius: 4px; background-color: #EDF4FF;}
+.applicationListWrap .applicationListBox .applicationList .attendanceBox {display: flex; flex-direction: column; gap: 4px 0;}
+.applicationListWrap .applicationListBox .applicationList .attendanceBox span {font-weight: 500; color: #454C53; font-size: 14px;}
+.applicationListWrap .applicationListBox .applicationList .attendanceBox em {font-weight: 700;  color: #9EA4AA; font-size: 14px;}
+.applicationListWrap .applicationListBox .applicationList .stateBox {text-align: center;}
+.applicationListWrap .applicationListBox .applicationList .stateBox .state {padding: 4px 8px; font-size: 12px; font-weight: 500; border-radius: 8px;}
+.applicationListWrap .applicationListBox .applicationList .stateBox .state.approval { border: 1px solid #4D8FFF; color: #4D8FFF;}
+.applicationListWrap .applicationListBox .applicationList .stateBox .state.atmosphere {background-color: #E8EBED; color: #454C53;}
+.applicationListWrap .applicationListBox .applicationListHead{position: sticky; display: grid; grid-template-columns: 144px auto 125px 60px; align-items: center; height: 32px; background-color: #F7F8F9; border-radius: 8px; font-size: 12px; font-weight: 700; color: #9EA4AA; top: 0; z-index: 9;}
+.applicationListWrap .applicationListBox .applicationListHead .col{display: flex; align-items: center;}
+.applicationListWrap .applicationListBox .applicationListHead .colDate{padding-left: 28px;}
+.applicationListWrap .applicationListBox .applicationListHead .colStatus {text-align: center; justify-content: center;}
+
+@media (max-width: 1199px){
+
+  .applicationListWrap h4{font-size: 22px;}
+
+  .applicationListWrap .applicationScrollBox::after { background: linear-gradient(to bottom,
+    rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 90%,rgba(255,255,255,1) 100%);}
+
+}
+
+@media (max-width: 767px){
+
+  .applicationListWrap{padding: 30px; border-radius: 20px;}
+  .applicationListWrap h4{font-size: 20px;}
+  .applicationListWrap .applicationStateList{position: static; margin-bottom: 20px;}
+
+  .applicationListWrap .applicationListBox .applicationList li a,
+  .applicationListWrap .applicationListBox .applicationListHead{grid-template-columns: 144px auto 80px 60px;}
+
+}
+
+@media (max-width: 576px){
+
+  .applicationListWrap .applicationListBox .applicationList li a,
+  .applicationListWrap .applicationListBox .applicationListHead{grid-template-columns: 130px auto 80px 60px;}
+  .applicationListWrap .applicationScrollBox{max-height: none; overflow-x: auto; overflow-y: hidden;}
+  .applicationListWrap .applicationListBox{width: 576px;}
+  .applicationListWrap .applicationScrollBox::after{display: none!important;}
+  
+}
+
+@media (max-width: 480px){
+
+  .applicationListWrap{border-radius: 10px;}
+  .applicationListWrap h4{font-size: 18px;}
+
+  .applicationListWrap .applicationListBox .applicationList .sportBox .sport{font-size: 14px;}
+  .applicationListWrap .applicationListBox .applicationList .sportBox img{margin-right: 12px; width: 30px;}
 
 }

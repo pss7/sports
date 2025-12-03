@@ -24,7 +24,7 @@ $(function () {
   });
 
   //스크롤 그라데이션 
-  $('.comListWrap').scroll(function () {
+  $('.applicationScrollBox').scroll(function () {
 
     let $wrap = $(this);
     let scrollTop = $wrap.scrollTop();
