@@ -791,10 +791,10 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .noticeListBox{position: relative;}
 .noticeListBox .tit{margin-bottom: 20px; font-size: 32px; color: #1B1D1F;}
 .noticeListBox .topBox{position: relative;}
-.noticeListBox .searchBox{position: relative;  width: 368px;  margin-bottom: 40px; }
-.noticeListBox .searchBox .searchBtn{width: 32px; height: 32px; position: absolute; top: 50%; transform: translateY(-50%); left:8px; background: url(../images/sub/search_icon.svg)no-repeat center; z-index: 9;}
-.noticeListBox .searchBox .inputTextBox{height: 100%;}
-.noticeListBox .searchBox .inputTextBox input{padding:0 10px 0 46px; position: relative; height: 48px; border: 2px solid #C8DCFF; border-radius: 16px; overflow: hidden; font-size: 16px; font-weight: 600; color: #9EA4AA;}
+.comSearchBox{position: relative;  width: 368px;  margin-bottom: 40px; }
+.comSearchBox .searchBtn{width: 32px; height: 32px; position: absolute; top: 50%; transform: translateY(-50%); left:8px; background: url(../images/sub/search_icon.svg)no-repeat center; z-index: 9;}
+.comSearchBox .inputTextBox{height: 100%;}
+.comSearchBox .inputTextBox input{padding:0 10px 0 46px; position: relative; height: 48px; border: 2px solid #C8DCFF; border-radius: 16px; overflow: hidden; font-size: 16px; font-weight: 600; color: #9EA4AA;}
 .postInfoWrap{margin-bottom: 29px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 0;}
 .postInfoWrap .postInfoBox{display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
 .postInfoWrap .postInfoBox span{padding: 3px 9px; background-color: #E8EBED; border-radius: 8px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
@@ -838,7 +838,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 
 @media (max-width: 1199px){
 
-  .noticeListBox .searchBox{margin-bottom: 20px; width: 100%;}
+  .comSearchBox{margin-bottom: 20px; width: 100%;}
 
   .noticeListBox .topBox .comBtn{margin-bottom: 20px; position: static;}
   .noticeListBox .tit{font-size: 28px;}
@@ -849,7 +849,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 @media (max-width: 767px){
   
   .postInfoWrap{flex-direction: column; align-items: flex-start; gap: 20px 0;}
-  .noticeListBox .searchBox .inputTextBox input{border-radius: 10px;}
+  .comSearchBox .inputTextBox input{border-radius: 10px;}
   .noticeListBox .tit{font-size: 24px;}
 
   .comTable tbody tr td .title{font-size: 16px;}
@@ -873,7 +873,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .noticeListBox .tit{margin-bottom: 15px; font-size: 22px;}
   .postInfoWrap .postInfoBox{gap: 8px;}
   .postInfoWrap .postInfoBox p{font-size: 14px;}
-  .noticeListBox .searchBox .inputTextBox input{font-size: 14px;}
+  .comSearchBox .inputTextBox input{font-size: 14px;}
   .postInfoWrap .postInfoList{padding: 20px 0; gap: 20px 0; width: 100%; background-color: #fbfbfb; border-radius: 10px;}
   .postInfoWrap .postInfoList li{width: 33.33%;}
   .postInfoWrap .postInfoList li .btn{width: 100%; justify-content: center;}
