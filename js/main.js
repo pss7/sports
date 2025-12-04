@@ -23,7 +23,7 @@ $(function () {
   });
 
   $('#mainSlideWrap .mainSlickBox .slick01').slick({
-    autoplay: false,
+    autoplay: true,
     arrows: true,
     dots: false,
     accessibility: false,
@@ -34,14 +34,14 @@ $(function () {
     zIndex: 1000,
     pauseOnHover: false,
     autoplaySpeed: 5000,
-    speed: 1300,
+    speed: 1500,
     prevArrow: $('#mainSlideWrap .mainSlickBox .slick01 .prev'),
     nextArrow: $('#mainSlideWrap .mainSlickBox .slick01 .next'),
   });
 
   //공지사항 슬라이드
   $('#mainSlideWrap .noticeBox .slick02').slick({
-    autoplay: false,
+    autoplay: true,
     arrows: true,
     dots: false,
     accessibility: false,
@@ -51,8 +51,8 @@ $(function () {
     slidesToScroll: 1,
     zIndex: 1000,
     pauseOnHover: false,
-    autoplaySpeed: 3000,
-    speed: 1300,
+    autoplaySpeed: 5000,
+    speed: 1500,
     vertical: true,
     prevArrow: $('#mainSlideWrap .noticeBox .prev'),
     nextArrow: $('#mainSlideWrap .noticeBox .next'),
@@ -65,7 +65,7 @@ $(function () {
   });
 
   $('#mainSlideWrap .mainBannerBox .slick03').slick({
-    autoplay: false,
+    autoplay: true,
     arrows: true,
     dots: false,
     accessibility: false,
@@ -76,7 +76,7 @@ $(function () {
     zIndex: 1000,
     pauseOnHover: false,
     autoplaySpeed: 5000,
-    speed: 1300,
+    speed: 1500,
     prevArrow: $('#mainSlideWrap .mainBannerBox .prev'),
     nextArrow: $('#mainSlideWrap .mainBannerBox .next'),
     responsive: [
