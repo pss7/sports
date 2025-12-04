@@ -15,7 +15,6 @@
 .titleBox .title{color: #454C53; font-size: 32px; font-weight: 500;}
 .titleBox{display: flex; align-items: flex-end; gap: 0 27px;}
 .titleBox .btnBox{flex-shrink: 0; position: relative; top: -8px; display: flex; gap: 0 4px;}
-.titleBox .btnBox .comBtn{height: 36px; border-radius: 8px; font-size: 14px;}
 
 @media (max-width: 1199px){
 
@@ -357,7 +356,6 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .mypageBox .leftBox .topBox .text02{position: relative; padding: 6px 10px 6px 16px; font-size: 14px; color: #fff; border-radius: 8px; background-color: #E8EBED; z-index: 1;}
 .mypageBox .leftBox .topBox .text02 .percent{width: 0; position: absolute; top:0; left:0; right:0; bottom: 0; background: linear-gradient(to right, #4D8FFF, #72787F); z-index: -1; border-radius: 8px;}
 .mypageBox .leftBox .topBox .infoBox{position: absolute; top:52px; right:0;  display: flex; gap: 0 4px;}
-.mypageBox .leftBox .topBox .infoBox .comBtn{padding: 0 16px; height: 36px; width: auto; border-radius: 8px;}
 .mypageBox .leftBox .loginInfoBox{margin-bottom: 19px; border: 0; padding: 0;}
 .mypageBox .leftBox .memberInfoBox{padding: 24px 10px 24px 24px; background-color: #fff; border-radius: 20px; border: 1px solid #E8EBED;}
 .mypageBox .leftBox .memberInfoBox .box{margin-bottom: 14px; display: flex; gap: 0 24px;}
