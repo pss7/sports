@@ -38,7 +38,7 @@
 }
 
 /* 공통 - 페이지네이션 */
-.paginationBox{margin: 60px 0 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 4px;}
+.paginationBox{margin: 60px 0 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 4px;}
 .paginationBox .pageLink{display: flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: 5px; background-color: #F7F8F9; font-size: 14px; font-weight: 700; color: #454C53; border-radius: 16px;}
 .paginationBox .pageLink.active{color: #fff; background-color: #4D8FFF;}
 .paginationBox .pageLinkFirst,
@@ -79,12 +79,13 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .mb60{margin-bottom: 60px!important;}
 
 /* 공통 - 버튼 */
-.comBtn{display: flex; align-items: center; justify-content: center; width: 100%; height: 56px; padding: 0 10px; background-color: #454C53; border-radius: 16px; text-align: center; color: #fff; font-weight:700;}
+.comBtn{padding: 18px 10px; background-color: #454C53; border-radius: 16px; text-align: center; color: #fff; font-weight:700;}
+.comBtn.comBtnType02{padding: 8px 10px; border-radius: 8px; font-size: 14px;}
 .comBtn.garyBtnColor{background-color: #9EA4AA;}
 
 @media (max-width: 767px){
 
-  .comBtn{height: 45px; border-radius: 8px;}
+  .comBtn{padding: 8px 10px; border-radius: 8px;}
 
 }
 
@@ -788,26 +789,26 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 }
 
 /* 공지사항 */
-.noticeBox .tit{margin-bottom: 20px; font-size: 32px; color: #1B1D1F;}
-.noticeBox .topBox{position: relative;}
-.noticeBox .topBox .comBtn{position: absolute; width: 72px; height: 36px; bottom: 0; right:0; border-radius: 8px; font-size: 14px;}
-.noticeBox .noticeSearchBox{position: relative;  width: 368px;  margin-bottom: 40px; }
-.noticeBox .noticeSearchBox .searchBtn{width: 32px; height: 32px; position: absolute; top: 50%; transform: translateY(-50%); left:8px; background: url(../images/sub/search_icon.svg)no-repeat center; z-index: 9;}
-.noticeBox .noticeSearchBox .inputTextBox{height: 100%;}
-.noticeBox .noticeSearchBox .inputTextBox input{padding:0 10px 0 46px; position: relative; height: 48px; border: 2px solid #C8DCFF; border-radius: 16px; overflow: hidden; font-size: 16px; font-weight: 600; color: #9EA4AA;}
-.noticeBox .postInfoWrap{margin-bottom: 29px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 0;}
-.noticeBox .postInfoWrap .postInfoBox{display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
-.noticeBox .postInfoWrap .postInfoBox span{padding: 3px 9px; background-color: #E8EBED; border-radius: 8px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
-.noticeBox .postInfoWrap .postInfoBox span strong{color: #454C53;}
-.noticeBox .postInfoWrap .postInfoBox p{color: #454C53; font-weight: 500;}
-.noticeBox .postInfoWrap .postInfoList{display: flex; flex-wrap: wrap; gap: 8px 16px;}
-.noticeBox .postInfoWrap .postInfoList li .btn{display: flex; align-items: center; gap: 0 4px; font-size: 14px; color: #454C53; font-weight: 500; line-height: 1; transition: all .3s;}
-.noticeBox .postInfoWrap .postInfoList li .btn .number{padding: 3px 5px; font-size: 14px; font-weight: 500; color: #454C53; border-radius: 4px; background-color: #E8EBED; transition: all .3s;}
-.noticeBox .postInfoWrap .postInfoList li .btn:hover,
-.noticeBox .postInfoWrap .postInfoList li .btn.active{font-weight: 700; color: #4D8FFF;}
-.noticeBox .postInfoWrap .postInfoList li .btn:hover .number,
-.noticeBox .postInfoWrap .postInfoList li .btn.active .number{background-color: #4D8FFF; color: #fff;}
-
+.noticeListBox{position: relative;}
+.noticeListBox .tit{margin-bottom: 20px; font-size: 32px; color: #1B1D1F;}
+.noticeListBox .topBox{position: relative;}
+.noticeListBox .noticeSearchBox{position: relative;  width: 368px;  margin-bottom: 40px; }
+.noticeListBox .noticeSearchBox .searchBtn{width: 32px; height: 32px; position: absolute; top: 50%; transform: translateY(-50%); left:8px; background: url(../images/sub/search_icon.svg)no-repeat center; z-index: 9;}
+.noticeListBox .noticeSearchBox .inputTextBox{height: 100%;}
+.noticeListBox .noticeSearchBox .inputTextBox input{padding:0 10px 0 46px; position: relative; height: 48px; border: 2px solid #C8DCFF; border-radius: 16px; overflow: hidden; font-size: 16px; font-weight: 600; color: #9EA4AA;}
+.noticeListBox .postInfoWrap{margin-bottom: 29px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 0;}
+.noticeListBox .postInfoWrap .postInfoBox{display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
+.noticeListBox .postInfoWrap .postInfoBox span{padding: 3px 9px; background-color: #E8EBED; border-radius: 8px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.noticeListBox .postInfoWrap .postInfoBox span strong{color: #454C53;}
+.noticeListBox .postInfoWrap .postInfoBox p{color: #454C53; font-weight: 500;}
+.noticeListBox .postInfoWrap .postInfoList{display: flex; flex-wrap: wrap; gap: 8px 16px;}
+.noticeListBox .postInfoWrap .postInfoList li .btn{display: flex; align-items: center; gap: 0 4px; font-size: 14px; color: #454C53; font-weight: 500; line-height: 1; transition: all .3s;}
+.noticeListBox .postInfoWrap .postInfoList li .btn .number{padding: 3px 5px; font-size: 14px; font-weight: 500; color: #454C53; border-radius: 4px; background-color: #E8EBED; transition: all .3s;}
+.noticeListBox .postInfoWrap .postInfoList li .btn:hover,
+.noticeListBox .postInfoWrap .postInfoList li .btn.active{font-weight: 700; color: #4D8FFF;}
+.noticeListBox .postInfoWrap .postInfoList li .btn:hover .number,
+.noticeListBox .postInfoWrap .postInfoList li .btn.active .number{background-color: #4D8FFF; color: #fff;}
+.noticeListBox .btnBox{position: absolute; top: 74px; right:0;}
 
 /* 공통 - 테이블 */
 .comTableBox{margin-bottom: 64px;}
@@ -838,18 +839,19 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 
 @media (max-width: 1199px){
 
-  .noticeBox .noticeSearchBox{margin-bottom: 20px; width: 100%;}
+  .noticeListBox .noticeSearchBox{margin-bottom: 20px; width: 100%;}
 
-  .noticeBox .topBox .comBtn{margin-bottom: 20px; position: static;}
-  .noticeBox .tit{font-size: 28px;}
+  .noticeListBox .topBox .comBtn{margin-bottom: 20px; position: static;}
+  .noticeListBox .tit{font-size: 28px;}
+  .noticeListBox .btnBox{position: static; display: flex; justify-content: flex-end;}
 
 }
 
 @media (max-width: 767px){
   
-  .noticeBox .postInfoWrap{flex-direction: column; align-items: flex-start; gap: 20px 0;}
-  .noticeBox .noticeSearchBox .inputTextBox input{border-radius: 10px;}
-  .noticeBox .tit{font-size: 24px;}
+  .noticeListBox .postInfoWrap{flex-direction: column; align-items: flex-start; gap: 20px 0;}
+  .noticeListBox .noticeSearchBox .inputTextBox input{border-radius: 10px;}
+  .noticeListBox .tit{font-size: 24px;}
 
   .comTable tbody tr td .title{font-size: 16px;}
   .comTable tbody tr td .link{padding: 10px 0 10px;}
@@ -869,15 +871,79 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 
 @media (max-width: 480px){
 
-  .noticeBox .tit{margin-bottom: 15px; font-size: 22px;}
-  .noticeBox .postInfoWrap .postInfoBox{gap: 8px;}
-  .noticeBox .postInfoWrap .postInfoBox p{font-size: 14px;}
-  .noticeBox .noticeSearchBox .inputTextBox input{font-size: 14px;}
-  .noticeBox .postInfoWrap .postInfoList{padding: 20px 0; gap: 20px 0; width: 100%; background-color: #fbfbfb; border-radius: 10px;}
-  .noticeBox .postInfoWrap .postInfoList li{width: 33.33%;}
-  .noticeBox .postInfoWrap .postInfoList li .btn{width: 100%; justify-content: center;}
+  .noticeListBox .tit{margin-bottom: 15px; font-size: 22px;}
+  .noticeListBox .postInfoWrap .postInfoBox{gap: 8px;}
+  .noticeListBox .postInfoWrap .postInfoBox p{font-size: 14px;}
+  .noticeListBox .noticeSearchBox .inputTextBox input{font-size: 14px;}
+  .noticeListBox .postInfoWrap .postInfoList{padding: 20px 0; gap: 20px 0; width: 100%; background-color: #fbfbfb; border-radius: 10px;}
+  .noticeListBox .postInfoWrap .postInfoList li{width: 33.33%;}
+  .noticeListBox .postInfoWrap .postInfoList li .btn{width: 100%; justify-content: center;}
 
   .comTable tbody tr td .authorBox .author,
   .comTable tbody tr td .link .titleText{font-size: 14px;}
  
+}
+
+/* 공지사항 - 상세 */
+.bg{background-color: #F7F8F9;}
+.noticeViewBox{position: relative;}
+.noticeViewBox .topBox{position: relative; margin-bottom: 24px;}
+.noticeViewBox .topBox .category{display: inline-block; margin-bottom: 8px; padding: 4px 8px; background-color: #EDF4FF; color: #203C6B; font-weight: 700; font-size: 14px; border-radius: 4px;}
+.noticeViewBox .topBox .tit{margin-bottom: 24px; color: #1B1D1F; font-size: 32px; font-weight: 500;}
+.noticeViewBox .infoBox{position: relative; flex-wrap: wrap; margin-bottom: 40px; display: flex; align-items: center; gap: 10px 24px;}
+.noticeViewBox .infoBox .date{display: flex; align-items: center; gap: 0 7px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.noticeViewBox .infoBox .date::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/calendar_icon02.svg)no-repeat center;}
+.noticeViewBox .infoBox .view{display: flex; align-items: center; gap: 0 10px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.noticeViewBox .infoBox .view::before{content: ''; width: 22px; height: 14px; background: url(../images/sub/view.svg)no-repeat center;}
+.noticeViewBox .infoBox .authorBox{padding: 4px 16px 4px 4px; display: flex; align-items: center; gap: 0 8px; border-radius: 50px; background-color:#4682E8;}
+.noticeViewBox .infoBox .authorBox .logoBox{display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background-color: #fff;}
+.noticeViewBox .infoBox .authorBox .author{font-size: 14px; font-weight: 700; color: #fff;}
+.noticeViewBox .contentViewBox{padding: 64px; background-color: #fff; border-radius: 64px; border: 1px solid #E8EBED;}
+.noticeViewBox .contentViewBox .imgBox{margin-bottom: 64px;}
+.noticeViewBox .contentViewBox .imgBox img{display: block; margin: 0 auto 16px; max-width: 100%;}
+.noticeViewBox .contentViewBox .imgBox img:last-child{margin-bottom: 0;}
+.noticeViewBox .contentViewBox .textBox{padding-bottom: 64px; border-bottom: 1px solid #E8EBED;}
+.noticeViewBox .contentViewBox .textBox p,
+.noticeViewBox .contentViewBox .textBox ul li{font-weight: 500; color: #454C53;}
+.noticeViewBox .contentViewBox .fileBox{padding: 27px 0 0;}
+.noticeViewBox .contentViewBox .fileBox h5{margin-bottom: 27px; color: #454C53; font-size: 16px;}
+.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn{margin-bottom: 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 5px 0;}
+.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn:last-child{margin-bottom: 0;}
+.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileIcon{margin-right: 8px;}
+.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileName{margin-right: 4px; color: #454C53;}
+.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileSize{font-size: 14px; color: #9EA4AA;}
+.noticeViewBox .btnBox{display: flex; gap: 0 4px; position: absolute; right:0; top: 107px;}
+
+@media (max-width: 1199px){
+
+  .noticeViewBox .topBox .tit{font-size: 28px;}
+  .noticeViewBox .contentViewBox{margin-bottom: 35px;}
+  .noticeViewBox .btnBox{position: static; display: flex; justify-content: center;}
+
+}
+
+@media (max-width: 767px){
+
+  .noticeViewBox .topBox .tit{margin-bottom: 15px; font-size: 26px;}
+  .noticeViewBox .contentViewBox{padding: 30px; border-radius: 20px;}
+
+}
+
+@media (max-width: 480px){
+
+  .noticeViewBox .contentViewBox .textBox{padding-bottom: 40px;}
+  .noticeViewBox .contentViewBox .imgBox{margin-bottom: 50px;}
+  .noticeViewBox .topBox .tit{font-size: 24px;}
+  .noticeViewBox .contentViewBox{border-radius: 10px;}
+  .noticeViewBox .contentViewBox .textBox p,
+  .noticeViewBox .contentViewBox .textBox ul li{font-size: 14px;}
+  .noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileIcon{width: 20px;}
+  .noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileName{font-size: 14px;}
+
+}
+
+@media (max-width: 414px){
+
+  .noticeViewBox .infoBox{margin: 0; flex-direction: column; align-items: flex-start;}
+
 }
