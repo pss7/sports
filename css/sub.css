@@ -860,7 +860,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .comTable,
   .comTable tbody,
   .comTable td{display: block;}
-  .comTable tr{display: flex; flex-wrap: wrap; padding: 10px 20px; border-bottom: 1px solid #E8EBED!important;}
+  .comTable tr{display: flex; flex-wrap: wrap; padding: 10px 20px 10px 10px; border-bottom: 1px solid #E8EBED!important;}
   .comTable tbody tr td{padding: 5px 0; border: 0;}
   .comTable tbody tr td.title{flex-basis: 100%; width: 100%;}
   .comTable tbody tr td .date,
@@ -874,9 +874,9 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
   .postInfoWrap .postInfoBox{gap: 8px;}
   .postInfoWrap .postInfoBox p{font-size: 14px;}
   .comSearchBox .inputTextBox input{font-size: 14px;}
-  .postInfoWrap .postInfoList{padding: 20px 0; gap: 20px 0; width: 100%; background-color: #fbfbfb; border-radius: 10px;}
+  .postInfoWrap .postInfoList{padding: 12px 0; gap:0; width: 100%; background-color: #fbfbfb; border-radius: 10px;}
   .postInfoWrap .postInfoList li{width: 33.33%;}
-  .postInfoWrap .postInfoList li .btn{width: 100%; justify-content: center;}
+  .postInfoWrap .postInfoList li .btn{padding: 13px 0; width: 100%; justify-content: center;}
 
   .comTable tbody tr td .authorBox .author,
   .comTable tbody tr td .link .titleText{font-size: 14px;}
