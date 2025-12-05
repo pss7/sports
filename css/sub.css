@@ -947,7 +947,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 
 }
 
-/* 사진갤러리 */
+/* 미디어갤러리 - 목록 */
 .galleryListBox{position: relative;}
 .galleryListBox .btnBox{position: absolute; right:0; top: 12px;}
 .galleryListBox .galleryTopBox{margin-bottom: 80px;}
@@ -1007,7 +1007,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 
 }
 
-/* 미디어갤러리 */
+/* 미디어갤러리 - 상세 */
 .galleryViewBox .btnBox{top: 70px;}
 .galleryViewBox .infoBox{margin: 0; padding: 24px; display: flex; flex-wrap: wrap; gap: 10px 23px; background-color: #F7F8F9; border-radius: 16px;}
 .galleryViewBox .infoBox .box{display: flex; gap: 0 8px;}
