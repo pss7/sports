@@ -883,66 +883,67 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
  
 }
 
-/* 공지사항 - 상세 */
-.noticeViewBox{position: relative;}
-.noticeViewBox .topBox{position: relative; margin-bottom: 24px;}
-.noticeViewBox .topBox .category{display: inline-block; margin-bottom: 8px; padding: 4px 8px; background-color: #EDF4FF; color: #203C6B; font-weight: 700; font-size: 14px; border-radius: 4px;}
-.noticeViewBox .topBox .tit{margin-bottom: 24px; color: #1B1D1F; font-size: 32px; font-weight: 500;}
-.noticeViewBox .infoBox{position: relative; flex-wrap: wrap; margin-bottom: 40px; display: flex; align-items: center; gap: 10px 24px;}
-.noticeViewBox .infoBox .date{display: flex; align-items: center; gap: 0 7px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
-.noticeViewBox .infoBox .date::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/calendar_icon02.svg)no-repeat center;}
-.noticeViewBox .infoBox .view{display: flex; align-items: center; gap: 0 10px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
-.noticeViewBox .infoBox .view::before{content: ''; width: 22px; height: 14px; background: url(../images/sub/view.svg)no-repeat center;}
-.noticeViewBox .infoBox .authorBox{padding: 4px 16px 4px 4px; display: flex; align-items: center; gap: 0 8px; border-radius: 50px; background-color:#4682E8;}
-.noticeViewBox .infoBox .authorBox .logoBox{display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background-color: #fff;}
-.noticeViewBox .infoBox .authorBox .author{font-size: 14px; font-weight: 700; color: #fff;}
-.noticeViewBox .contentViewBox{padding: 64px; background-color: #fff; border-radius: 64px; border: 1px solid #E8EBED;}
-.noticeViewBox .contentViewBox .imgBox{margin-bottom: 64px;}
-.noticeViewBox .contentViewBox .imgBox img{display: block; margin: 0 auto 16px; max-width: 100%;}
-.noticeViewBox .contentViewBox .imgBox img:last-child{margin-bottom: 0;}
-.noticeViewBox .contentViewBox .textBox{padding-bottom: 64px; border-bottom: 1px solid #E8EBED;}
-.noticeViewBox .contentViewBox .textBox p,
-.noticeViewBox .contentViewBox .textBox ul li{font-weight: 500; color: #454C53;}
-.noticeViewBox .contentViewBox .fileBox{padding: 27px 0 0;}
-.noticeViewBox .contentViewBox .fileBox h5{margin-bottom: 27px; color: #454C53; font-size: 16px;}
-.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn{margin-bottom: 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 5px 0;}
-.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn:last-child{margin-bottom: 0;}
-.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileIcon{margin-right: 8px;}
-.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileName{margin-right: 4px; color: #454C53;}
-.noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileSize{font-size: 14px; color: #9EA4AA;}
-.noticeViewBox .btnBox{display: flex; gap: 0 4px; position: absolute; right:0; top: 107px;}
+/* 공지사항, 미디어갤러리 - 상세 */
+.detailBox{position: relative;}
+.detailBox .topBox{position: relative; margin-bottom: 24px;}
+.detailBox .topBox .category{display: inline-block; margin-bottom: 8px; padding: 4px 8px; background-color: #EDF4FF; color: #203C6B; font-weight: 700; font-size: 14px; border-radius: 4px;}
+.detailBox .topBox .tit{margin-bottom: 24px; color: #1B1D1F; font-size: 32px; font-weight: 500;}
+.detailBox .topInfoBox{position: relative; flex-wrap: wrap; margin-bottom: 40px; display: flex; align-items: center; gap: 10px 24px;}
+.detailBox .topInfoBox .date{display: flex; align-items: center; gap: 0 7px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.detailBox .topInfoBox .date::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/calendar_icon02.svg)no-repeat center;}
+.detailBox .topInfoBox .view{display: flex; align-items: center; gap: 0 10px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.detailBox .topInfoBox .view::before{content: ''; width: 22px; height: 14px; background: url(../images/sub/view.svg)no-repeat center;}
+.detailBox .topInfoBox .authorBox{padding: 4px 16px 4px 4px; display: flex; align-items: center; gap: 0 8px; border-radius: 50px; background-color:#4682E8;}
+.detailBox .topInfoBox .authorBox .logoBox{display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background-color: #fff;}
+.detailBox .topInfoBox .authorBox .author{font-size: 14px; font-weight: 700; color: #fff;}
+.detailBox .contentViewBox{padding: 64px; background-color: #fff; border-radius: 64px; border: 1px solid #E8EBED;}
+.detailBox .contentViewBox .imgBox{margin-bottom: 64px;}
+.detailBox .contentViewBox .imgBox img{display: block; margin: 0 auto 16px; max-width: 100%;}
+.detailBox .contentViewBox .imgBox img:last-child{margin-bottom: 0;}
+.detailBox .contentViewBox .textBox{padding-bottom: 64px;}
+.detailBox .contentViewBox .textBox p,
+.detailBox .contentViewBox .textBox ul li{font-weight: 500; color: #454C53;}
+.detailBox .contentViewBox .fileBox{padding: 27px 0 0; border-top: 1px solid #E8EBED;}
+.detailBox .contentViewBox .fileBox h5{margin-bottom: 27px; color: #454C53; font-size: 16px;}
+.detailBox .contentViewBox .fileBox .fileBtnBox .fileBtn{margin-bottom: 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 5px 0;}
+.detailBox .contentViewBox .fileBox .fileBtnBox .fileBtn:last-child{margin-bottom: 0;}
+.detailBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileIcon{margin-right: 8px;}
+.detailBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileName{margin-right: 4px; color: #454C53;}
+.detailBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileSize{font-size: 14px; color: #9EA4AA;}
+.detailBox .btnBox{display: flex; gap: 0 4px; position: absolute; right:0; top: 107px;}
 
 @media (max-width: 1199px){
 
-  .noticeViewBox .topBox .tit{font-size: 28px;}
-  .noticeViewBox .contentViewBox{margin-bottom: 35px;}
-  .noticeViewBox .btnBox{position: static; display: flex; justify-content: center;}
+  .detailBox .topBox .tit{font-size: 28px;}
+  .detailBox .contentViewBox{margin-bottom: 35px;}
+  .detailBox .btnBox{position: static; display: flex; justify-content: center;}
 
 }
 
 @media (max-width: 767px){
 
-  .noticeViewBox .topBox .tit{margin-bottom: 15px; font-size: 26px;}
-  .noticeViewBox .contentViewBox{padding: 30px; border-radius: 20px;}
+  .detailBox .topBox .tit{margin-bottom: 15px; font-size: 26px;}
+  .detailBox .contentViewBox{padding: 30px; border-radius: 20px;}
 
 }
 
 @media (max-width: 480px){
 
-  .noticeViewBox .contentViewBox .textBox{padding-bottom: 40px;}
-  .noticeViewBox .contentViewBox .imgBox{margin-bottom: 50px;}
-  .noticeViewBox .topBox .tit{font-size: 24px;}
-  .noticeViewBox .contentViewBox{border-radius: 10px;}
-  .noticeViewBox .contentViewBox .textBox p,
-  .noticeViewBox .contentViewBox .textBox ul li{font-size: 14px;}
-  .noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileIcon{width: 20px;}
-  .noticeViewBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileName{font-size: 14px;}
+  .detailBox .contentViewBox .imgBox img{margin-bottom: 10px;}
+  .detailBox .contentViewBox .textBox{padding-bottom: 40px;}
+  .detailBox .contentViewBox .imgBox{margin-bottom: 50px;}
+  .detailBox .topBox .tit{font-size: 24px;}
+  .detailBox .contentViewBox{border-radius: 10px;}
+  .detailBox .contentViewBox .textBox p,
+  .detailBox .contentViewBox .textBox ul li{font-size: 14px;}
+  .detailBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileIcon{width: 20px;}
+  .detailBox .contentViewBox .fileBox .fileBtnBox .fileBtn .fileName{font-size: 14px;}
 
 }
 
 @media (max-width: 414px){
 
-  .noticeViewBox .infoBox{margin: 0; flex-direction: column; align-items: flex-start;}
+  .detailBox .topInfoBox{margin: 0; flex-direction: column; align-items: flex-start;}
 
 }
 
@@ -1003,5 +1004,24 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 @media (max-width: 414px){
 
   .galleryListBox .galleryTopBox .imgBox{padding-top: 71%;}
+
+}
+
+/* 미디어갤러리 */
+.galleryViewBox .btnBox{top: 70px;}
+.galleryViewBox .infoBox{margin: 0; padding: 24px; display: flex; flex-wrap: wrap; gap: 10px 23px; background-color: #F7F8F9; border-radius: 16px;}
+.galleryViewBox .infoBox .box{display: flex; gap: 0 8px;}
+.galleryViewBox .infoBox .box em{width: 33px; height: 21px; line-height: 21px; font-weight: 700; color: #fff; font-size: 14px; background-color: #454C53; border-radius: 4px; text-align: center;}
+.galleryViewBox .infoBox .box span{font-weight: 500; color: #454C53; font-size: 14px;}
+
+@media (max-width: 767px){
+
+  .galleryViewBox .infoBox{border-radius: 10px;}
+
+}
+
+@media (max-width: 480px){
+
+  .galleryViewBox .infoBox{padding: 20px;}
 
 }
