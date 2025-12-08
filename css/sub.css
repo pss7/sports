@@ -102,8 +102,8 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 }
 
 /* 공통 - 그라데이션 텍스트 */
-.gradientText{background: linear-gradient(to right, #203c6b,
-    #4d8fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.gradientText {display: inline-block; background: linear-gradient(to right, #203c6b, #4d8fff, #203c6b);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 
 /* 공통 - 그라데이션 배경색 */
 .gradientBG{background: radial-gradient(ellipse 40% 48% at center,rgba(173, 203, 255, 0.5) 0%, rgba(173, 203, 255, 0.5) 60%,#F7F8F9 100% );}
