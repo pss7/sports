@@ -12,6 +12,9 @@
 
 }
 
+/* 공통 - 여백 */
+.formBox{margin-bottom: 32px;}
+
 /* 공통 - 제목 */
 .titleBox .title{color: #454C53; font-size: 32px; font-weight: 500;}
 .titleBox{display: flex; align-items: flex-end; gap: 0 27px;}
@@ -63,12 +66,15 @@ input[type="text"]::placeholder{color: #9EA4AA;}
 .customSelectBox .selectList{display: none; padding: 10px 0; position: absolute; top:56px; left:0; right:0; border: 1px solid #E8EBED; border-radius: 8px; background-color: #fff; z-index: 99;}
 .customSelectBox .selectList li .btn{padding: 10px 10px 10px 16px; display: block; width: 100%; text-align: left; font-weight: 500; font-size: 14px; transition: all .3s;}
 .customSelectBox .selectList li .btn:hover{background-color: #4D8FFF; color: #fff;}
+input[type="checkbox"] + label,
 input[type="radio"] + label{padding-left: 16px; height: 48px; display: flex; align-items: center; gap: 0 8px; font-size: 14px; font-weight: 500; color: #454C53; font-weight: 500; border: 1px solid #E8EBED; border-radius: 8px; cursor: pointer;}
 input[type="radio"]:checked + label{background-color: #4D8FFF; color: #fff; font-weight: 700;}
 input[type="checkbox"] + label::before,
-input[type="radio"] + label::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/radio_icon.svg)no-repeat center / contain;}
+input[type="radio"] + label::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/chk_icon.svg)no-repeat center / contain;}
 input[type="checkbox"]:checked + label::before,
-input[type="radio"]:checked + label::before{ background: url(../images/sub/radio_on_icon.svg)no-repeat center / contain;}
+input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_on_icon.svg)no-repeat center / contain;}
+.label{display: block; margin-bottom: 16px; font-weight: 700; color: #454C53;}
+.label .required{color: #FF8539;}
 
 /* 공통 - 정렬 */
 .textCenter{text-align: center!important;}
@@ -79,13 +85,13 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .mb60{margin-bottom: 60px!important;}
 
 /* 공통 - 버튼 */
-.comBtn{padding: 18px 10px; background-color: #454C53; border-radius: 16px; text-align: center; color: #fff; font-weight:700;}
-.comBtn.comBtnType02{padding: 8px 10px; border-radius: 8px; font-size: 14px;}
+.comBtn{min-width: 108px; padding: 18px 10px; background-color: #454C53; border-radius: 16px; text-align: center; color: #fff; font-weight:700;}
+.comBtn.comBtnType02{min-width: auto; padding: 8px 10px; border-radius: 8px; font-size: 14px;}
 .comBtn.garyBtnColor{background-color: #9EA4AA;}
 
 @media (max-width: 767px){
 
-  .comBtn{padding: 8px 10px; border-radius: 8px;}
+  .comBtn{padding: 12px 10px; border-radius: 8px; font-size: 14px;}
 
 }
 
@@ -550,11 +556,11 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 .programListWrap aside .stateBtnBox{flex-wrap: wrap; width: 150px; padding: 24px; background-color: #fff; border-radius: 20px; border: 1px solid #E8EBED;}
 .programListWrap aside .stateBtnBox .btn{margin-bottom: 16px; display: flex; align-items: center; gap: 0 8px; color: #454C53; font-size: 14px; font-weight: 500;}
 .programListWrap aside .stateBtnBox .btn:last-child{margin-bottom: 0;}
-.programListWrap aside .stateBtnBox .btn::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/radio_icon.svg)no-repeat center;}
+.programListWrap aside .stateBtnBox .btn::before{content: ''; width: 22px; height: 22px; background: url(../images/sub/chk_icon.svg)no-repeat center;}
 .programListWrap aside .stateBtnBox .btn.active{color: #4D8FFF; font-weight: 700;}
-.programListWrap aside .stateBtnBox .btn.active::before{content: ''; background: url(../images/sub/radio_on_icon.svg)no-repeat center;}
+.programListWrap aside .stateBtnBox .btn.active::before{content: ''; background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
 .programListWrap aside .stateBtnBox .btn:hover{color: #4D8FFF; font-weight: 700;}
-.programListWrap aside .stateBtnBox .btn:hover::before{content: ''; background: url(../images/sub/radio_on_icon.svg)no-repeat center;}
+.programListWrap aside .stateBtnBox .btn:hover::before{content: ''; background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
 .programListWrap .programListBox{padding-top: 30px;}
 .programListWrap .programList{display: flex; flex-wrap: wrap; gap: 80px 2.3%;}
 .programListWrap .programList li{width: 31.8%;}
@@ -1023,5 +1029,77 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/radio
 @media (max-width: 480px){
 
   .galleryViewBox .infoBox{padding: 20px;}
+
+}
+
+/* 글쓰기 */
+.formWrap{padding: 64px; border: 1px solid #E8EBED; border-radius: 40px; background-color: #fff;}
+.formWrap h4{margin-bottom: 48px; font-size: 24px; font-weight: 700;}
+.formWrap .btnBox{display: flex; justify-content: center; gap: 0 8px;}
+.formWrap .noticeChkBox,
+.formWrap .customSelectBox{max-width: 220px;}
+.formWrap .fileBox .fileUploadBox{margin-bottom: 32px;}
+.formWrap .fileBox .fileUploadBox .fileInputBox{margin-bottom: 16px; border: 1px solid #E8EBED; border-radius: 8px;}
+.formWrap .fileBox .fileUploadBox .fileInputBox img{width: 15px;}
+.formWrap .fileBox .fileUploadBox .fileInputBox .fileText{font-size: 14px; font-weight: 500; color: #454C53;}
+.formWrap .fileBox .fileUploadBox .fileInputBox .fileInput{display: flex; align-items: center; padding-left: 16px; height: 48px; gap: 0 9px; cursor: pointer;}
+.formWrap .fileBox .fileInfoTextBox{margin-bottom: 8px;}
+.formWrap .fileBox .fileInfoTextBox .fileInfoList{background-color: #F7F8F9; padding: 16px; border: 1px solid #E8EBED; border-radius: 16px;}
+.formWrap .fileBox .fileInfoTextBox .fileInfoList li{position: relative; margin-bottom: 4px; padding-left: 18px; font-size: 14px; color: #454C53;}
+.formWrap .fileBox .fileInfoTextBox .fileInfoList li:last-child{margin-bottom: 0;}
+.formWrap .fileBox .fileInfoTextBox .fileInfoList li::before{content: '';position: absolute; top:7px; left:4px; width: 6px; height: 6px; border-radius: 50%; background-color: #D9D9D9;}
+.formWrap .fileBox .fileListUploadBox{margin-bottom: 32px;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox{margin-bottom: 18px; padding: 28px 24px; border: 2px dashed #E8EBED; border-radius: 20px;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList{display: flex; flex-wrap: wrap; gap:8px;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn.active{border: 2px solid #4D8FFF;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn.active .checkIcon{background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn{position: relative; display: block; width: 92px; height: 92px; border: 2px solid #C9CDD2; border-radius: 8px; overflow: hidden;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn .mainImgText{position: absolute; top:2px; left:2px; padding: 4px; font-size: 12px; font-weight: 700; color: #203C6B; background-color: #fff; border-radius: 4px; text-align: center;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn .checkIcon{width: 22px; height: 22px; position: absolute; right:2px; bottom: 2px; background: url(../images/sub/chk_icon.svg)no-repeat center / contain;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.formWrap .fileBox .infoBox{display: flex; gap: 0 24px;}
+.formWrap .fileBox .infoBox span{font-weight: 500; color: #9EA4AA;}
+.formWrap .fileBox .infoBox strong{font-weight: 700; color: #454C53;}
+.formWrap .fileBox .selectAllBtnBox{display: flex; align-items: center; gap: 0 20px;}
+.formWrap .fileBox .selectAllBtnBox .checkAllBtn{ display: flex; gap: 0 8px; font-size: 14px; font-weight: 500; color: #454C53;}
+.formWrap .fileBox .selectAllBtnBox .checkAllBtn::before{content: ''; width: 22px; height: 22px;  background: url(../images/sub/chk_icon.svg)no-repeat center;}
+.formWrap .fileBox .selectAllBtnBox .checkAllBtn.active::before{background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
+.formWrap .fileBox .layoutBox{display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 0;}
+.formWrap .fileBox .fileDropArea{margin-bottom: 8px; padding: 34px 20px; border-radius: 12px; border: 2px dashed #E8EBED; background: #fff; text-align: center;}
+.formWrap .fileBox .fileDropArea .fileDropInner{display: flex; flex-direction: column; align-items: center;}
+.formWrap .fileBox .fileDropArea .fileDropIcon{margin-bottom: 24px;}
+.formWrap .fileBox .fileDropArea p{font-size: 14px; color: #9EA4AA; font-weight: 500;}
+.formWrap .fileBox .fileDelBtnBox{display: flex; align-items: center; flex-wrap: wrap; gap: 8px;}
+.formWrap .fileBox .fileDelBtnBox #fileNameText{font-size: 14px; font-weight: 500; color: #454C53;}
+
+@media (max-width: 1199px){
+
+  .formWrap{padding: 45px; border-radius: 30px;}
+  .formWrap h4{font-size: 22px;}
+  .formWrap .noticeChkBox, .formWrap .customSelectBox{max-width: none;}
+
+}
+
+@media (max-width: 767px){
+
+  .formWrap{padding: 45px 30px; border-radius: 20px;}
+  .formWrap .fileBox .fileInfoTextBox .fileInfoList{border-radius: 10px;}
+  .formWrap .fileBox .fileListUploadBox .fileimgListBox{border-radius: 10px;}
+  .formWrap h4{font-size: 20px;}
+  .formWrap .fileBox .fileDropArea{border-radius: 10px;}
+
+}
+
+@media (max-width: 480px){
+
+  .formWrap .fileBox .fileInfoTextBox .fileInfoList{padding: 16px 16px 16px 10px;}
+  .formWrap .fileBox .fileInfoTextBox .fileInfoList li::before{width: 5px; height: 5px;}
+  .formWrap .fileBox .infoBox span{font-size: 14px;}
+  .formWrap .fileBox .selectAllBtnBox{gap: 10px;}
+  .formWrap .fileBox .layoutBox{flex-direction: column; align-items: flex-start;}
+  .formWrap .fileBox .fileDropArea .fileDropIcon{width: 30px; height: 30px;}
+  .formWrap .fileBox .fileListUploadBox .fileimgListBox{padding: 20px;}
+  .formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn{width: 80px; height: 80px;}
+  .formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn .checkIcon{width: 16px; height: 16px;}
 
 }
