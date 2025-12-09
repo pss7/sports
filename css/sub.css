@@ -535,23 +535,22 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .programListWrap aside{flex-shrink: 0; width: 286px;}
 .programListWrap aside h4{margin-bottom: 65px; font-size: 32px; color: #1B1D1F;}
 .programListWrap aside .sportBtnBox{margin-bottom: 24px;}
-.programListWrap aside .sportBtnBox .btn{position: relative; margin-bottom: 8px; height: 48px; border-radius: 16px; border: 1px solid #E8EBED; font-size: 14px; color: #454C53; font-weight: 500; background-color: #fff; z-index: 9;}
+.programListWrap aside .sportBtnBox .btn{position: relative; margin-bottom: 8px; height: 48px; border-radius: 16px; border: 1px solid #E8EBED; font-size: 14px; color: #454C53; font-weight: 500; background-color: #fff; z-index: 9; }
 .programListWrap aside .sportBtnBox .btn.active { position: relative; font-weight: 700; border: 1px solid transparent;
   background:linear-gradient(#ffffff, #ffffff) padding-box,linear-gradient(to right,#203c6b 0%,
             #4d8fff 50%,#203c6b 100%); color: transparent; overflow: hidden; box-shadow: 10px 10px 40px rgba(0,0,0,.1);}
-.programListWrap aside .sportBtnBox .btn.active::before{content: attr(data-text); position: absolute;
-    inset: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(
-        to right,#203c6b 0%,#4d8fff 50%,#203c6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none;}
+.programListWrap aside .sportBtnBox .btn.active::before{content: attr(data-text); background: linear-gradient(to right,#203c6b 0%,#4d8fff 50%,#203c6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none;}
+.programListWrap aside .sportBtnBox .btn.active em{position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
 .programListWrap aside .sportBtnBox .btn:last-child{margin-bottom: 0;}
 .programListWrap aside .sportBtnBox .btn.totalBtn{width: 57px;}
-.programListWrap aside .sportBtnBox .btn.sportBtn{display: flex; align-items: center; gap: 0 8px; padding: 0 16px 0 8px;}
-.programListWrap aside .sportBtnBox .btn.sportBtn::before{content: ''; width: 32px; height: 32px; background-size: contain!important;}
-.programListWrap aside .sportBtnBox .btn.ballGame::before{background: url(../images/sub/ballgame_icon.svg)no-repeat center;}
-.programListWrap aside .sportBtnBox .btn.racket::before{ background: url(../images/sub/racket_icon.svg)no-repeat center;}
-.programListWrap aside .sportBtnBox .btn.martialArts::before{ background: url(../images/sub/martialarts_icon.svg)no-repeat center;}
-.programListWrap aside .sportBtnBox .btn.dance::before{ background: url(../images/sub/dance_icon.svg)no-repeat center;}
-.programListWrap aside .sportBtnBox .btn.fitness::before{ background: url(../images/sub/fitness_icon.svg)no-repeat center;}
-.programListWrap aside .sportBtnBox .btn.ice::before{ background: url(../images/sub/ice_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.sportBtn{display: flex; align-items: center; gap: 0 8px; padding: 0 16px 0 47px;}
+.programListWrap aside .sportBtnBox .btn.sportBtn::after{content: ''; position: absolute; top:50%; left:7px;width: 32px; height: 32px; transform: translateY(-50%); background-size: contain!important;}
+.programListWrap aside .sportBtnBox .btn.ballGame::after{background: url(../images/sub/ballgame_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.racket::after{ background: url(../images/sub/racket_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.martialArts::after{ background: url(../images/sub/martialarts_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.dance::after{ background: url(../images/sub/dance_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.fitness::after{ background: url(../images/sub/fitness_icon.svg)no-repeat center;}
+.programListWrap aside .sportBtnBox .btn.ice::after{ background: url(../images/sub/ice_icon.svg)no-repeat center;}
 .programListWrap aside .sportBtnBox .btn.sportBtn .number{padding: 4px 8px; border-radius: 8px; background-color: #E8EBED; font-size: 14px; color: #454C53; font-weight: 500;}
 .programListWrap aside .stateBtnBox{flex-wrap: wrap; width: 150px; padding: 24px; background-color: #fff; border-radius: 20px; border: 1px solid #E8EBED;}
 .programListWrap aside .stateBtnBox .btn{margin-bottom: 16px; display: flex; align-items: center; gap: 0 8px; color: #454C53; font-size: 14px; font-weight: 500;}
