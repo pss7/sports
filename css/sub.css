@@ -40,6 +40,24 @@
 
 }
 
+/* 공통 - 이전글-다음글 */
+.postNav{margin: 25px 0;}
+.postNav .postNavItem{display: flex; gap: 0 30px; align-items: center; padding: 15px 15px 15px 20px; color: #111827;}
+.postNav .postNavTitle{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; color: #454C53;}
+.postNav .postNavLabel{flex-shrink: 0;}
+.postNav .postNavItem .direction{ display: flex; align-items: center; gap: 0 12px; font-size: 14px; font-weight: 700; color: #9EA4AA;}
+.postNav .postNavItem .direction::before{content: ''; width: 17px; height: 11px;}
+.postNav .prevPost .direction::before{background: url(../images/sub/arrow_icon04.svg)no-repeat center / contain;}
+.postNav .nextPost .direction::before{background: url(../images/sub/arrow_icon05.svg)no-repeat center / contain;}
+
+@media (max-width: 480px) {
+
+  .postNav .postNavItem{padding: 10px 10px 10px 15px; flex-direction: column; align-items: flex-start; gap: 4px 0;}
+  .postNav .postNavTitle{max-width: 100%; font-size: 14px;}
+  .postNav .postNavItem .direction::before{width: 14px; height: 9px;}
+
+}
+
 /* 공통 - 페이지네이션 */
 .paginationBox{margin: 60px 0 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 4px;}
 .paginationBox .pageLink{display: flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: 5px; background-color: #F7F8F9; font-size: 14px; font-weight: 700; color: #454C53; border-radius: 16px;}
@@ -78,6 +96,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 
 /* 공통 - 폼 버튼 위치 */
 .positionBtnBox{position: absolute; top:0; right:0; display: flex; flex-wrap: wrap; gap: 4px;}
+.eventNewsListBox .positionBtnBox{top: 5px;}
 .noticeListBox .positionBtnBox{top: 74px;}
 .pressReleaseListBox .positionBtnBox,
 .galleryListBox .positionBtnBox{top: 12px;}
@@ -1157,20 +1176,106 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 
 }
 
-/* 공통 - 하단 네비게이션 */
-.postNav{margin: 25px 0;}
-.postNav .postNavItem{display: flex; gap: 0 30px; align-items: center; padding: 15px 15px 15px 20px; color: #111827;}
-.postNav .postNavTitle{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; color: #454C53;}
-.postNav .postNavLabel{flex-shrink: 0;}
-.postNav .postNavItem .direction{ display: flex; align-items: center; gap: 0 12px; font-size: 14px; font-weight: 700; color: #9EA4AA;}
-.postNav .postNavItem .direction::before{content: ''; width: 17px; height: 11px;}
-.postNav .prevPost .direction::before{background: url(../images/sub/arrow_icon04.svg)no-repeat center / contain;}
-.postNav .nextPost .direction::before{background: url(../images/sub/arrow_icon05.svg)no-repeat center / contain;}
+/* 행사소식 */
+.eventNewsListBox{position: relative;}
+.eventNewsListBox .calendarLeftBox{flex-shrink: 0; display: flex; gap: 0 66px; position: relative; padding: 64px; width: 626px; height: 493px;
+  background: linear-gradient(to bottom,#E8EBED,#FFFFFF ); border-radius: 40px; overflow: hidden;}
+.eventNewsListBox .calendarLeftBox::before{content: ''; position: absolute; inset: 0; background: linear-gradient(
+    to bottom,#FFFFFF 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,0) 80%,#FFFFFF 100%); pointer-events: none; z-index: 1;}
+.eventNewsListBox .calendarLeftBox .leftBox{width: 72px;}
+.eventNewsListBox .calendarLeftBox .dateBox{margin-bottom: 12px; padding: 8px 0 0;}
+.eventNewsListBox .calendarLeftBox .dateBox span{display: block; font-size: 24px; font-weight: 700; color: #1B1D1F;}
+.eventNewsListBox .calendarLeftBox .calendarBtnBox{display: flex; gap: 0 8px;}
+.eventNewsListBox .calendarLeftBox .calendarBtnBox .calendarBtn{width: 32px; height: 32px;}
+.eventNewsListBox .calendarLeftBox .calendarBtnBox .prevBtn{background: url(../images/sub/prev_icon.svg)no-repeat center;}
+.eventNewsListBox .calendarLeftBox .calendarBtnBox .nextBtn{background: url(../images/sub/next_icon.svg)no-repeat center;}
+.eventNewsListBox .calendarLeftBox .calendarBox{width: 100%;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calWeekdays {display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 4px;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calWeekdays span{height: 48px; line-height: 48px; font-weight: 700; text-align: center; color: #454C53;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calWeekdays span.sun{color: #F65F52;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calWeekdays span.sat{color: #3D9EFF;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calGrid{display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: 48px; gap: 4px;}
+.eventNewsListBox .calendarLeftBox .calendarBox .day{border-radius: 16px; font-weight: 500; color: #454C53;}
+.eventNewsListBox .calendarLeftBox .calendarBox .day.event{position: relative;}
+.eventNewsListBox .calendarLeftBox .calendarBox .day.event::before{content: ''; position: absolute; top:7px; left:50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #203C6B;}
+.eventNewsListBox .calendarLeftBox .calendarBox .day.today{background-color: #3E7BFD; font-weight: 700; color: #fff; box-shadow:
+    0 0 10px #C8DCFF, inset 0 0 10px rgba(255,255,255,0.25);}
+.eventNewsListBox .calendarLeftBox .calendarBox .day.select{background-color: #FC7C1D; font-weight: 700; color: #fff; box-shadow:
+    0 0 10px #FED6B9, inset 0 0 10px rgba(255,255,255,0.25);}
+.eventNewsListBox .calendarLeftBox .calendarBox .prevMonth,
+.eventNewsListBox .calendarLeftBox .calendarBox .nextMonth{color: #9EA4AA;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox{margin-top: 30px; flex-wrap: wrap; display: flex; justify-content: center; gap: 10px 16px;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span{display: flex; align-items: center; gap: 0 8px; font-size: 14px; font-weight: 500; color: #555;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span::before{content: '';}
+.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span.today::before{width: 12px; height: 12px; border-radius: 4px; background-color: #4D8FFF;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span.select::before{width: 12px; height: 12px; border-radius: 4px; background-color: #FC7C1D;}
+.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span.event::before{width: 4px; height: 4px; border-radius: 50%; background-color: #203C6B;}
+.eventNewsListBox .newsListBox{width: 44.4%;}
+.eventNewsListBox .newsListBox .dateBox{margin-bottom: 12px; display: flex; align-items: center; gap: 0 40px;}
+.eventNewsListBox .newsListBox .dateBox span{display: block; font-size: 32px; color: #1B1D1F; font-family: 'Retrosans';}
+.eventNewsListBox .newsListBox .dateBox em{font-size: 96px; color: #1B1D1F; font-family: 'Retrosans';}
+.eventNewsListBox .newsListBox .newsList li{margin-bottom: 4px;}
+.eventNewsListBox .newsListBox .newsList li:last-child{margin-bottom: 0;}
+.eventNewsListBox .newsListBox .newsList li a:hover{transform: translateX(10px);}
+.eventNewsListBox .newsListBox .newsList li a:hover .textBox h4{text-decoration: underline;}
+.eventNewsListBox .newsListBox .newsList li a{padding: 24px; display: flex; gap: 0 76px; background-color: #F7F8F9; border-radius: 20px; transition: all .3s;}
+.eventNewsListBox .newsListBox .newsList li a .timeBox{flex-shrink: 0; display: flex; flex-direction: column; gap: 8px 0;}
+.eventNewsListBox .newsListBox .newsList li a .timeBox span{display: block; font-size: 14px; font-weight: 700; color: #4D8FFF ;}
+.eventNewsListBox .newsListBox .newsList li a .textBox{flex: 1; min-width: 0;}
+.eventNewsListBox .newsListBox .newsList li a .textBox .text01{display: inline-block; margin-bottom: 12px; padding: 5px 9px; font-size: 14px; font-weight: 700; color: #203C6B; border-radius: 4px; background-color: #EDF4FF;}
+.eventNewsListBox .newsListBox .newsList li a .textBox h4{margin-bottom: 16px; font-size: 18px; font-weight: 700; color: #1B1D1F; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.eventNewsListBox .newsListBox .newsList li a .textBox .text02{font-size: 14px; font-weight: 700; color: #797979;}
+.eventNewsListBox .eventNewsLayoutBox{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.eventNewsListBox .noSchedule{margin-top: 4px; padding: 33px 10px; border-radius: 20px; background-color: #F7F8F9; text-align: center; font-weight: 700; color: #9EA4AA; font-size: 18px;}
 
-@media (max-width: 480px) {
+@media (max-width: 1280px){
 
-  .postNav .postNavItem{padding: 10px 10px 10px 15px; flex-direction: column; align-items: flex-start; gap: 4px 0;}
-  .postNav .postNavTitle{max-width: 100%; font-size: 14px;}
-  .postNav .postNavItem .direction::before{width: 14px; height: 9px;}
+  .eventNewsListBox .calendarLeftBox{width: 580px;}
+
+}
+
+@media (max-width: 1199px){
+
+  .eventNewsListBox .eventNewsLayoutBox{margin-bottom: 30px;}
+  .eventNewsListBox .calendarLeftBox .dateBox{text-align: center;}
+  .eventNewsListBox .calendarLeftBox{padding: 64px 20px; flex-direction: column; align-items: center; gap: 30px 0; width: 100%; height: auto; border-radius: 20px;}
+  .eventNewsListBox .calendarLeftBox::before{background: linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0) 90%, #FFFFFF 100%);}
+
+  .eventNewsListBox .newsListBox{width: 100%;}
+  .eventNewsListBox .newsListBox .dateBox{gap: 0 30px;}
+  .eventNewsListBox .newsListBox .dateBox span{font-size: 26px;}
+  .eventNewsListBox .newsListBox .dateBox em{font-size: 80px;}
+  .eventNewsListBox .newsListBox .newsList li a{gap: 0 49px;}
+
+}
+
+@media (max-width: 767px){
+
+  .eventNewsListBox .calendarLeftBox .dateBox span{font-size: 20px;}
+  .eventNewsListBox .newsListBox .dateBox{gap: 0 20px;}
+  .eventNewsListBox .newsListBox .dateBox span{font-size: 22px;}
+  .eventNewsListBox .newsListBox .dateBox em{font-size: 60px;}
+  .eventNewsListBox .newsListBox .newsList li a{padding: 24px 20px; gap: 0 35px; border-radius: 10px;}
+  .eventNewsListBox .noSchedule{padding: 20px 10px; border-radius: 10px; font-size: 16px;}
+  
+}
+
+@media (max-width: 480px){
+
+  .eventNewsListBox .newsListBox .dateBox{gap: 0 16px; justify-content: center;}
+  .eventNewsListBox .newsListBox .dateBox span{font-size: 16px;}
+  .eventNewsListBox .newsListBox .dateBox em{font-size: 50px;}
+  .eventNewsListBox .newsListBox .newsList li a{flex-direction: column; gap: 15px 20px;}
+  .eventNewsListBox .newsListBox .newsList li a .textBox h4{margin-bottom: 12px; font-size: 16px; text-align: center;}
+  .eventNewsListBox .newsListBox .newsList li a .timeBox{gap: 4px 0; align-items: center;}
+  .eventNewsListBox .newsListBox .newsList li a .timeBox span{font-size: 12px;}
+  .eventNewsListBox .newsListBox .newsList li a .textBox{text-align: center;}
+  .eventNewsListBox .newsListBox .newsList li a .textBox .text02{display: block; text-align: center;}
+
+  .eventNewsListBox .calendarLeftBox{gap: 14px 0;}
+  .eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox{margin-top: 20px;}
+  .eventNewsListBox .calendarLeftBox .calendarBox .calWeekdays span,
+  .eventNewsListBox .calendarLeftBox .calendarBox .day{font-size: 14px; border-radius: 10px;}
+  .eventNewsListBox .noSchedule{font-size: 14px;}
 
 }
