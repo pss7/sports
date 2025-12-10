@@ -1157,3 +1157,20 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 
 }
 
+/* 공통 - 하단 네비게이션 */
+.postNav{margin: 25px 0;}
+.postNav .postNavItem{display: flex; gap: 0 30px; align-items: center; padding: 15px 15px 15px 20px; color: #111827;}
+.postNav .postNavTitle{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; color: #454C53;}
+.postNav .postNavLabel{flex-shrink: 0;}
+.postNav .postNavItem .direction{ display: flex; align-items: center; gap: 0 12px; font-size: 14px; font-weight: 700; color: #9EA4AA;}
+.postNav .postNavItem .direction::before{content: ''; width: 17px; height: 11px;}
+.postNav .prevPost .direction::before{background: url(../images/sub/arrow_icon04.svg)no-repeat center / contain;}
+.postNav .nextPost .direction::before{background: url(../images/sub/arrow_icon05.svg)no-repeat center / contain;}
+
+@media (max-width: 480px) {
+
+  .postNav .postNavItem{padding: 10px 10px 10px 15px; flex-direction: column; align-items: flex-start; gap: 4px 0;}
+  .postNav .postNavTitle{max-width: 100%; font-size: 14px;}
+  .postNav .postNavItem .direction::before{width: 14px; height: 9px;}
+
+}
