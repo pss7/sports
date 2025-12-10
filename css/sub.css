@@ -101,6 +101,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .pressReleaseListBox .positionBtnBox,
 .galleryListBox .positionBtnBox{top: 12px;}
 .detailBox .positionBtnBox{top: 70px;}
+.eventNewsViewBox .positionBtnBox,
 .noticeViewBox .positionBtnBox{top: 107px;}
 
 @media(max-width: 1199px){
@@ -940,6 +941,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 /* 공지사항, 미디어갤러리 - 상세 */
 .detailBox{position: relative;}
 .detailBox .topBox{position: relative; margin-bottom: 24px;}
+.detailBox .topBox .text01,
 .detailBox .topBox .category{display: inline-block; margin-bottom: 8px; padding: 4px 8px; background-color: #EDF4FF; color: #203C6B; font-weight: 700; font-size: 14px; border-radius: 4px;}
 .detailBox .topBox .tit{margin-bottom: 24px; color: #1B1D1F; font-size: 32px; font-weight: 500;}
 .detailBox .topInfoBox{position: relative; flex-wrap: wrap; margin-bottom: 40px; display: flex; align-items: center; gap: 10px 24px;}
@@ -1277,5 +1279,59 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .eventNewsListBox .calendarLeftBox .calendarBox .calWeekdays span,
   .eventNewsListBox .calendarLeftBox .calendarBox .day{font-size: 14px; border-radius: 10px;}
   .eventNewsListBox .noSchedule{font-size: 14px;}
+
+}
+
+/* 행사소식 - 상세 */
+.eventNewsDetailBox{margin-bottom: 30px; padding: 64px; background-color: #fff; border: 1px solid #E8EBED; border-radius: 64px;}
+.eventNewsDetailBox h5{margin-bottom: 16px; font-size: 18px; font-weight: 700; color: #454C53;}
+.eventNewsDetailBox .newsInfoBox{margin-bottom: 64px; padding: 24px 20px; background-color: #F7F8F9; border-radius: 16px;}
+.eventNewsDetailBox .newsInfoBox .list li{position: relative; padding-left: 16px; margin-bottom: 18px; display: flex; gap: 0 24px;}
+.eventNewsDetailBox .newsInfoBox .list li::before{content: ''; position: absolute; top:8px; left:3px; width: 6px; height: 6px; border-radius: 50%; background-color: #4D8FFF;}
+.eventNewsDetailBox .newsInfoBox .list li:last-child{margin-bottom: 0;}
+.eventNewsDetailBox .newsInfoBox .list li .text01{flex-shrink: 0; width: 64px; font-weight: 700; color: #1B1D1F;}
+.eventNewsDetailBox .newsInfoBox .list li .text02{font-weight: 500; color: #454C53;}
+.eventNewsDetailBox p{font-weight: 500; color: #454C53; line-height: 1.7;}
+
+@media (max-width: 767px){
+
+  .eventNewsDetailBox .newsInfoBox{margin-bottom: 42px; border-radius: 10px;}
+  .eventNewsDetailBox{padding: 30px; border-radius: 20px;}
+  .eventNewsDetailBox .newsInfoBox .list li{gap:0;}
+
+}
+
+@media (max-width: 480px){
+
+  .eventNewsDetailBox{border-radius: 10px;}
+  .eventNewsDetailBox h5{font-size: 16px;}
+  .eventNewsDetailBox .newsInfoBox .list li .text01,
+  .eventNewsDetailBox .newsInfoBox .list li .text02,
+  .eventNewsDetailBox p{font-size: 14px;}
+  .eventNewsDetailBox .newsInfoBox .list li::before{width: 4px; height: 4px;}
+  .eventNewsDetailBox .newsInfoBox .list li .text01{width: 48px;}
+
+}
+
+/* 행사소식 - 작성 */
+.formBox .scheduleBox{display: flex; align-items: center; gap: 0 8px;}
+.formBox .scheduleBox .inputTextBox{position: relative;}
+.formBox .scheduleBox .inputTextBox input{padding: 0 48px 0 16px; width: 220px;}
+.formBox .scheduleBox .inputTextBox input::placeholder{color: #454C53;}
+.formBox .scheduleBox .inputTextBox .calendarBtn{width: 19px; height: 18px; position: absolute; top: 50%; transform: translateY(-50%); right:18px; background: url(../images/sub/calendar_icon.svg)no-repeat center;}
+.formBox .timeBox{display: flex; align-items: center; gap: 0 8px;}
+.formBox .timeBox .box{height: 48px; padding: 8px 16px; display: flex; align-items: center; gap: 0 8px; background-color: #F7F8F9; border-radius: 8px; border: 1px solid #E8EBED;}
+.formBox .timeBox .box .inputTextBox input{padding: 0 3px; width: 56px; height: 32px; text-align: center; border-radius: 4px;}
+.formBox .timeBox .box .inputTextBox input::placeholder{color: #454C53;}
+
+@media (max-width: 1199px){
+
+  .formBox .timeBox,
+  .formBox .scheduleBox{flex-direction: column;}
+  .formBox .timeBox .box,
+  .formBox .timeBox .box .inputTextBox,
+  .formBox .scheduleBox .inputTextBox,
+  .formBox .timeBox .box .inputTextBox input,
+  .formBox .scheduleBox .inputTextBox input{width: 100%;}
 
 }
