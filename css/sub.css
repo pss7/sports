@@ -170,13 +170,16 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .subDepthBox .breadcrumbsList li a::after{content: ''; margin: 0 5px; width: 4px; height: 1px; background-color: #9EA4AA;}
 .subDepthBox .breadcrumbsList li:last-child a{ color: #454C53; font-weight: 700;}
 .subDepthBox .breadcrumbsList li:last-child a::after{display: none;}
-.subDepthBox .title01{margin-bottom: 20px; font-weight: 400; font-family: 'Retrosans'; font-size: 38px;}
+.subDepthBox .title01{margin-bottom: 14px; font-weight: 400; font-family: 'Retrosans'; font-size: 32px;}
 .subDepthBox .title02{font-weight: 700; color: #9EA4AA; font-size: 24px;}
 .subDepthBox .shareBox{position: absolute; top:0; right:20px; display: flex; gap: 0 8px;}
 .subDepthBox .shareBox a{position: relative; display: block; width: 64px; height: 54px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 40px rgba(0,0,0,.1);}
 .subDepthBox .shareBox a::after{content: ''; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
 .subDepthBox .shareBox .shareBtn::after{width: 24px; height: 24px; background: url(../images/sub/share_icon.svg)no-repeat center;}
 .subDepthBox .shareBox .printerBtn::after{width: 22px; height: 21px; background: url(../images/sub/printer_icon.svg)no-repeat center;}
+.subDepthBox .subDepth{margin-bottom: 5px; display: flex; gap: 0 32px;}
+.subDepthBox .subDepth li a.active{color: #1B1D1F;}
+.subDepthBox .subDepth li a{display: block; color: #9EA4AA; font-weight: 700; font-size: 20px;}
 
 @media (max-width: 1199px){
 
@@ -189,6 +192,8 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .subVisualBox .visualBox{margin-bottom: 16px;}
   .subVisualBox .visualBox .title{font-size: 20px;}
   .subDepthBox .shareBox{display: none;}
+  .subDepthBox .subDepth li a{font-size: 16px;}
+  .subVisualBox .subMenuList li a{font-size: 14px;}
 
 }
 
@@ -202,6 +207,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .subDepthBox .breadcrumbsList{margin-bottom: 20px;}
   .subDepthBox .title01{margin: 0;}
   .subDepthBox .title02{display: none;}
+  .subDepthBox .subDepth{display: none;}
 
 }
 
@@ -1333,5 +1339,143 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .formBox .scheduleBox .inputTextBox,
   .formBox .timeBox .box .inputTextBox input,
   .formBox .scheduleBox .inputTextBox input{width: 100%;}
+
+}
+
+/* 비전 */
+.visionBox .visionContentBox{position: relative; padding-top: 80px; z-index: 1; overflow: hidden;}
+.visionBox .visionContentBox::after{content: ''; width: 1549px; height: 1347px; position: absolute; top:-69px; right:0; background: url(../images/sub/bg01.svg)no-repeat center top / contain; z-index: -1;}
+.visionBox .topImgBox{position: relative; height: 540px; z-index: 1;  transform: scale(.9); border-radius: 120px; transition: all 3s; overflow: hidden; background: url(../images/sub/vision_img.png)no-repeat center top; background-size: cover;}
+.visionBox .topImgBox::after{content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 183px;
+    background: linear-gradient(to bottom, #FEFEFB00 0%, #C9CDD2 100%);}
+.visionBox .topImgBox::before{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background-color: rgba(0,0,0,.2); z-index: -1;}
+.visionBox .topImgBox img{position: absolute; top:0; left:0; right:0; bottom: 0; width: 100%; height: 100%; object-fit: contain;}
+.visionBox .topImgBox .textBox .container{position: relative; height: 540px;}
+.visionBox .topImgBox .textBox p{position: absolute; left:20px; right:20px; top: 50%; transform: translateY(-50%); font-size: 20px; color: #fff; font-weight: 700; letter-spacing: 20px; filter: blur(5px);}
+.visionBox .topImgBox .textBox span{display: inline-block; margin-right: 27px; line-height: 2;}
+.visionBox .topImgBox.active .textBox p{opacity: 1; filter: blur(0); letter-spacing: 15px; transition: all 3s;}
+.visionBox .topImgBox.active{transform: scale(1); border-radius: 0;}
+.visionBox .topBox{margin-bottom: 200px;}
+.visionBox .topBox .layoutBox{display: flex; align-items: flex-end; justify-content: space-between;}
+.visionBox .topBox .imgList{display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 96px;}
+.visionBox .topBox .imgList li img{display: block;}
+.visionBox .topBox p{font-size: 24px; font-weight: 500; color: #454C53; text-align: right;}
+.visionBox .topBox p span{color: #5493FE;}
+.visionBox .visionTitleBox{margin-bottom: 140px;}
+.visionBox .visionTitleBox .layoutBox{ display: flex; align-items: flex-end; justify-content: space-between;}
+.visionBox .visionTitleBox .box p{margin-bottom: 12px; font-size: 32px; font-weight: 300; color: #1B1D1F;}
+.visionBox .visionTitleBox .box h4{font-size: 96px; color: #1B1D1F; font-weight: 400; font-family: 'Retrosans';}
+.visionBox .visionTitleBox  span{font-size: 24px; font-weight: 700; color: #fff; letter-spacing: 5px; text-transform: uppercase;}
+.visionBox .visionList li{display: flex; margin-bottom: 24px;}
+.visionBox .visionList li:last-child{margin-bottom: 0;}
+.visionBox .visionList li .number{margin-right: 64px;}
+.visionBox .visionList li .number img{display: block;}
+.visionBox .visionList li .box{display: flex;}
+.visionBox .visionList li .box .textBox{flex-shrink: 0; width: 408px;}
+.visionBox .visionList li .box .textBox span{display: block; margin-bottom: 8px; font-size: 14px; font-weight: 700; color: #4D8FFF;}
+.visionBox .visionList li .box .textBox .text01{font-size: 24px; color: #1B1D1F; font-family: 'Retrosans';}
+.visionBox .visionList li .box .text02{position: relative; padding-left: 64px; font-size: 20px; color: #454C53;}
+.visionBox .visionList li .box .text02::before{content: ''; position: absolute; top:0; left:0; bottom: 0; width: 2px; background: url(../images/sub/border.svg)no-repeat center;}
+
+@media (max-width: 1199px){
+
+  .visionBox .topBox .layoutBox{flex-direction: column; gap: 50px 0; align-items: center;}
+  .visionBox .topBox p{text-align: center; font-size: 22px;}
+
+  .visionBox .topBox{margin-bottom: 120px;}
+  .visionBox .visionTitleBox .layoutBox{flex-direction: column; align-items: center; gap: 10px 0;}
+  .visionBox .visionTitleBox .box{width: 100%; text-align: center;}
+  .visionBox .visionTitleBox .box p{font-size: 28px;}
+  .visionBox .visionTitleBox .box h4{font-size: 80px;}
+  .visionBox .visionTitleBox span{font-size: 20px; text-align: center;}
+  .visionBox .visionTitleBox{margin-bottom: 90px;}
+
+  .visionBox .visionList li .box .textBox{width: 350px;}
+  .visionBox .visionList li .number{margin-right: 35px;}
+  .visionBox .visionList li .number img{width: 130px;}
+  .visionBox .visionList li .box .textBox .text01{font-size: 22px;}
+  .visionBox .visionList li .box .text02{padding-left: 48px; font-size: 18px;}
+  .visionBox .visionList li .box .text02 br{display: none;}
+  .visionBox .visionContentBox::after{width: 1270px; height: 1162px;}
+
+  .visionBox .topImgBox,
+  .visionBox .topImgBox .textBox .container{height: 400px;}
+  .visionBox .topImgBox .textBox p{font-size: 18px; text-align: center;}
+  .visionBox .topImgBox .textBox span{margin-right: 13px;}
+  .visionBox .topImgBox::after{height: 150px;}
+
+}
+
+@media (max-width: 1024px){
+
+  .visionBox .topBox p{font-size: 20px;}
+  .visionBox .topBox{margin-bottom: 80px;}
+  .visionBox .visionList li .number img{width: 90px;}
+  .visionBox .visionTitleBox{margin-bottom: 45px;}
+  .visionBox .visionTitleBox .layoutBox{gap:0;}
+  .visionBox .visionTitleBox .box p{margin-bottom: 0; font-size: 24px;}
+  .visionBox .visionTitleBox .box h4{font-size: 60px;}
+  .visionBox .visionList li{position: relative; margin-bottom: 120px; flex-direction: column; align-items: center; gap: 18px 0;}
+  .visionBox .visionList li::after{content: ''; width: 2px; height: 220px; position: absolute; left: 50%; transform: translateX(-50%) rotate(90deg); bottom: -164px; background: url(../images/sub/border.svg) no-repeat center / contain;}
+  .visionBox .visionList li .box .textBox{width: 100%; text-align: center; }
+  .visionBox .visionList li .number{margin: 0;}
+  .visionBox .visionList li .box .textBox span{margin-bottom: 3px;}
+  .visionBox .visionList li .box{flex-direction: column; align-items: center; gap:10px 0;}
+  .visionBox .visionList li .box .text02::before{display: none;}
+  .visionBox .visionList li .box .text02{padding: 0; font-size: 16px; text-align: center;}
+  .visionBox .visionList li .box .text02 br{display: block;}
+  .visionBox .visionList li .box .textBox .text01{font-size: 20px;}
+  .visionBox .visionList li .box .textBox{width: 324px;}
+  .visionBox .visionContentBox::after{width: 1100px; height: 1000px;}
+  .visionBox .visionTitleBox span{font-size: 18px;}
+
+}
+
+@media (max-width: 767px){
+
+  .visionBox .topBox{margin-bottom: 60px;}
+  .visionBox .topBox .layoutBox{gap: 35px 0;}
+  .visionBox .topBox p{font-size: 18px;}
+  .visionBox .visionTitleBox .box p{font-size: 20px;}
+  .visionBox .visionTitleBox .box h4{font-size: 50px;}
+  .visionBox .visionList li .box{gap: 6px 0;}
+  .visionBox .visionList li .box .textBox .text01{font-size: 18px;}
+  .visionBox .visionTitleBox span{font-size: 16px;}
+  .visionBox .visionContentBox::after{top: 50px}
+
+  .visionBox .topImgBox,
+  .visionBox .topImgBox .textBox .container{height: 350px;}
+  .visionBox .topImgBox .textBox p{font-size: 16px;}
+  .visionBox .topImgBox .textBox span{margin-right: 0;}
+
+
+}
+
+@media (max-width: 480px){
+
+  .visionBox .topImgBox,
+  .visionBox .topImgBox .textBox .container{height: 300px;}
+  .visionBox .topImgBox .textBox p{font-size: 14px;}
+  .visionBox .topBox .imgList{gap: 20px 0;}
+  .visionBox .topBox .imgList li{width: 33.33%;}
+  .visionBox .topBox .imgList li img{margin: 0 auto;}
+  .visionBox .visionContentBox{padding-top: 55px;}
+  .visionBox .visionContentBox::after{top: 124px;}
+  .visionBox .topBox p{font-size: 16px;}
+  .visionBox .visionTitleBox .box h4{font-size: 35px;}
+  .visionBox .visionTitleBox .box p{font-size: 18px;}
+  .visionBox .visionTitleBox span{font-size: 14px;}
+  .visionBox .visionList li::after{height: 150px; bottom: -134px;}
+  .visionBox .visionList li .number img{width: 80px;}
+  .visionBox .visionList li .box .textBox .text01{font-size: 16px;}
+  .visionBox .visionList li .box .text02{font-size: 14px;}
+  .visionBox .visionList li .box .text02 br{display: none;}
+
+}
+
+@media (max-width: 414px){
+
+  .visionBox .topBox .imgList li{width: 50%;}
+  .visionBox .visionContentBox::after{top: 242px;}
 
 }
