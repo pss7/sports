@@ -95,14 +95,11 @@ $(function () {
 
   });
 
-  // 클릭 시 부드럽게 이동
-  const $links = $('.executiveStatusBox .linkBtn');
-
-  function getHeaderH() {
-    return $('#headerWrap').outerHeight() || 0;
-  }
-
+  // 클릭 이동
+  const $links = $('.executiveStatusBox .linkBtn[href^="#"]');
+  const $secs = $('.executiveStatusBox .rightBox .box[id]');
   const gap = 35;
+  let moving = false;
 
   $links.click(function (e) {
     e.preventDefault();
@@ -110,24 +107,49 @@ $(function () {
     const $target = $($(this).attr('href'));
     if (!$target.length) return;
 
-    const headerH = getHeaderH();
+    moving = true;
 
-    $('html, body').stop().animate({
-      scrollTop: $target.offset().top - headerH - gap
-    }, 400);
+    $('html, body').stop(true).animate({
+      scrollTop: $target.offset().top - ($('#headerWrap').outerHeight() || 0) - gap
+    }, 400, function () {
+      moving = false;
+      $(window).scroll();
+    });
 
-    $links.removeClass('active');
+    $(this).closest('.executiveStatusBox').find('.linkBtn').removeClass('active');
     $(this).addClass('active');
   });
 
+  // 스크롤 active
+  $(window).scroll(function () {
+    if (moving) return;
 
+    const st = $(this).scrollTop();
+    const o = ($('#headerWrap').outerHeight() || 0) + gap;
 
+    let $current = null;
+    $secs.each(function () {
+      if ($(this).offset().top - o <= st) $current = $(this);
+    });
 
+    if (!$current) return;
 
+    const id = $current.attr('id');
+    const $wrap = $current.closest('.executiveStatusBox');
 
+    $wrap.find('.linkBtn').removeClass('active');
+    $wrap.find('.linkBtn[href="#' + id + '"]').addClass('active');
+  });
 
-
-
-
+  $(window).on('load', function () {
+    setTimeout(function () {
+      $(window).scroll();
+    }, 0);
+  });
+  
+  $(window).resize(function () {
+    $(window).scroll();
+  });
+  $(window).scroll();
 
 });
