@@ -1834,3 +1834,161 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .presidentBox .presidentListBox .presidentList li .imgBox{margin: 0 auto;}
 
 }
+
+/* 조직 및 기구 */ 
+.organizationBox .organizationTopBox{margin-bottom: 140px; padding: 80px 0 40px;}
+.organizationBox .organizationTopBox .orgChartList01{position: relative;}
+.organizationBox .organizationTopBox .orgChartList01::after{content: ''; position: absolute; top:84px; left: 50%; margin-left: -3.5px; width: 7px; height: 7px; border-radius: 50%; background-color: #203C6B;}
+.organizationBox .organizationTopBox .orgChartList01::before{content: ''; position: absolute; left:50%; bottom: 300px; width: 1px; top:86px; margin-left: -0.5px; background-color: #203C6B; z-index: -1;}
+.organizationBox .organizationTopBox .orgChartList01 > li h4{margin-bottom: 80px;}
+.organizationBox .organizationTopBox .orgChartList01 > li h4 img{display: block; margin: 0 auto;}
+.organizationBox .organizationTopBox .orgChartList02{position: relative; margin-bottom: 80px; display: flex; justify-content: center; gap: 0 65px;}
+.organizationBox .organizationTopBox .orgChartList02::before{content: ''; position: absolute; top:50%; left: 50%; transform: translateX(-50%); margin-top: -0.5px; width: 10%; height: 1px; background-color: #203C6B; z-index: -1;}
+.organizationBox .organizationTopBox .orgChartList02 li a{position: relative; display: flex; align-items: center; justify-content: center; width: 283px; height: 66px; background: linear-gradient(to right, #1C2026, #203B69); text-align: center;}
+.organizationBox .organizationTopBox .orgChartList02 li a::before{content: ''; position: absolute; top:8px; left:4px; bottom: 8px; width: 8px; background-color: #FC7C1D;}
+.organizationBox .organizationTopBox .orgChartList02 li a span{font-weight: 700; color: #fff; font-size: 18px;} 
+.organizationBox .organizationTopBox .orgChartList03{position: relative; display: flex; justify-content: center; gap: 0 65px;}
+.organizationBox .organizationTopBox .orgChartList03::before{content: ''; position: absolute; top:33px; left:50%; transform: translateX(-50%); width: 46%; height: 1px; background-color: #203C6B; z-index: -1;}
+.organizationBox .organizationTopBox .orgChartList03 li a{position: relative; display: flex; align-items: center; justify-content: center; width: 251px; height: 66px; background: linear-gradient(to right, #1C2026, #203B69);}
+.organizationBox .organizationTopBox .orgChartList03 > li > a::before{content: ''; position: absolute; top:8px; left:4px; bottom: 8px; width: 8px; background-color: #4D8FFF;}
+.organizationBox .organizationTopBox .orgChartList03 > li > a.group::before{background-color: #FC7C1D;}
+.organizationBox .organizationTopBox .orgChartList03 > li > a > span{font-weight: 700; color: #fff; font-size: 18px;}
+.organizationBox .organizationTopBox .orgChartList03 li{margin-bottom: 8px; display: flex; gap: 0 65px;}
+.organizationBox .organizationTopBox .orgChartList03 li:last-child{margin-bottom: 0;}
+.organizationBox .organizationTopBox .orgChartList04{position: relative;}
+.organizationBox .organizationTopBox .orgChartList04::before{content: ''; position: absolute; top:33px; left:-32px; bottom: 33px; width: 1px; background-color: #203C6B;}
+.organizationBox .organizationTopBox .orgChartList04 li a{background: linear-gradient(to right, #2B4E89, #454C53); text-align: center;}
+.organizationBox .organizationTopBox .orgChartList04 li a span{font-weight: 700; color: #fff; font-size: 18px;}
+.organizationBox .organizationTopBox .orgChartList04 li{position: relative;}
+.organizationBox .organizationTopBox .orgChartList04 li:nth-child(1)::before{display: none;}
+.organizationBox .organizationTopBox .orgChartList04 li::before{content: ''; left: -32px; position: absolute; top:50%; margin-top: -0.5px; width: 32px; height: 1px; background-color: #203C6B;}
+.organizationBox .organizationTopBox .orgChartList04 li a::before{content: ''; position: absolute; top:8px; left:4px; bottom: 8px; width: 8px; background-color: #4D8FFF;}
+.organizationBox .organizationTopBox .infoText{margin-top: 69px; display: flex; flex-wrap: wrap; justify-content: center;text-align: center; color: #454C53; font-size: 14px;}
+.organizationBox .organizationTopBox .infoText::before{content: ''; margin-right: 8px; width: 20px; height: 20px; background: url(../images/sub/icon03.svg)no-repeat center;}
+.organizationBox .layoutBox{display: flex; gap: 0 80px; align-items: flex-start;}
+.organizationBox .leftBox{position: sticky; top:114px; width: 286px; flex-shrink: 0;}
+.organizationBox .leftBox .link{display: inline-block; padding: 8px 16px; margin-top: 46px; font-weight: 500; color: #9EA4AA; border-radius: 8px; background-color: #F7F8F9; word-break: keep-all;}
+.organizationBox .leftBox h4{margin-bottom: 40px; font-weight: 400; color: #1B1D1F; font-size: 48px; font-family: 'Retrosans';}
+.organizationBox .leftBox .linkList li{margin-bottom: 8px;}
+.organizationBox .leftBox .linkList li:last-child{margin-bottom: 0;}
+.organizationBox .leftBox .linkList li a{padding: 3px 0; display: inline-flex; align-items: center; justify-content: flex-start; border-radius: 8px; font-weight: 500; color: #454C53; font-size: 18px; word-break: keep-all;}
+.organizationBox .leftBox .linkList li a.active{padding: 5px 16px; background: linear-gradient(to right, #203B69, #1B1E22); font-weight: 700; color: #fff;}
+.organizationBox .rightBox{width: 100%;}
+.organizationBox .rightBox .box{margin-bottom: 40px;}
+.organizationBox .rightBox .box:last-child{margin-bottom: 0;}
+.organizationBox .rightBox .box h5{padding-top: 5px; display: flex; align-items: center; padding-left: 16px; height: 70px; font-size: 24px; color: #1B1D1F; border-radius: 20px 0 0 0; background: linear-gradient(to right, #EDF4FF, #FFFFFF);  border-bottom: 2px solid #1B1D1F; }
+.organizationBox .rightBox .box .infoBox{padding: 40px 0; display: flex; border-bottom: 1px solid #454C53;}
+.organizationBox .rightBox .box .infoBox:last-child{border-bottom: 0;}
+.organizationBox .rightBox .box .infoBox .nameBox{flex-shrink: 0; position: relative; padding-left: 32px; width: 280px;}
+.organizationBox .rightBox .box .infoBox .nameBox::before{content: ''; position: absolute; top:9px; left:6px; width: 12px; height: 12px; background: url(../images/sub/icon01.svg)no-repeat center / contain;}
+.organizationBox .rightBox .box .infoBox .nameBox h6{margin-bottom: 13px; font-size: 20px; color: #1B1D1F;}
+.organizationBox .rightBox .box .infoBox .titleList{padding-left: 40px; border-left:1px solid #E8EBED;}
+.organizationBox .rightBox .box .infoBox .titleList > li{margin-bottom: 8px; position: relative; padding-left: 25px; color: #454C53;}
+.organizationBox .rightBox .box .infoBox .titleList > li:last-child{margin-bottom: 0;}
+.organizationBox .rightBox .box .infoBox .titleList > li::before{content: ''; position: absolute; top:10px; left:11px; width: 3px; height: 3px; background-color:#454C53; border-radius: 50%;}
+.organizationBox .rightBox .box .infoBox .list02{margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px;}
+.organizationBox .rightBox .box .infoBox .list02 li{padding: 6px; font-size: 14px; font-weight: 500; color: #454C53; border-radius: 8px; background-color: #E8EBED;}
+
+@media (max-width: 1199px){
+
+  .organizationBox .layoutBox{gap: 0;}
+  .organizationBox .leftBox h4{margin-bottom: 22px; font-size: 32px;}
+  .organizationBox .layoutBox{gap: 0 50px}
+  .organizationBox .leftBox{width: 150px;}
+  .organizationBox .rightBox .box h5{font-size: 22px;}
+  .organizationBox .rightBox .box .infoBox .nameBox h6{font-size: 18px;}
+  .organizationBox .rightBox .box .infoBox .nameBox{width: 165px;}
+  .organizationBox .rightBox .box .infoBox .nameBox::before{top: 7px;}
+
+}
+
+@media (max-width: 1024px){
+
+  .organizationBox .organizationTopBox{padding: 80px 20px;}
+  .organizationBox .organizationTopBox .orgChartList02{flex-direction: column; gap: 10px 0; margin: 0 auto 30px!important;}
+  .organizationBox .organizationTopBox .orgChartList02 li,
+  .organizationBox .organizationTopBox .orgChartList02 li a{width: 100%; border-radius: 8px;}
+  .organizationBox .organizationTopBox .orgChartList02::before{display: none;}
+
+  .organizationBox .organizationTopBox .orgChartList03{ flex-direction: column; margin: 10px auto 0!important;}
+  .organizationBox .organizationTopBox .orgChartList03 li{flex-direction: column; gap: 10px 0;}
+  .organizationBox .organizationTopBox .orgChartList03 li a{border-radius: 8px;}
+  .organizationBox .organizationTopBox .orgChartList03 li,
+  .organizationBox .organizationTopBox .orgChartList03 li a{width: 100%;}
+  .organizationBox .organizationTopBox .orgChartList02,
+  .organizationBox .organizationTopBox .orgChartList03{max-width: 500px; margin: 0 auto;}
+  .organizationBox .organizationTopBox .orgChartList04 li::after{display: none;}
+  .organizationBox .organizationTopBox .orgChartList04::before{display: none;}
+  .organizationBox .organizationTopBox .orgChartList04 li::before{left: 50%; top: auto; bottom: -9px; margin-left: -0.5px; width: 1px; height: 10px;}
+  .organizationBox .organizationTopBox .orgChartList04 li:last-child:before{display: none;}
+  .organizationBox .organizationTopBox .orgChartList04 li:nth-child(1)::before{display: block;}
+  .organizationBox .organizationTopBox .orgChartList04 li a{border-radius: 8px;}
+
+}
+
+@media (max-width: 767px){
+
+  .organizationBox .organizationTopBox{margin-bottom: 80px;}
+  .organizationBox .organizationTopBox .orgChartList04 li a span,
+  .organizationBox .organizationTopBox .orgChartList03 li a span,
+  .organizationBox .organizationTopBox .orgChartList02 li a span{font-size: 16px;}
+  .organizationBox .organizationTopBox .orgChartList03 > li > a::before,
+  .organizationBox .organizationTopBox .orgChartList04 > li > a::before,
+  .organizationBox .organizationTopBox .orgChartList02 li a::before{width: 6px;}
+  .organizationBox .organizationTopBox .orgChartList02 li a,
+  .organizationBox .organizationTopBox .orgChartList03 li a,
+  .organizationBox .organizationTopBox .orgChartList04 li a{ height: 54px;}
+  .organizationBox .organizationTopBox .orgChartList04::before{top: 27px; bottom: 26px;}
+  
+  .organizationBox .layoutBox{gap: 0 50px}
+  .organizationBox .leftBox .linkList li a.active{padding: 5px 10px;}
+  .organizationBox .leftBox h4{margin-bottom: 18px; font-size: 26px;}
+  .organizationBox .leftBox{width: 130px;}
+  .organizationBox .leftBox .linkList li a{font-size: 16px;}
+  .organizationBox .rightBox .box h5{height: 55px; font-size: 18px; border-radius: 10px 0 0 0;}
+  .organizationBox .rightBox .box .infoBox .nameBox h6{font-size: 16px;}
+  .organizationBox .rightBox .box .infoBox .nameBox{padding-left: 28px; width: 125px;}
+  .organizationBox .rightBox .box .infoBox .nameBox::before{top: 5px;}
+  .organizationBox .rightBox .box .infoBox .titleList{padding-left: 15px;}
+  .organizationBox .leftBox .link{padding: 5px 8px; margin-top: 20px; font-size: 14px; border-radius: 3px;}
+  
+}
+
+@media (max-width: 576px){
+
+  .organizationBox .organizationTopBox .orgChartList01 > li h4{margin-bottom: 60px;}
+  .organizationBox .organizationTopBox .orgChartList01 > li h4 img{width: 250px;}
+  .organizationBox .organizationTopBox .orgChartList01::before{top: 56px}
+  .organizationBox .organizationTopBox .orgChartList01::after{top: 52px;}
+  .organizationBox .organizationTopBox .orgChartList04 li a span,
+  .organizationBox .organizationTopBox .orgChartList03 > li > a > span,
+  .organizationBox .organizationTopBox .orgChartList02 li a span{font-size: 14px;}
+
+  .organizationBox .layoutBox{gap: 0 25px}
+  .organizationBox .leftBox h4{margin-bottom: 10px; font-size: 18px;}
+  .organizationBox .leftBox{width: 100px;}
+  .organizationBox .leftBox .linkList li{margin-bottom: 5px;}
+  .organizationBox .leftBox .linkList li a{padding: 0; font-size: 12px;}
+  .organizationBox .rightBox .box{margin-bottom: 20px;}
+  .organizationBox .rightBox .box h5{height: 42px; font-size: 15px;}
+  .organizationBox .rightBox .box .infoBox{padding: 23px 0;}
+  .organizationBox .rightBox .box .infoBox .nameBox h6{margin-bottom: 5px; font-size: 14px;}
+  .organizationBox .rightBox .box .infoBox .nameBox{width: 80px; padding-left: 20px;}
+  .organizationBox .rightBox .box .infoBox .titleList > li,
+  .organizationBox .rightBox .box .infoBox .nameBox span{font-size: 12px;}
+  .organizationBox .rightBox .box .infoBox .nameBox::before{top: 7px; width: 6px; height: 6px;}
+  .organizationBox .rightBox .box .infoBox .titleList > li{padding-left: 20px;}
+  .organizationBox .rightBox .box .infoBox .titleList > li::before{top: 9px; left: 7px;}
+  .organizationBox .rightBox .box .infoBox .list02 li{padding: 4px; font-size: 12px; border-radius: 5px;}
+  .organizationBox .leftBox .link{font-size: 12px;}
+
+}
+
+@media (max-width: 414px){
+
+  .organizationBox .organizationTopBox .orgChartList01::before{top: 50px}
+  .organizationBox .organizationTopBox .orgChartList01::after{top: 46px;}
+  .organizationBox .organizationTopBox .orgChartList01 > li h4 img{width: 200px;}
+
+
+}

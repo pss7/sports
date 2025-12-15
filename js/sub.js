@@ -95,16 +95,30 @@ $(function () {
 
   });
 
+  // 클릭 시 부드럽게 이동
+  const $links = $('.executiveStatusBox .linkBtn');
 
+  function getHeaderH() {
+    return $('#headerWrap').outerHeight() || 0;
+  }
 
+  const gap = 35;
 
+  $links.click(function (e) {
+    e.preventDefault();
 
+    const $target = $($(this).attr('href'));
+    if (!$target.length) return;
 
+    const headerH = getHeaderH();
 
+    $('html, body').stop().animate({
+      scrollTop: $target.offset().top - headerH - gap
+    }, 400);
 
-
-
-
+    $links.removeClass('active');
+    $(this).addClass('active');
+  });
 
 
 
