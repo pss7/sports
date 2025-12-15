@@ -1990,5 +1990,11 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .organizationBox .organizationTopBox .orgChartList01::after{top: 46px;}
   .organizationBox .organizationTopBox .orgChartList01 > li h4 img{width: 200px;}
 
+  .organizationBox .layoutBox{gap: 0 15px;}
+
+  .organizationBox .rightBox .box .infoBox{padding: 15px 0; flex-direction: column; gap: 10px 0;}
+  .organizationBox .rightBox .box .infoBox .nameBox{width: 100%;}
+  .organizationBox .rightBox .box .infoBox .titleList{padding: 12px 0 0 0; border-top: 1px solid #E8EBED; border-left:0;}
+
 
 }
