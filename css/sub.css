@@ -40,6 +40,41 @@
 
 }
 
+/* 공통 - 탭버튼 */
+.comTabBtn{margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 8px;}
+.comTabBtn .btn:hover{border: 1px solid transparent;
+    background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(to right, #203c6b 0%, #4d8fff 50%, #203c6b 100%); color: transparent; overflow: hidden; box-shadow: 10px 10px 40px rgba(0, 0, 0, .1); transition: all .3s;}
+.comTabBtn .btn:hover::before{content: attr(data-text); background: linear-gradient(to right,#203c6b 0%,#4d8fff 50%,#203c6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none;}
+.comTabBtn .btn:hover .text{display: none;}
+.comTabBtn .btn{position: relative; padding: 9px 16px; display: flex; align-items: center; gap: 0 8px; border-radius: 16px; background-color: #fff; border: 1px solid #E8EBED; font-size: 14px;}
+.comTabBtn .btn .text{font-size: 14px; font-weight: 500; color: #454C53;}
+.comTabBtn .btn .number{padding: 4px 8px; border-radius: 8px; background-color:#E8EBED; font-weight: 500; color: #454C53; font-size: 14px;}
+.comTabBtn .btn.active{border: 1px solid transparent;
+    background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(to right, #203c6b 0%, #4d8fff 50%, #203c6b 100%); color: transparent; overflow: hidden; box-shadow: 10px 10px 40px rgba(0, 0, 0, .1);}
+.comTabBtn .btn.active::before{content: attr(data-text); background: linear-gradient(to right,#203c6b 0%,#4d8fff 50%,#203c6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none;}
+.comTabBtn .btn.active .text{display: none;}
+
+@media (max-width: 767px){
+
+  .comTabBtn .btn{padding: 9px 12px; border-radius: 10px; }
+
+}
+
+@media (max-width: 480px){
+
+
+  .comTabBtn{gap: 8px 2%;}
+  .comTabBtn .btn{padding: 6px; width: 32%; justify-content: center;}
+  .comTabBtn .btn .number{padding: 2px 6px; border-radius: 5px;}
+
+}
+
+@media (max-width: 414px){
+
+  .comTabBtn .btn{width: 49%;}
+  
+}
+
 /* 공통 - 이전글-다음글 */
 .postNav{margin: 25px 0;}
 .postNav .postNavItem{display: flex; gap: 0 30px; align-items: center; padding: 15px 15px 15px 20px; color: #111827;}
@@ -178,8 +213,9 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .subDepthBox .shareBox .shareBtn::after{width: 24px; height: 24px; background: url(../images/sub/share_icon.svg)no-repeat center;}
 .subDepthBox .shareBox .printerBtn::after{width: 22px; height: 21px; background: url(../images/sub/printer_icon.svg)no-repeat center;}
 .subDepthBox .subDepth{margin-bottom: 5px; display: flex; gap: 0 32px;}
+.subDepthBox .subDepth li a:hover{color: #1B1D1F;}
 .subDepthBox .subDepth li a.active{color: #1B1D1F;}
-.subDepthBox .subDepth li a{display: block; color: #9EA4AA; font-weight: 700; font-size: 20px;}
+.subDepthBox .subDepth li a{display: block; color: #9EA4AA; font-weight: 700; font-size: 20px; transition: all .3s;}
 
 @media (max-width: 1199px){
 
@@ -1997,4 +2033,131 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .organizationBox .rightBox .box .infoBox .titleList{padding: 12px 0 0 0; border-top: 1px solid #E8EBED; border-left:0;}
 
 
+}
+
+/* 단체현황 */
+.groupStatusBox .layoutBox{display: flex; align-items: flex-start; gap: 0 80px;}
+.groupStatusBox .leftBox{width: 286px; position: sticky; top:114px;}
+.groupStatusBox .leftBox .tabBtn{margin-bottom: 48px;}
+.groupStatusBox .leftBox .tabBtn .btn:hover{border: 1px solid transparent;
+    background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(to right, #203c6b 0%, #4d8fff 50%, #203c6b 100%); color: transparent; overflow: hidden; box-shadow: 10px 10px 40px rgba(0, 0, 0, .1); transition: all .3s;}
+.groupStatusBox .leftBox .tabBtn .btn:hover::before{content: attr(data-text); background: linear-gradient(to right,#203c6b 0%,#4d8fff 50%,#203c6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none;}
+.groupStatusBox .leftBox .tabBtn .btn:hover .text{display: none;}
+.groupStatusBox .leftBox .tabBtn .btn{margin-bottom: 8px; position: relative; padding: 9px 16px; display: flex; align-items: center; gap: 0 8px; border-radius: 16px; background-color: #fff; border: 1px solid #E8EBED; font-size: 14px;}
+.groupStatusBox .leftBox .tabBtn .btn:last-child{margin-bottom: 0;}
+.groupStatusBox .leftBox .tabBtn .btn .text{font-size: 14px; font-weight: 500; color: #454C53;}
+.groupStatusBox .leftBox .tabBtn .btn .number{padding: 4px 8px; border-radius: 8px; background-color:#E8EBED; font-weight: 500; color: #454C53; font-size: 14px;}
+.groupStatusBox .leftBox .tabBtn .btn.active{border: 1px solid transparent;
+    background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(to right, #203c6b 0%, #4d8fff 50%, #203c6b 100%); color: transparent; overflow: hidden; box-shadow: 10px 10px 40px rgba(0, 0, 0, .1);}
+.groupStatusBox .leftBox .tabBtn .btn.active::before{content: attr(data-text); background: linear-gradient(to right,#203c6b 0%,#4d8fff 50%,#203c6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none;}
+.groupStatusBox .leftBox .tabBtn .btn.active .text{display: none;}
+.groupStatusBox .leftBox .initialList{display: flex; flex-wrap: wrap; gap: 20px; width: 136px;}
+.groupStatusBox .leftBox .initialList li .btn{width: 32px; height: 32px; line-height: 32px; border-radius: 8px; font-size: 20px; color: #454C53; font-weight: 500; text-align: center;}
+.groupStatusBox .leftBox .initialList li .btn.active{background-color: #4D8FFF; color: #fff; font-weight: 700;} 
+.groupStatusBox .rightBox{width: 100%;}
+.groupStatusBox .rightBox .listBox{display: flex; gap: 0 60px; width: 100%; margin-bottom: 140px;}
+.groupStatusBox .rightBox .listBox:last-child{margin-bottom: 0;}
+.groupStatusBox .rightBox .listBox .initialText{display: block; font-weight: 700; color: #1B1D1F; font-size: 48px; line-height: 1;}
+.groupStatusBox .rightBox .listBox .list{width: 100%; border-top: 2px solid #454C53;}
+.groupStatusBox .rightBox .listBox .list li{padding: 40px 0 48px; display: flex; gap: 0 64px; border-bottom: 1px solid #E8EBED;}
+.groupStatusBox .rightBox .listBox .list li .logoBox{width: 100px; height: 100px;}
+.groupStatusBox .rightBox .listBox .list li .logoBox img{display: block;}
+.groupStatusBox .rightBox .listBox .list li .textBox{width: 100%;}
+.groupStatusBox .rightBox .listBox .list li .textBox .text{margin-bottom: 20px; padding: 3px 7px; display: inline-block; color: #203C6B; font-weight: 700; background-color: #EDF4FF; border-radius: 4px;}
+.groupStatusBox .rightBox .listBox .list li .titleBox{margin-bottom: 40px; display: flex; align-items: center; gap: 0 16px;}
+.groupStatusBox .rightBox .listBox .list li .titleBox h4{font-size: 24px; color: #000;}
+.groupStatusBox .rightBox .listBox .list li .titleBox .homepage{display: flex; align-items: center; gap: 0 10px; font-size: 14px; font-weight: 500; color: #454C53;}
+.groupStatusBox .rightBox .listBox .list li .titleBox .homepage::before{content: ''; width: 16px; height: 16px; background: url(../images/sub/link_icon.svg)no-repeat center;}
+.groupStatusBox .rightBox .listBox .list li .infoBox{width: 100%; padding: 8px; background-color: #F7F8F9; border-radius: 4px;}
+.groupStatusBox .rightBox .listBox .list li .infoBox dl{display: flex; gap: 0 40px;}
+.groupStatusBox .rightBox .listBox .list li .infoBox dl .box{display: flex; align-items: center; gap: 0 8px;}
+.groupStatusBox .rightBox .listBox .list li .infoBox dl .box dt{font-weight: 700; color: #9EA4AA; font-size: 14px;}
+.groupStatusBox .rightBox .listBox .list li .infoBox dl .box dd{font-weight: 500; color: #454C53;}
+
+@media (max-width: 1199px){
+
+  .groupStatusBox .rightBox .listBox .initialText{margin-bottom: 10px; font-size: 40px;}
+  .groupStatusBox .rightBox .listBox{display: block;}
+  .groupStatusBox .leftBox .initialList{width: 100%; justify-content: center;}
+  .groupStatusBox .leftBox .initialList li .btn{font-size: 18px;}
+  .groupStatusBox .layoutBox{flex-direction: column; gap: 40px 0;}
+  .groupStatusBox .leftBox{width: 100%; position: static;}
+  .groupStatusBox .leftBox .tabBtn{margin-bottom: 23px; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px; justify-content: center;}
+  .groupStatusBox .leftBox .tabBtn .btn{margin-bottom: 0;}
+
+}
+
+@media (max-width: 767px){
+
+  .groupStatusBox .leftBox .tabBtn .btn{padding: 5px 12px; border-radius: 10px;}
+  .groupStatusBox .rightBox .listBox .initialText{font-size: 26px;}
+  .groupStatusBox .rightBox .listBox .list li{gap: 0 40px;}
+  .groupStatusBox .rightBox .listBox .list li .titleBox h4{font-size: 22px;}
+
+}
+
+@media (max-width: 480px){
+
+  .groupStatusBox .rightBox .listBox .list li{padding: 24px 0 26px;}
+  .groupStatusBox .rightBox .listBox .list li{flex-direction: column; gap: 20px 0;}
+  .groupStatusBox .rightBox .listBox .list li .logoBox{margin: 0 auto;}
+  .groupStatusBox .rightBox .listBox .list li .titleBox{margin-bottom: 10px;}
+  .groupStatusBox .rightBox .listBox .list li .textBox .text{margin-bottom: 10px; font-size: 14px;}
+  .groupStatusBox .rightBox .listBox .list li .titleBox h4{font-size: 18px;}
+  .groupStatusBox .rightBox .listBox .list li .infoBox dl .box dd{font-size: 14px;}
+  .groupStatusBox .rightBox .listBox .initialText{font-size: 22px;}
+
+}
+
+/* 육성현황 */
+.trainingStatusBox .tabBtn{margin-bottom: 16px;}
+.trainingStatusBox .trainingStatusList{border-top: 2px solid #000;}
+.trainingStatusBox .trainingStatusList > li{padding: 40px 0; display: flex; gap: 0 0; align-items: flex-start; border-bottom: 1px solid #E8EBED;}
+.trainingStatusBox .trainingStatusList li .leftBox{position: sticky; top:0; width: 366px; flex-shrink: 0;}
+.trainingStatusBox .trainingStatusList li .leftBox .symbolBox{display: flex; align-items: center; gap: 0 20px;}
+.trainingStatusBox .trainingStatusList li .leftBox .symbolBox .symbol{display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid #E8EBED; border-radius: 16px;}
+.trainingStatusBox .trainingStatusList li .leftBox .symbolBox span{font-size: 20px; color: #454C53; font-weight: 700;}
+.trainingStatusBox .trainingStatusList li .list{width: 100%;}
+.trainingStatusBox .trainingStatusList li .list li{margin-bottom: 4px; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; background: linear-gradient(to right, #203C6B, #1B1D1F); border-radius: 8px;}
+.trainingStatusBox .trainingStatusList li .list li:last-child{margin-bottom: 0;}
+.trainingStatusBox .trainingStatusList li .list li .titBox h4{margin-bottom: 13px; font-size: 18px; font-weight: 700; color: #fff;}
+.trainingStatusBox .trainingStatusList li .list li .titBox .infoBox01{display: flex; align-items: center; gap: 0 16px;}
+.trainingStatusBox .trainingStatusList li .list li .titBox .infoBox01 .infoText01{padding: 2px 6px; font-size: 12px; color: #203C6B; font-weight: 700; background-color: #fff; border-radius: 4px;} 
+.trainingStatusBox .trainingStatusList li .list li .titBox .infoBox01 .infoText02{font-size: 14px; font-weight: 700; color: #9EA4AA;}
+.trainingStatusBox .trainingStatusList li .list li .titBox .infoBox01 .infoText02 em{padding-left: 5px; font-weight: 500; color: #FFF;}
+.trainingStatusBox .trainingStatusList li .list li .infoBox{display: flex; align-items: center; gap: 0 16px;}
+.trainingStatusBox .trainingStatusList li .list li .infoBox .personnelBox01{flex-shrink: 0; width: 64px;}
+.trainingStatusBox .trainingStatusList li .list li .infoBox .personnelBox01 span{display: block; margin-bottom: 4px; font-size: 14px; font-weight: 700; color: #9EA4AA;}
+.trainingStatusBox .trainingStatusList li .list li .infoBox .personnelBox01 em{font-weight: 700; color: #fff;}
+.trainingStatusBox .trainingStatusList li .list li .infoBox .personnelBox02{min-width: 301px; padding: 7px; display: flex; align-items: center; gap: 0 16px; background-color: #454C53; border-radius: 8px;}
+.trainingStatusBox .trainingStatusList li .list li .infoBox .personnelBox02 .box{display: flex; gap: 0 4px;}
+.trainingStatusBox .trainingStatusList li .list li .infoBox .personnelBox02 .box span{font-size: 14px; font-weight: 500; color: #fff;}
+.trainingStatusBox .trainingStatusList li .list li .infoBox .personnelBox02 .box em{padding: 0 4px; font-size: 14px; font-weight: 500; color: #454C53; background-color: #E8EBED; border-radius: 4px;}
+
+@media (max-width: 1199px){
+
+  .trainingStatusBox .trainingStatusList li .leftBox{width: 284px;}
+  .trainingStatusBox .trainingStatusList > li{padding: 20px;}
+  .trainingStatusBox .trainingStatusList > li{flex-direction: column; gap: 25px 0;}
+
+}
+
+@media (max-width: 767px){
+
+  .trainingStatusBox .trainingStatusList li .leftBox .symbolBox{gap: 0 10px;}
+  .trainingStatusBox .trainingStatusList li .leftBox .symbolBox .symbol{width: 40px; height: 40px; border-radius: 3px;}
+  .trainingStatusBox .trainingStatusList li .leftBox .symbolBox span{font-size: 18px;}
+  .trainingStatusBox .trainingStatusList li .list li{padding: 30px 20px; flex-direction: column; gap: 20px 0;}
+  .trainingStatusBox .trainingStatusList li .list li .titBox h4{text-align: center;}
+  .trainingStatusBox .trainingStatusList li .list li .infoBox{width: 100%; flex-direction: column; gap: 10px 0; text-align: center;}
+  .trainingStatusBox .trainingStatusList li .list li .infoBox .personnelBox02{min-width: auto; width: 100%; padding: 20px 10px; flex-direction: column; gap: 10px 0;}
+
+}
+
+@media (max-width: 480px){
+
+  .trainingStatusBox .trainingStatusList li .leftBox .symbolBox span{font-size: 16px;}
+  .trainingStatusBox .trainingStatusList li .list li{padding: 30px 20px 25px;}
+  .trainingStatusBox .trainingStatusList li .list li .titBox h4{margin-bottom: 16px;}
+  .trainingStatusBox .trainingStatusList li .list li .titBox .infoBox01{flex-direction: column; gap: 3px 0;}
 }

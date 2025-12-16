@@ -120,8 +120,21 @@ $(function () {
     $(this).addClass('active');
   });
 
+  /* 육성현황 탭 */
+  $('.trainingStatusTabContentBox .trainingStatusList').hide();
+  $('.trainingStatusTabContentBox .trainingStatusList').first().show();
 
+  $('.trainingStatusBox .comTabBtn .btn').click(function () {
 
+    $('.trainingStatusBox .comTabBtn .btn').removeClass('active');
+    $(this).addClass('active');
+
+    let idx = $(this).index();
+
+    $('.trainingStatusTabContentBox .trainingStatusList').hide();
+    $('.trainingStatusTabContentBox .trainingStatusList').eq(idx).show();
+
+  });
 
 
 
