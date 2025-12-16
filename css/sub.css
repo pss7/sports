@@ -2160,4 +2160,5 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .trainingStatusBox .trainingStatusList li .list li{padding: 30px 20px 25px;}
   .trainingStatusBox .trainingStatusList li .list li .titBox h4{margin-bottom: 16px;}
   .trainingStatusBox .trainingStatusList li .list li .titBox .infoBox01{flex-direction: column; gap: 3px 0;}
+  
 }

@@ -1,5 +1,17 @@
 $(function () {
 
+  /* 사이드바 스크롤 */
+  $(window).scroll(function () {
+    let y = $(this).scrollTop() * 0.2;
+
+    y = Math.max(0, Math.min(y, 300));
+
+    $('.applicationSideBox').css(
+      'transform',
+      `translateY(${y}px)`
+    );
+  });
+
   //헤더 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
@@ -93,27 +105,4 @@ $(function () {
     $('#sitemapBox').removeClass('active');
   });
 
-
-
-
-
-  //스크롤 시 top 버튼 fadeIn, fadeOut
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      $('#top').fadeIn();
-    } else {
-      $('#top').fadeOut();
-    }
-  });
-
-  //상단으로 이동
-  $("#top").click(function () {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 500);
-    return false;
-  });
-
-
 });
-
