@@ -186,7 +186,7 @@ main{padding-top: 180px;}
   #mobileMenuBox .mobileDepth01 li h2 a.active{background: linear-gradient(to right, #EDF4FF, #FFFFFF 20%); color: #203C6B;}
   #mobileMenuBox .mobileDepth02{display: none; padding-top: 93px; position: absolute; top:0; right:0; bottom: 0; width: calc(100% - 190px); z-index: 999; border-left: 4px solid #EDF4FF;}
   #mobileMenuBox .mobileDepth02 li h3 a{position: relative; padding: 8px 60px 8px 22px; display: block; font-weight: 600; background: linear-gradient(90deg, #454C53, #9EA4AA 20%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 16px;}
-  #mobileMenuBox .mobileDepth02 li h3.depth03 a{position: relative; background: linear-gradient(90deg, #4D8DFB, #454E58 50%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+  #mobileMenuBox .mobileDepth02 li h3.depth03.active a{position: relative; background: linear-gradient(90deg, #4D8DFB, #454E58 50%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
  #mobileMenuBox .mobileDepth02 li h3.depth03 a::after{content: ''; width: 10px; height: 7px; position: absolute; top: 50%; transform: translateY(-50%) rotate(180deg); right:32px; background: url(../images/common/arrow_icon02.svg)no-repeat center / contain;}
   #mobileMenuBox .mobileDepth02 li h3.active a::after{transform: translateY(-50%) rotate(0);}
   #mobileMenuBox .mobileDepth03{display: none; padding: 10px 10px 16px 18px;}
