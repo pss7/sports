@@ -494,14 +494,14 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 }
 
 /* 마이페이지 - 상세 */
-.contentLayoutBox{display: flex; gap: 0 8px;}
+.contentLayoutBox{display: flex; align-items: flex-start; gap: 0 8px;}
 .contentLayoutBox .comContentBox{max-width: 1212px; margin: 0;}
-.contentLayoutBox aside{width: 220px;}
+.contentLayoutBox aside{width: 220px; position: sticky; top: 114px}
 
 @media (max-width: 1199px){
 
   .contentLayoutBox{flex-direction: column-reverse; gap: 30px 0;}
-  .contentLayoutBox aside{width: 100%;}
+  .contentLayoutBox aside{width: 100%; position: static;}
 
 }
 
@@ -621,12 +621,12 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 }
 
 /* 프로그램 - 목록 */
-.programListWrap{display: flex; gap: 0 80px;}
+.programListWrap{display: flex; align-items: flex-start; gap: 0 80px;}
 .programListWrap .programInfoText{display: flex; flex-wrap: wrap; gap:8px; margin-bottom: 98px; font-size: 14px; color: #454C53;}
 .programListWrap .programInfoText strong{background: linear-gradient(to right,
     #F6503B, #9EA4AA); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 .programListWrap .programInfoText::before{content: ''; width: 20px; height: 20px; background: url(../images/sub/icon03.svg)no-repeat center;}
-.programListWrap aside{flex-shrink: 0; width: 286px;}
+.programListWrap aside{position: sticky; top: 114px; flex-shrink: 0; width: 286px;}
 .programListWrap aside h4{margin-bottom: 65px; font-size: 32px; color: #1B1D1F;}
 .programListWrap aside .sportBtnBox{margin-bottom: 24px;}
 .programListWrap aside .sportBtnBox .btn{position: relative; margin-bottom: 8px; height: 48px; border-radius: 16px; border: 1px solid #E8EBED; font-size: 14px; color: #454C53; font-weight: 500; background-color: #fff; z-index: 9;}
@@ -738,7 +738,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 @media (max-width: 1199px){
 
   .programListWrap{flex-direction: column; gap: 20px 0;}
-  .programListWrap aside{width: 100%;}
+  .programListWrap aside{width: 100%; position: static;}
   .programListWrap aside h4{margin-bottom: 30px; font-size: 28px; text-align: center;}
   .programListWrap aside .sportBtnBox{display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 10px;}
   .programListWrap aside .stateBtnBox{padding: 15px 20px; display: flex; justify-content: center; align-items: center; width: 100%; gap: 10px 20px;}
@@ -1586,8 +1586,8 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 }
 
 /* 시설현황 - 목록 */
-.facilityStatusListBox{display: flex; gap: 0 80px;}
-.facilityStatusListBox .categoryBox{width: 286px; flex-shrink: 0;}
+.facilityStatusListBox{display: flex; align-items: flex-start; gap: 0 80px;}
+.facilityStatusListBox .categoryBox{position: sticky; top: 114px; width: 286px; flex-shrink: 0;}
 .facilityStatusListBox .categoryBox h4{margin-bottom: 16px; font-size: 18px; color: #454C53; font-weight: 700;}
 .facilityStatusListBox .categoryBox .categoryList{width: 132px; padding: 24px 5px 24px 24px; background-color: #fff; border: 1px solid #E8EBED; border-radius: 20px;}
 .facilityStatusListBox .categoryBox .categoryList li{margin-bottom: 16px;}
@@ -1638,6 +1638,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 @media (max-width: 1199px){
 
   .facilityStatusListBox{flex-direction: column; gap: 30px 0;}
+  .facilityStatusListBox .categoryBox{position: static;}
   .facilityStatusListBox .categoryBox .categoryList{padding: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 30px; width: 100%;}
   .facilityStatusListBox .categoryBox .categoryList li{margin: 0;}
   .facilityStatusListBox .listBox .facilityStatusList li a .imgBox{padding: 0;}
@@ -1749,9 +1750,9 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .historyBox .topImgBox .textBox span:last-child{margin-right: 0;}
 .historyBox .topImgBox.active .textBox p{opacity: 1; filter: blur(0); letter-spacing: 15px; transition: all 3s;}
 .historyBox .topImgBox.active{transform: scale(1); border-radius: 0;}
-.historyBox .historyList > li{margin-bottom: 120px; display: flex; gap: 0 0;}
+.historyBox .historyList > li{margin-bottom: 120px; display: flex; align-items: flex-start; gap: 0 0;}
 .historyBox .historyList > li:last-child{margin-bottom: 0;}
-.historyBox .historyList li .yearBox{width: 342px; flex-shrink: 0;}
+.historyBox .historyList li .yearBox{position: sticky; top: 114px; width: 342px; flex-shrink: 0;}
 .historyBox .historyList li .yearBox h4{color: #1B1D1F; font-family: 'Retrosans'; font-size: 48px; font-weight: 400;}
 .historyBox .historyList li .list{position: relative; padding-left: 64px;}
 .historyBox .historyList li .list::before{content: ''; width: 2px; position: absolute; top:0; left:0; bottom: 0; background: url(../images/sub/border.svg)no-repeat center / cover;}
@@ -1786,7 +1787,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .historyBox .topImgBox{margin-bottom: 80px;}
   .historyBox .historyList > li{margin-bottom: 55px; flex-direction: column; gap : 20px 0;}
   .historyBox .historyList li .yearBox h4{font-size: 30px;}
-  .historyBox .historyList li .yearBox{width: 100%;}
+  .historyBox .historyList li .yearBox{position: static; width: 100%;}
   .historyBox .historyList li .list{padding-left: 36px;}
   .historyBox .historyList li .list li{margin-bottom: 34px;}
   .historyBox .historyList li .list li .text{font-size: 18px;}
@@ -2114,7 +2115,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .trainingStatusBox .tabBtn{margin-bottom: 16px;}
 .trainingStatusBox .trainingStatusList{border-top: 2px solid #000;}
 .trainingStatusBox .trainingStatusList > li{padding: 40px 0; display: flex; gap: 0 0; align-items: flex-start; border-bottom: 1px solid #E8EBED;}
-.trainingStatusBox .trainingStatusList li .leftBox{position: sticky; top:0; width: 366px; flex-shrink: 0;}
+.trainingStatusBox .trainingStatusList li .leftBox{position: sticky; top: 114px; width: 366px; flex-shrink: 0;}
 .trainingStatusBox .trainingStatusList li .leftBox .symbolBox{display: flex; align-items: center; gap: 0 20px;}
 .trainingStatusBox .trainingStatusList li .leftBox .symbolBox .symbol{display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid #E8EBED; border-radius: 16px;}
 .trainingStatusBox .trainingStatusList li .leftBox .symbolBox span{font-size: 20px; color: #454C53; font-weight: 700;}
@@ -2137,7 +2138,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 
 @media (max-width: 1199px){
 
-  .trainingStatusBox .trainingStatusList li .leftBox{width: 284px;}
+  .trainingStatusBox .trainingStatusList li .leftBox{width: 284px; position: static;}
   .trainingStatusBox .trainingStatusList > li{padding: 20px;}
   .trainingStatusBox .trainingStatusList > li{flex-direction: column; gap: 25px 0;}
 
