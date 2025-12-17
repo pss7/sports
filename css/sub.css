@@ -2256,11 +2256,10 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .searchBox .searchContentBox .comTabBtn{margin-bottom: 64px;}
 .searchBox .searchContentBox .searchResultBox{position: relative; margin-bottom: 80px;}
 .searchBox .searchContentBox .searchResultBox:last-of-type{margin-bottom: 0;}
-.searchBox .searchContentBox .searchResultBox .infoBox{margin-bottom: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px;}
+.searchBox .searchContentBox .searchResultBox .infoBox{padding-bottom: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px; border-bottom: 2px solid #000;}
 .searchBox .searchContentBox .searchResultBox .infoBox .dot{width: 6px; height: 6px; border-radius: 50%; background-color: #9EA4AA;}
 .searchBox .searchContentBox .searchResultBox .infoBox h4{font-size: 24px; font-weight: 700; color: #454C53;}
 .searchBox .searchContentBox .searchResultBox .infoBox .length{font-weight: 700; color: #4D8FFF; font-size: 24px;}
-.searchBox .searchContentBox .searchResultBox .searchResultList{border-top: 2px solid #000;}
 .searchBox .searchContentBox .searchResultBox .searchResultList li{border-bottom: 1px solid #E8EBED;}
 .searchBox .searchContentBox .searchResultBox .searchResultList li a{display: block; padding: 24px 0;}
 .searchBox .searchContentBox .searchResultBox .searchResultList li a .depth{ padding: 4px 8px; margin-bottom: 8px; display: inline-flex; align-items: center; gap: 0 15px; background-color: #E8EBED; border-radius: 8px;}
@@ -2272,6 +2271,10 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .searchBox .searchContentBox .searchResultBox .searchResultList li a p{color: #9EA4AA; font-size: 14px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 .searchBox .searchContentBox .searchResultBox .view{position: absolute; top:7px; right:0; display: flex; align-items: center; gap: 0 7px; font-size: 14px; font-weight: 700; color: #9EA4AA;}
 .searchBox .searchContentBox .searchResultBox .view::after{content: '';  width: 24px; height: 24px; background: url(../images/sub/view_icon.svg)no-repeat center;}
+.searchBox .noResultBox{margin-top: 32px; display: flex; flex-direction: column; align-items: center;}
+.searchBox .noResultBox::before{content: ''; margin-bottom: 5px; width: 72px; height: 72px; background: url(../images/sub/document_icon01.svg)no-repeat center / contain;}
+.searchBox .noResultBox span{display: block; margin-bottom: 4px; font-weight: 700; color: #454C53; font-size: 18px; text-align: center;}
+.searchBox .noResultBox em{display: block; font-size: 14px; color: #9EA4AA; text-align: center;}
 
 @media (max-width: 1199px){
 
@@ -2289,14 +2292,15 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .searchBox .searchContentBox{border-radius: 30px;}
   .searchBox .searchTopBox .serachResultText{font-size: 24px;}
   .searchBox .searchContentBox{padding: 60px 30px;}
-  .searchBox .searchContentBox .searchResultBox .infoBox{margin-bottom: 15px;}
-  .searchBox .searchContentBox .searchResultBox .infoBox h4,
+  .searchBox .searchContentBox .searchResultBox .infoBox{padding-bottom: 15px; gap: 0 6px;}
   .searchBox .searchContentBox .searchResultBox .infoBox .length{font-size: 18px;}
+  .searchBox .noResultBox span{font-size: 16px;}
 
 }
 
 @media (max-width: 480px){
 
+  .searchBox .searchContentBox .searchResultBox .infoBox .dot{width: 4px; height: 4px;}
   .searchBox .searchContentBox{border-radius: 20px;}
   .searchBox .searchTopBox .serachResultText{font-size: 22px;}
   .searchBox .searchContentBox .searchResultBox{margin-bottom: 60px;}
