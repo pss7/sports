@@ -46,9 +46,9 @@
     background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(to right, #203c6b 0%, #4d8fff 50%, #203c6b 100%); color: transparent; overflow: hidden; box-shadow: 10px 10px 40px rgba(0, 0, 0, .1); transition: all .3s;}
 .comTabBtn .btn:hover::before{content: attr(data-text); background: linear-gradient(to right,#203c6b 0%,#4d8fff 50%,#203c6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none;}
 .comTabBtn .btn:hover .text{display: none;}
-.comTabBtn .btn{position: relative; padding: 9px 16px; display: flex; align-items: center; gap: 0 8px; border-radius: 16px; background-color: #fff; border: 1px solid #E8EBED; font-size: 14px;}
-.comTabBtn .btn .text{font-size: 14px; font-weight: 500; color: #454C53;}
-.comTabBtn .btn .number{padding: 4px 8px; border-radius: 8px; background-color:#E8EBED; font-weight: 500; color: #454C53; font-size: 14px;}
+.comTabBtn .btn{position: relative; padding: 9px 16px; display: flex; align-items: center; gap: 0 8px; border-radius: 16px; background-color: #fff; border: 1px solid #E8EBED; font-size: 14px; word-break: keep-all;}
+.comTabBtn .btn .text{ font-size: 14px; font-weight: 500; color: #454C53;}
+.comTabBtn .btn .number{flex-shrink: 0; padding: 4px 8px; border-radius: 8px; background-color:#E8EBED; font-weight: 500; color: #454C53; font-size: 14px;}
 .comTabBtn .btn.active{border: 1px solid transparent;
     background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(to right, #203c6b 0%, #4d8fff 50%, #203c6b 100%); color: transparent; overflow: hidden; box-shadow: 10px 10px 40px rgba(0, 0, 0, .1);}
 .comTabBtn .btn.active::before{content: attr(data-text); background: linear-gradient(to right,#203c6b 0%,#4d8fff 50%,#203c6b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; pointer-events: none;}
@@ -63,8 +63,8 @@
 @media (max-width: 480px){
 
 
-  .comTabBtn{gap: 8px 2%;}
-  .comTabBtn .btn{padding: 6px; width: 32%; justify-content: center;}
+  .comTabBtn{ gap: 8px 2%;}
+  .comTabBtn .btn{flex-direction: column; gap: 5px 0; padding: 6px; width: 32%; justify-content: center;}
   .comTabBtn .btn .number{padding: 2px 6px; border-radius: 5px;}
 
 }
@@ -2244,5 +2244,68 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .chuncheonSportsClubBox .title{font-size: 20px;}
   .chuncheonSportsClubBox .imgListBox .imgList{margin-bottom: 40px;}
   .chuncheonSportsClubBox .imgListBox .symbol{width: 65px; top: -36px;}
+
+}
+
+/* 통합검색 */
+.searchBox .searchTopBox{margin-bottom: 40px; display: flex; align-items: flex-end; justify-content: space-between;}
+.searchBox .searchTopBox .comSearchBox{margin: 0; max-width: 540px;}
+.searchBox .searchTopBox .serachResultText{color: #1B1D1F; font-weight: 700; font-size: 32px;}
+.searchBox .searchTopBox .serachResultText strong{color: #4D8FFF;}
+.searchBox .searchContentBox{padding: 64px; background-color: #fff; border-radius: 64px;}
+.searchBox .searchContentBox .comTabBtn{margin-bottom: 64px;}
+.searchBox .searchContentBox .searchResultBox{position: relative; margin-bottom: 80px;}
+.searchBox .searchContentBox .searchResultBox:last-of-type{margin-bottom: 0;}
+.searchBox .searchContentBox .searchResultBox .infoBox{margin-bottom: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px;}
+.searchBox .searchContentBox .searchResultBox .infoBox .dot{width: 6px; height: 6px; border-radius: 50%; background-color: #9EA4AA;}
+.searchBox .searchContentBox .searchResultBox .infoBox h4{font-size: 24px; font-weight: 700; color: #454C53;}
+.searchBox .searchContentBox .searchResultBox .infoBox .length{font-weight: 700; color: #4D8FFF; font-size: 24px;}
+.searchBox .searchContentBox .searchResultBox .searchResultList{border-top: 2px solid #000;}
+.searchBox .searchContentBox .searchResultBox .searchResultList li{border-bottom: 1px solid #E8EBED;}
+.searchBox .searchContentBox .searchResultBox .searchResultList li a{display: block; padding: 24px 0;}
+.searchBox .searchContentBox .searchResultBox .searchResultList li a .depth{ padding: 4px 8px; margin-bottom: 8px; display: inline-flex; align-items: center; gap: 0 15px; background-color: #E8EBED; border-radius: 8px;}
+ .searchBox .searchContentBox .searchResultBox .searchResultList li a .depth li{ position: relative; font-size: 14px; font-weight: 500; color: #9EA4AA;}
+ .searchBox .searchContentBox .searchResultBox .searchResultList li a .depth li::after{content: ''; position: absolute; top: 50%; transform: translateY(-50%); right:-10px; width: 5px; height: 2px; background-color: #9EA4AA;}
+ .searchBox .searchContentBox .searchResultBox .searchResultList li a .depth li:last-child::after{display: none;}
+.searchBox .searchContentBox .searchResultBox .searchResultList li a .depth li:last-child{font-weight: 700; color: #454C53;}
+.searchBox .searchContentBox .searchResultBox .searchResultList li a h5{margin-bottom: 8px; font-size: 18px; font-weight: 500; color: #454C53; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.searchBox .searchContentBox .searchResultBox .searchResultList li a p{color: #9EA4AA; font-size: 14px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.searchBox .searchContentBox .searchResultBox .view{position: absolute; top:7px; right:0; display: flex; align-items: center; gap: 0 7px; font-size: 14px; font-weight: 700; color: #9EA4AA;}
+.searchBox .searchContentBox .searchResultBox .view::after{content: '';  width: 24px; height: 24px; background: url(../images/sub/view_icon.svg)no-repeat center;}
+
+@media (max-width: 1199px){
+
+  .searchBox .searchTopBox{flex-direction: column; align-items: center; text-align: center; gap: 20px 0;}  
+  .searchBox .searchTopBox .serachResultText{font-size: 28px;}
+  .searchBox .searchContentBox{padding: 60px 50px;}
+  .searchBox .searchContentBox .searchResultBox .infoBox h4,
+  .searchBox .searchContentBox .searchResultBox .infoBox .length{font-size: 20px;}
+  .searchBox .searchContentBox .searchResultBox .searchResultList li a h5{font-size: 16px;}
+
+}
+
+@media (max-width: 767px){
+
+  .searchBox .searchContentBox{border-radius: 30px;}
+  .searchBox .searchTopBox .serachResultText{font-size: 24px;}
+  .searchBox .searchContentBox{padding: 60px 30px;}
+  .searchBox .searchContentBox .searchResultBox .infoBox{margin-bottom: 15px;}
+  .searchBox .searchContentBox .searchResultBox .infoBox h4,
+  .searchBox .searchContentBox .searchResultBox .infoBox .length{font-size: 18px;}
+
+}
+
+@media (max-width: 480px){
+
+  .searchBox .searchContentBox{border-radius: 20px;}
+  .searchBox .searchTopBox .serachResultText{font-size: 22px;}
+  .searchBox .searchContentBox .searchResultBox{margin-bottom: 60px;}
+  .searchBox .searchContentBox .searchResultBox .searchResultList li a h5{font-size: 14px;}
+  .searchBox .searchContentBox{padding: 50px 20px;}
+  .searchBox .searchContentBox .searchResultBox .infoBox h4,
+  .searchBox .searchContentBox .searchResultBox .infoBox .length{font-size: 16px;}
+  .searchBox .searchContentBox .searchResultBox .searchResultList li a{padding: 20px 0;}
+  .searchBox .searchContentBox .searchResultBox .searchResultList li a .depth li{font-size: 12px;}
+  .searchBox .searchContentBox .searchResultBox .searchResultList li a .depth{padding: 2px 8px; border-radius: 5px;}
 
 }
