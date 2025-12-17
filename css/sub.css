@@ -196,7 +196,8 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .subVisualBox .visualBox .title em:nth-child(10){animation-delay: .75s;}
 .subVisualBox .visualBox .title em:nth-child(11){animation-delay: .8s;}
 .subVisualBox .subMenuList{padding-bottom: 10px; display: flex; justify-content: center; gap: 0 8px; overflow-x: auto;}
-.subVisualBox .subMenuList li a{display: block; padding: 10px 16px; font-weight: 500; color: #454C53; border-radius: 50px; background-color:#fff; white-space: nowrap;}
+.subVisualBox .subMenuList li a{display: block; padding: 10px 16px; font-weight: 500; color: #454C53; border-radius: 50px; background-color:#fff; white-space: nowrap; transition: all .3s;}
+.subVisualBox .subMenuList li a:hover{background-color: #4D8FFF; font-weight: 700; color: #fff;}
 .subVisualBox .subMenuList li a.active{background-color: #4D8FFF; font-weight: 700; color: #fff;}
 .subDepthBox{padding-bottom: 18px; border-bottom: 1px solid #E8EBED;}
 .subDepthBox .container{position: relative;}
@@ -208,7 +209,8 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .subDepthBox .title01{margin-bottom: 14px; font-weight: 400; font-family: 'Retrosans'; font-size: 32px;}
 .subDepthBox .title02{font-weight: 700; color: #9EA4AA; font-size: 24px;}
 .subDepthBox .shareBox{position: absolute; top:0; right:20px; display: flex; gap: 0 8px;}
-.subDepthBox .shareBox a{position: relative; display: block; width: 64px; height: 54px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 40px rgba(0,0,0,.1);}
+.subDepthBox .shareBox a{position: relative; display: block; width: 64px; height: 54px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 40px rgba(0,0,0,.1); transition: all .3s;}
+.subDepthBox .shareBox a:hover{transform: translateY(-10px);}
 .subDepthBox .shareBox a::after{content: ''; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
 .subDepthBox .shareBox .shareBtn::after{width: 24px; height: 24px; background: url(../images/sub/share_icon.svg)no-repeat center;}
 .subDepthBox .shareBox .printerBtn::after{width: 22px; height: 21px; background: url(../images/sub/printer_icon.svg)no-repeat center;}
@@ -1126,12 +1128,12 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .formWrap .fileBox .fileListUploadBox{margin-bottom: 32px;}
 .formWrap .fileBox .fileListUploadBox .fileimgListBox{margin-bottom: 18px; padding: 28px 24px; border: 2px dashed #E8EBED; border-radius: 20px;}
 .formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList{display: flex; flex-wrap: wrap; gap:8px;}
-.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn.active{border: 2px solid #4D8FFF;}
-.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn.active .checkIcon{background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li.active .fileBtn{border: 2px solid #4D8FFF;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li.active .fileBtn .checkIcon{background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
 .formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn{position: relative; display: block; width: 92px; height: 92px; border: 2px solid #C9CDD2; border-radius: 8px; overflow: hidden;}
 .formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn .mainImgText{position: absolute; top:2px; left:2px; padding: 4px; font-size: 12px; font-weight: 700; color: #203C6B; background-color: #fff; border-radius: 4px; text-align: center;}
 .formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn .checkIcon{width: 22px; height: 22px; position: absolute; right:2px; bottom: 2px; background: url(../images/sub/chk_icon.svg)no-repeat center / contain;}
-.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.formWrap .fileBox .fileListUploadBox .fileimgListBox .fileImgList li .fileBtn img{display: block; width: 100%; height: 100%; object-fit: contain;}
 .formWrap .fileBox .infoBox{display: flex; gap: 0 24px;}
 .formWrap .fileBox .infoBox span{font-weight: 500; color: #9EA4AA;}
 .formWrap .fileBox .infoBox strong{font-weight: 700; color: #454C53;}

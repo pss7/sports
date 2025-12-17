@@ -51,32 +51,32 @@ $(function () {
   });
 
   // 개별 선택
-  $('.fileImgList li .fileBtn').click(function () {
-    $(this).toggleClass('active');
+  // $('.fileImgList li .fileBtn').click(function () {
+  //   $(this).toggleClass('active');
 
-    let total = $('.fileImgList .fileBtn').length;
-    let selected = $('.fileImgList .fileBtn.active').length;
+  //   let total = $('.fileImgList .fileBtn').length;
+  //   let selected = $('.fileImgList .fileBtn.active').length;
 
-    if (total === selected && total > 0) {
-      $('.checkAllBtn').addClass('active').text('전체 해제');
-    } else {
-      $('.checkAllBtn').removeClass('active').text('전체 선택');
-    }
-  });
+  //   if (total === selected && total > 0) {
+  //     $('.checkAllBtn').addClass('active').text('전체 해제');
+  //   } else {
+  //     $('.checkAllBtn').removeClass('active').text('전체 선택');
+  //   }
+  // });
 
   // 전체 선택
-  $('.checkAllBtn').click(function () {
-    let total = $('.fileImgList .fileBtn').length;
-    let selected = $('.fileImgList .fileBtn.active').length;
+  // $('.checkAllBtn').click(function () {
+  //   let total = $('.fileImgList .fileBtn').length;
+  //   let selected = $('.fileImgList .fileBtn.active').length;
 
-    if (total === selected && total > 0) {
-      $('.fileImgList .fileBtn').removeClass('active');
-      $(this).removeClass('active').text('전체 선택');
-    } else {
-      $('.fileImgList .fileBtn').addClass('active');
-      $(this).addClass('active').text('전체 해제');
-    }
-  });
+  //   if (total === selected && total > 0) {
+  //     $('.fileImgList .fileBtn').removeClass('active');
+  //     $(this).removeClass('active').text('전체 선택');
+  //   } else {
+  //     $('.fileImgList .fileBtn').addClass('active');
+  //     $(this).addClass('active').text('전체 해제');
+  //   }
+  // });
 
   //스크롤 시 해당 영역 active 클래스 적용
   $(window).scroll(function () {
