@@ -2163,3 +2163,86 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .trainingStatusBox .trainingStatusList li .list li .titBox .infoBox01{flex-direction: column; gap: 3px 0;}
 
 }
+
+/* 춘천스포츠클럽 */
+.chuncheonSportsClubBox .title{color: #9EA4AA; margin-bottom: 32px; font-size: 48px; font-weight: 700;}
+.chuncheonSportsClubBox .title .color01{color: #1B1D1F;}
+.chuncheonSportsClubBox .title .color02{color: #4D8FFF;}
+.chuncheonSportsClubBox .imgListBox{position: relative;}
+.chuncheonSportsClubBox .imgListBox .imgList{margin-bottom: 93px; display: flex; flex-wrap: wrap;}
+.chuncheonSportsClubBox .imgListBox .imgList li{width: 50%; height: 265px; border-radius: 16px; overflow: hidden;}
+.chuncheonSportsClubBox .imgListBox .imgList li img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.chuncheonSportsClubBox .imgListBox .symbol{width: 190px; height: 206px; position: absolute; top: -93px; right: 64px; object-fit: contain;}
+.chuncheonSportsClubBox .infoBox01{display: flex; margin-bottom: 80px;}
+.chuncheonSportsClubBox .infoBox01 .tit{flex-shrink: 0; margin-right: 80px; font-weight: 700; color: #1B1D1F; font-size: 32px;}
+.chuncheonSportsClubBox .infoBox01 .text01{margin-right: 64px;}
+.chuncheonSportsClubBox .infoBox01 .text{font-weight: 500; color: #454C53;}
+.chuncheonSportsClubBox .infoBox02{margin-left: 300px; display: flex; align-items: center; gap: 0 64px; }
+.chuncheonSportsClubBox .infoBox02 .contactBox{padding-left: 64px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 505px; height: 136px; border-radius: 64px; background: radial-gradient(ellipse 40% 48% at center,rgba(173, 203, 255, 0.5) 0%, rgba(173, 203, 255, 0.5) 60%,#F7F8F9 100% );}
+.chuncheonSportsClubBox .infoBox02 .contactBox span{display: block; margin-bottom: 8px; font-weight: 500; color: #1B1D1F;}
+.chuncheonSportsClubBox .infoBox02 .contactBox p{font-weight: 500; color: #454C53; font-size: 24px;}
+.chuncheonSportsClubBox .infoBox02 .infoList li{margin-bottom: 18px;}
+.chuncheonSportsClubBox .infoBox02 .infoList li:last-child{margin-bottom: 0;}
+.chuncheonSportsClubBox .infoBox02 .infoList li a{display: flex; align-items: center; gap: 0 12px; font-weight: 500; color: #1B1D1F;}
+.chuncheonSportsClubBox .infoBox02 .infoList li a::after{content: ''; width: 16px; height: 16px; background: url(../images/sub/link_icon.svg)no-repeat center;}
+.chuncheonSportsClubBox .infoBox02 .infoList li a.kakao::before{content: ''; width: 28px; height: 28px; background: url(../images/sub/kakao_icon.svg)no-repeat center;}
+.chuncheonSportsClubBox .infoBox02 .infoList li a.homepage{margin-left: 8px;}
+.chuncheonSportsClubBox .infoBox02 .infoList li a.homepage::before{content: ''; width: 18px; height: 18px; background: url(../images/sub/homepage_icon.svg)no-repeat center;}
+.chuncheonSportsClubBox .infoBox02 .infoList li p{font-weight: 500; color: #454C53;}
+
+@media (max-width: 1199px){
+
+  .chuncheonSportsClubBox .title{font-size: 40px;}
+  .chuncheonSportsClubBox .infoBox01 .tit{margin-right: 60px; font-size: 28px;}
+  .chuncheonSportsClubBox .infoBox02 .contactBox p{font-size: 20px;}
+
+}
+
+@media (max-width: 1024px){
+
+  .chuncheonSportsClubBox .imgListBox .imgList{margin-bottom: 55px;}
+  .chuncheonSportsClubBox .title{font-size: 36px;}
+  .chuncheonSportsClubBox .infoBox01{margin-bottom: 48px; flex-direction: column; gap: 30px 0; text-align: center;}
+  .chuncheonSportsClubBox .infoBox01 .text{margin: 0;}
+  .chuncheonSportsClubBox .infoBox01 .tit{margin-right: 0; font-size: 24px;}
+  .chuncheonSportsClubBox .infoBox02 .contactBox{padding: 0; align-items: center;}
+  .chuncheonSportsClubBox .infoBox02 .contactBox p{font-size: 20px;}
+  .chuncheonSportsClubBox .infoBox02{margin: 0; justify-content: center;}
+  .chuncheonSportsClubBox .infoBox02{flex-direction: column; gap: 30px 0;}
+  .chuncheonSportsClubBox .infoBox02 .infoList{justify-content: center;}
+  .chuncheonSportsClubBox .infoBox02 .infoList li a{justify-content: center;}
+
+}
+
+@media (max-width: 767px){
+  
+  .chuncheonSportsClubBox .infoBox01 .tit{font-size: 22px;}
+  .chuncheonSportsClubBox .title{margin-bottom: 30px; font-size: 24px;}
+  .chuncheonSportsClubBox .imgListBox .imgList li{height: 202px;}
+  .chuncheonSportsClubBox .infoBox02 .contactBox p{font-size: 18px;}
+  .chuncheonSportsClubBox .imgListBox .symbol{height: auto; width: 120px;}
+
+}
+
+@media (max-width: 576px){
+
+  .chuncheonSportsClubBox .title{font-size: 22px;}
+  .chuncheonSportsClubBox .imgListBox .symbol{width: 87px; top: -65px; right: 20px;}
+  .chuncheonSportsClubBox .imgListBox .imgList li{width: 100%;}
+  .chuncheonSportsClubBox .infoBox01 .text br{display: none;}
+  .chuncheonSportsClubBox .infoBox02 .infoList li p,
+  .chuncheonSportsClubBox .infoBox02 .infoList li a{font-size: 14px;}    
+  .chuncheonSportsClubBox .infoBox02 .contactBox{width: 380px; height: 106px;}
+  .chuncheonSportsClubBox .infoBox02 .contactBox p{font-size: 16px;}
+  .chuncheonSportsClubBox .infoBox02 .contactBox span{font-size: 14px;}
+  .chuncheonSportsClubBox .infoBox01 .tit{font-size: 20px;}
+
+}
+
+@media (max-width: 480px){
+
+  .chuncheonSportsClubBox .title{font-size: 20px;}
+  .chuncheonSportsClubBox .imgListBox .imgList{margin-bottom: 40px;}
+  .chuncheonSportsClubBox .imgListBox .symbol{width: 65px; top: -36px;}
+
+}
