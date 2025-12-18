@@ -130,8 +130,17 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .label .required{color: #FF8539;}
 .isReadonly{background-color: #E8EBED !important; cursor: auto !important;}
 .isDisabled{background-color: #E8EBED !important; cursor: not-allowed !important; pointer-events: none;}
-input[readonly]{ background-color: #E8EBED; cursor: auto;}
-input[readonly]:focus{ outline: none; box-shadow: none;}
+input:disabled,
+input:disabled + label,
+input[readonly], 
+input[readonly] + label{background-color: #E8EBED;}
+input[readonly], input[readonly] + label{cursor: auto;}
+input:disabled, input:disabled + label{cursor: not-allowed;}
+
+input[readonly]:focus,
+input[readonly] + label:focus,
+input:disabled,
+input:disabled + label{outline: none;}
 
 @media (max-width: 480px){
 
