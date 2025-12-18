@@ -25,19 +25,21 @@ $(function () {
   });
 
   //스크롤 그라데이션 
-  $('.applicationScrollBox').scroll(function () {
+  $('.applicationScrollBox').each(function () {
+    const $w = $(this);
 
-    let $wrap = $(this);
-    let scrollTop = $wrap.scrollTop();
-    let wrapHeight = $wrap.innerHeight();
-    let scrollHeight = this.scrollHeight;
+    $w.scroll(function () {
+      const st = $w.scrollTop();
+      const h = $w.innerHeight();
+      const sh = this.scrollHeight;
 
-    if (scrollTop + wrapHeight >= scrollHeight - 5) {
-      $wrap.addClass('scrollEnd');
-    } else {
-      $wrap.removeClass('scrollEnd');
-    }
-
+      if (sh > h + 1) {
+        $w.addClass('hasScroll')
+          .toggleClass('scrollEnd', st + h >= sh - 5);
+      } else {
+        $w.removeClass('hasScroll scrollEnd');
+      }
+    }).trigger('scroll');
   });
 
   //첨부파일
@@ -135,6 +137,42 @@ $(function () {
     $('.trainingStatusTabContentBox .trainingStatusList').eq(idx).show();
 
   });
+
+  //선택박스
+  $('.customSelectBox .selectBtn').click(function () {
+
+    if ($(this).hasClass('active')) {
+      $(this).next().slideUp();
+      $(this).removeClass('active');
+    } else {
+      $(this).next().slideDown();
+      $(this).addClass('active');
+    }
+
+    return false;
+
+  });
+
+  //링크 복사 및 프린트
+  $('.shareBtn').click(function (e) {
+    e.preventDefault();
+
+    const url = location.href;
+
+    navigator.clipboard.writeText(url)
+      .then(function () {
+        alert('링크가 복사되었습니다.');
+      })
+      .catch(function () {
+        alert('복사에 실패했습니다.');
+      });
+  });
+
+  $('.printerBtn').click(function (e) {
+    e.preventDefault();
+    window.print();
+  });
+
 
 
 });

@@ -1360,318 +1360,241 @@
     <!-- //headerWrap -->
 
     <main id="subWrap">
-      <div class="contentBox gradientBG"> <!-- gradientBG 클래스 > 원 가운데 연한 파랑색 배경-->
-        <div class="signupBox">
 
-          <div class="container">
+      <div class="subVisualBox">
+        <div class="container">
+          <div class="visualBox">
+            <img src="../images/sub/visual_img02.png" alt="서브 상단 이미지">
+            <p class="title">
+              <em class="fadeEffect">내</em><em class="fadeEffect">일</em><em class="fadeEffect">을</em> <em
+                class="fadeEffect">바</em><em class="fadeEffect">꾸</em><em class="fadeEffect">는</em> <em
+                class="fadeEffect">오</em><em class="fadeEffect">늘</em><em class="fadeEffect">의</em> <em
+                class="fadeEffect">노</em><em class="fadeEffect">력</em>
+            </p>
+          </div>
 
-            <div class="comContentBox">
-              <p class="title">
-                처음 오셨군요? <br>
-                <strong class="gradientText">회원가입</strong>을 진행해주세요!
-              </p>
+          <ul class="subMenuList customScroll">
+            <li>
+              <a href="../sub/sub_program_list.html" class="active">
+                생활체육교실
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                신나는 주말 체육학교
+              </a>
+            </li>
+            <li>
+              <a href="../sub/sub_chuncheon_sports_club.html">
+                춘천스포츠클럽
+              </a>
+            </li>
+          </ul>
 
-              <div class="loginInfoBox mb50">
-                <span>
-                  로그인정보
-                </span>
-                <em class="naver"> <!-- //카카오일경우 kakao 클래스 적용 -->
-                  naver@naver.com
-                </em>
-              </div>
+        </div>
+      </div>
+      <!-- //subVisualBox -->
 
-              <h4 class="gradientText">
-                개인정보 수집 및 이용
-              </h4>
+      <div class="subDepthBox">
 
-              <div class="agreeBox mb50">
-                <p class="agreeTitle">
-                  춘천시체육회는 원활한 서비스 제공을 위하여 귀하의 정보를 아래와 같이 수집합니다
-                </p>
-                <h5 class="title01">
-                  개인정보 수집 및 이용 동의
-                </h5>
+        <div class="container">
 
-                <h6 class="title02">
-                  수집하는 개인정보 항목
-                </h6>
-                <ul class="list01">
-                  <li>
-                    이름, 생년월일, 핸드폰 번호, 성별, 주소
-                  </li>
-                </ul>
+          <ul class="breadcrumbsList">
+            <li>
+              <a href="../index.html">
+                홈
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                종목 프로그램
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                생활체육교실
+              </a>
+            </li>
+          </ul>
 
-                <h6 class="title02">
-                  수집 및 이용 목적
-                </h6>
-                <ul class="list01">
-                  <li>
-                    회원의 서비스 제공
-                  </li>
-                  <li>
-                    계약 이행을 위한 연락처 및 주소
-                  </li>
-                  <li>
-                    민원 및 고충 처리
-                  </li>
-                </ul>
+          <h2 class="title01">
+            생활체육교실
+          </h2>
 
-                <h6 class="title02">
-                  보유 및 이용기간
-                </h6>
-                <ul class="list01">
-                  <li>
-                    회원가입일로부터 준영구
-                  </li>
-                  <li>
-                    회원 탈퇴 요청 시 5일 이내 삭제
-                  </li>
-                </ul>
+          <ul class="subDepth">
+            <li>
+              <a href="../sub/sub_program_list.html" class="active">
+                프로그램 목록
+              </a>
+            </li>
+            <li>
+              <a href="../sub/sub_application_list.html">
+                나의 신청내역
+              </a>
+            </li>
+          </ul>
 
-                <div class="agreeInputChkBox">
-                  <input id="agreechk" type="checkbox" class="blind">
-                  <label for="agreechk">
-                    [필수] 개인정보 이용 및 수집에 동의해요
-                  </label>
-                </div>
-
-              </div>
-
-              <h4 class="gradientText">
-                회원정보입력
-              </h4>
-
-              <form>
-
-                <div class="formBox mb30">
-                  <span class="label">
-                    이름
-                    <em class="required" title="필수입력">*</em>
-                  </span>
-
-                  <div class="inputTextBox">
-                    <input id="name" type="text" placeholder="이름을 입력해주세요">
-                    <label for="name" class="blind">
-                      이름 입력
-                    </label>
-                  </div>
-                </div>
-
-                <div class="formBox mb30">
-                  <span class="label">
-                    휴대폰번호
-                    <em class="required" title="필수입력">*</em>
-                  </span>
-
-                  <div class="phoneBox">
-                    <div class="inputTextBox">
-                      <input id="phone" type="text" placeholder="‘-’ 제외 숫자만 입력">
-                      <label for="phone" class="blind">
-                        휴대폰번호
-                      </label>
-                    </div>
-                    <button class="comBtn">
-                      회원 조회
-                    </button>
-                  </div>
-
-                  <div class="signupInfoBox">
-                    <p class="infoText01">
-                      홍길동님은 가입이 가능합니다!
-                    </p>
-
-                    <!-- 
-                    -이미 가입한 회원 
-                    -카카오 메일 > kakao 클래스
-                    -네이버 메일 > naver 클래스
-                    -->
-                    <!-- <div class="infoBox">
-                      <div class="box">
-                        <p class="infoText02">
-                          홍길동님은 가입이 가능합니다!
-                        </p>
-                        <span class="mailText kakao"> 
-                          ka***@kakao.com
-                        </span>
-                      </div>
-                      <a href="#" class="link">
-                        카카오로 로그인 하러 가기
-                      </a>
-                    </div> -->
-
-                  </div>
-                </div>
-
-                <div class="formBox mb30">
-                  <span class="label">
-                    성별
-                    <em class="required" title="필수입력">*</em>
-                  </span>
-
-                  <div class="genderBox">
-                    <div class="inputRadioBox">
-                      <input id="male" type="radio" name="radio" class="blind">
-                      <label for="male">남성</label>
-                    </div>
-
-                    <div class="inputRadioBox">
-                      <input id="female" type="radio" name="radio" class="blind">
-                      <label for="female">여성</label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="formBox mb30">
-                  <span class="label">
-                    생년월일
-                    <em class="required" title="필수입력">*</em>
-                  </span>
-
-                  <div class="inputTextBox birthDateBox">
-                    <input id="BirthDate" type="text" placeholder="생년월일">
-                    <label for="BirthDate" class="blind">
-                      생년월일
-                    </label>
-                    <button class="calendarBtn">
-                      <img src="../images/sub/calendar_icon.svg" alt="달력">
-                    </button>
-                  </div>
-                </div>
-
-                <div class="formBox mb30">
-                  <span class="label">
-                    거주지(읍면동)
-                  </span>
-
-                  <div class="customSelectBox">
-                    <button class="selectBtn">
-                      선택
-                    </button>
-                    <ul class="selectList">
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li><li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li><li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                      <li>
-                        <button class="btn">
-                          선택
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="formBox mb30">
-                  <span class="label">
-                    이메일
-                  </span>
-
-                  <div class="emailBox">
-                    <div class="inputTextBox">
-                      <input id="email" type="text" placeholder="이메일">
-                      <label for="email" class="blind">
-                        이메일아이디
-                      </label>
-                    </div>
-                    <span>
-                      @
-                    </span>
-                    <div class="inputTextBox">
-                      <input id="EmailDomain" type="text" placeholder="abcde.com">
-                      <label for="EmailDomain" class="blind">
-                        이메일도메인
-                      </label>
-                    </div>
-                    <div class="customSelectBox">
-                      <button class="selectBtn">
-                        직접입력
-                      </button>
-                      <ul class="selectList">
-                        <li>
-                          <button class="btn">
-                            선택
-                          </button>
-                        </li>
-                        <li>
-                          <button class="btn">
-                            선택
-                          </button>
-                        </li>
-                        <li>
-                          <button class="btn">
-                            선택
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-              </form>
-
-              <div class="btnBox">
-                <button class="comBtn garyBtnColor">
-                  취소
-                </button>
-                <button class="comBtn">
-                  가입하기
-                </button>
-              </div>
-
-            </div>
+          <div class="shareBox">
+            <a href="#" class="shareBtn">
+              <span class="blind">공유하기</span>
+            </a>
+            <a href="#" class="printerBtn">
+              <span class="blind">인쇄하기</span>
+            </a>
           </div>
 
         </div>
-        <!-- //signupBox -->
+
+      </div>
+      <!-- //subDepthBox -->
+
+      <div class="contentBox gradientBG"> <!-- gradientBG 클래스 > 원 가운데 연한 파랑색 배경-->
+        <div class="programBox">
+
+          <div class="container">
+            <div class="programApplicationBox">
+              <div class="formWrap">
+                <h4 class="gradientText">
+                  프로그램 신청
+                </h4>
+
+                <div class="sportInfoBox">
+                  <span class="topText">2025하반기</span>
+                  <div class="sportTitle">
+                    <h5>
+                      복싱
+                    </h5>
+                    <em>
+                      1분반
+                    </em>
+                  </div>
+                  <div class="dateInfoBox">
+                    <span class="text">운영기간</span>
+                    <span class="date">
+                      2025-08-13 ~ 2025-08-31
+                    </span>
+                  </div>
+                </div>
+
+                <div class="infoBox">
+                  <p>
+                    신청자 정보는 <strong>정확성</strong>을 위해 회원가입 시 등록한 <strong>내 정보</strong>를 자동으로 불러옵니다. <br>
+                    수정 필요 시 마이페이지에서 내 정보를 수정해주세요.
+                  </p>
+                  <a href="#" class="link">
+                    마이페이지 이동
+                  </a>
+                </div>
+
+                <h4 class="gradientText tit02">
+                  신청자 정보
+                </h4>
+
+                <form>
+
+                  <div class="formBox">
+                    <span class="label">이름
+                      <em class="required" title="필수입력">*</em>
+                    </span>
+                    <div class="inputTextBox">
+                      <input id="name" type="text" value="홍길동" readonly>
+                      <label for="name" class="blind">이름</label>
+                    </div>
+                  </div>
+
+                  <div class="formBox">
+                    <span class="label">휴대폰 번호
+                      <em class="required" title="필수입력">*</em>
+                    </span>
+                    <div class="inputTextBox">
+                      <input id="phone" type="text" value="01012345678" readonly>
+                      <label for="phone" class="blind">휴대폰 번호</label>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="formBox">
+                    <span class="label">생년월일
+                      <em class="required" title="필수입력">*</em>
+                    </span>
+                    <div class="inputTextBox">
+                      <input id="date" type="text" value="20251218" readonly>
+                      <label for="date" class="blind">생년월일</label>
+                    </div>
+                  </div>
+
+                  <div class="formBox">
+                    <span class="label">거주지(읍면동)
+                      <em class="required" title="필수입력">*</em>
+                    </span>
+                    <div class="inputTextBox">
+                      <input id="address" type="text" value="퇴계동" readonly>
+                      <label for="address" class="blind">거주지</label>
+                    </div>
+                  </div>
+
+                  <div class="formBox">
+                    <span class="label">이메일
+                    </span>
+                    <div class="emailBox">
+                      <div class="inputTextBox">
+                        <input id="email" type="text" value="abcd" readonly>
+                        <label for="email" class="blind">
+                          이메일아이디
+                        </label>
+                      </div>
+                      <span>
+                        @
+                      </span>
+                      <div class="inputTextBox">
+                        <input id="EmailDomain" type="text" value="abcde.com" readonly>
+                        <label for="EmailDomain" class="blind">
+                          이메일도메인
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="noticeBox">
+                    <h5>
+                      유의사항
+                    </h5>
+                    <ul class="list">
+                      <li>
+                        최근(25년 하반기) 기준 2년 이내 <strong>동일 종목 수강 이력 시</strong> 신청이 제한됩니다.
+                      </li>
+                      <li>
+                        <strong>3회 결석 시</strong> 자동 취소 및 대기인원으로 순차적 교체됩니다.
+                      </li>
+                      <li>
+                        <strong>명의도용 참가자</strong>를 방지하기 위해 출석체크 시 신분증을 확인합니다.
+                      </li>
+                      <li>
+                        <strong>신청 승인 여부</strong>는 홈페이지 > 마이페이지에서 확인 가능합니다
+                      </li>
+                      <li>
+                        <strong>특이사항</strong>은 개강 전 개별 문자로 알려드립니다.
+                      </li>
+                      <li>
+                        날씨 및 운영 상황에 따라 <strong>프로그램 운영기간이 조정</strong>될 수 있습니다.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="btnBox">
+                    <button class="comBtn garyBtnColor">취소</button>
+                    <button class="comBtn">작성하기</button>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //programBox -->
 
       </div>
       <!-- //contentBox -->

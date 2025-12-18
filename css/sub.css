@@ -116,7 +116,7 @@ input[type="text"]::placeholder{color: #9EA4AA;}
 .customSelectBox .selectBtn{padding: 0 36px 0 16px; text-align: left;}
 .customSelectBox .selectBtn.active::after{transform: translateY(-50%) rotate(90deg);}
 .customSelectBox .selectBtn::after{content: ''; width: 7px; height: 10px; position: absolute; top: 50%; transform: translateY(-50%) rotate(-90deg); right:16px; background: url(../images/sub/arrow_icon01.svg)no-repeat center;}
-.customSelectBox .selectList{display: none; padding: 10px 0; position: absolute; top:56px; left:0; right:0; border: 1px solid #E8EBED; border-radius: 8px; background-color: #fff; z-index: 99;}
+.customSelectBox .selectList{display: none; height: 250px; padding: 10px 0; position: absolute; top:56px; left:0; right:0; border: 1px solid #E8EBED; border-radius: 8px; background-color: #fff; z-index: 99; overflow-y: auto;}
 .customSelectBox .selectList li .btn{padding: 10px 10px 10px 16px; display: block; width: 100%; text-align: left; font-weight: 500; font-size: 14px; transition: all .3s;}
 .customSelectBox .selectList li .btn:hover{background-color: #4D8FFF; color: #fff;}
 input[type="checkbox"] + label,
@@ -814,11 +814,11 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .applicationListWrap h4{margin-bottom: 16px; font-size: 24px; color: #454C53; font-weight: 700;}
 .applicationListWrap .applicationScrollBox{position: relative; max-height: 528px; overflow-y: auto;
   overflow-x: hidden;}
-.applicationListWrap .applicationScrollBox::after {content: ''; position: absolute; left: 0;
-  right: 0; bottom: 0; height: 99px; background: linear-gradient(to bottom,
+.applicationListWrap .applicationScrollBox::after {content: ''; opacity: 0; position: absolute; left: 0; right: 0; bottom: 0; height: 99px; background: linear-gradient(to bottom,
     rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 40%,rgba(255,255,255,1) 100%);
-  z-index: 9; opacity: 1; transition: all .3s; pointer-events: none;}
-.applicationListWrap .applicationScrollBox.scrollEnd::after {opacity: 0;}
+  z-index: 9; transition: all .3s; pointer-events: none;}
+.applicationListWrap .applicationScrollBox.hasScroll::after{opacity: 1;}
+.applicationListWrap .applicationScrollBox.scrollEnd::after{opacity: 0;}
 .applicationListWrap .applicationListBox .applicationList li {border-bottom: 1px solid #E8EBED;}
 .applicationListWrap .applicationListBox .applicationList li a{padding-left: 28px; position: relative; display: grid; grid-template-columns: 115px auto 125px 60px; align-items: center; min-height: 88px; z-index: 1; z-index: 1;}
 .applicationListWrap .applicationListBox .applicationList li a::after{content: ''; width: 0; position: absolute; top:0; right:0; bottom: 0; background: linear-gradient(to right, #FFFFFF 65%, #EDF4FF); z-index: -1; transition: all .3s;} 
@@ -2316,3 +2316,27 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
   .searchBox .searchContentBox .searchResultBox .searchResultList li a .depth{padding: 2px 8px; border-radius: 5px;}
 
 }
+
+/* 프로그램 신청 */
+.programBox .programApplicationBox{max-width: 720px; margin: 0 auto;}
+.programBox .programApplicationBox .sportInfoBox{margin-bottom: 48px; padding: 24px; width: 100%; border-radius: 20px; border: 1px solid #E8EBED;}
+.programBox .programApplicationBox .sportInfoBox .topText{margin-bottom: 8px; font-weight: 500; color: #454C53;}
+.programBox .programApplicationBox .sportInfoBox .sportTitle{margin-bottom: 28px; display: flex; align-items: center; gap: 0 8px;}
+.programBox .programApplicationBox .sportInfoBox .sportTitle h5{font-weight: 700; color: #1B1D1F; font-size: 24px;}
+.programBox .programApplicationBox .sportInfoBox .sportTitle em{padding: 4px 8px; font-size: 12px; font-weight: 700; color: #203C6B; background-color: #EDF4FF; border-radius: 4px;}
+.programBox .programApplicationBox .sportInfoBox .dateInfoBox{display: flex; align-items: center; gap: 0 16px; padding: 8px 20px 8px 8px; border-radius: 8px; background: linear-gradient(to right, #223D69, #444B53);}
+.programBox .programApplicationBox .sportInfoBox .dateInfoBox .text{flex-shrink: 0; padding: 3px 4px; font-size: 14px; font-weight: 700; color: #454C53; border-radius: 4px; background-color: #fff;}
+.programBox .programApplicationBox .sportInfoBox .dateInfoBox .date{font-weight: 700; color: #fff;}
+.programBox .programApplicationBox .infoBox{margin-bottom: 48px; padding: 27px; background-color: #F7F8F9; border: 1px solid #E8EBED; border-radius: 20px; }
+.programBox .programApplicationBox .infoBox p{padding-left: 28px; position: relative; margin-bottom: 15px; font-size: 14px; color: #454C53;}
+.programBox .programApplicationBox .infoBox p::before{content: ''; position: absolute; top:0; left:0; width: 20px; height: 20px; background: url(../images/sub/icon03.svg)no-repeat center;}
+.programBox .programApplicationBox .infoBox .link{display: inline-flex; align-items: center; gap: 0 10px; padding-left: 28px; font-size: 14px; color: #203C6B; font-weight: 700;}
+.programBox .programApplicationBox .infoBox .link::after{content: ''; width: 7px; height: 10px; background: url(../images/sub/arrow_icon06.svg)no-repeat center;}
+.programBox .programApplicationBox .tit02{margin-bottom: 16px; font-size: 18px;}
+.programBox .programApplicationBox .emailBox{display: flex; gap: 0 8px; align-items: center;}
+.programBox .programApplicationBox .emailBox .inputTextBox{width: 100%;}
+.programBox .programApplicationBox .noticeBox{margin: 42px 0 64px;}
+.programBox .programApplicationBox .noticeBox h5{margin-bottom: 15px; color: #454C53; font-size: 18px;}
+.programBox .programApplicationBox .noticeBox .list li{padding-left: 30px; position: relative; margin-bottom: 18px; font-size: 14px; color: #454C53;} 
+.programBox .programApplicationBox .noticeBox .list li::before{width: 16px; height: 13px; content: ''; position: absolute; top:4px; left:0; background: url(../images/sub/chk_icon02.svg)no-repeat center;}
+.programBox .programApplicationBox .noticeBox .list li:last-child{margin-bottom: 0;}
