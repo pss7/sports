@@ -116,7 +116,7 @@ input[type="text"]::placeholder{color: #9EA4AA;}
 .customSelectBox .selectBtn{padding: 0 36px 0 16px; text-align: left;}
 .customSelectBox .selectBtn.active::after{transform: translateY(-50%) rotate(90deg);}
 .customSelectBox .selectBtn::after{content: ''; width: 7px; height: 10px; position: absolute; top: 50%; transform: translateY(-50%) rotate(-90deg); right:16px; background: url(../images/sub/arrow_icon01.svg)no-repeat center;}
-.customSelectBox .selectList{display: none; height: 250px; padding: 10px 0; position: absolute; top:56px; left:0; right:0; border: 1px solid #E8EBED; border-radius: 8px; background-color: #fff; z-index: 99; overflow-y: auto;}
+.customSelectBox .selectList{display: none; max-height: 250px; padding: 10px 0; position: absolute; top:56px; left:0; right:0; border: 1px solid #E8EBED; border-radius: 8px; background-color: #fff; z-index: 99; overflow-y: auto;}
 .customSelectBox .selectList li .btn{padding: 10px 10px 10px 16px; display: block; width: 100%; text-align: left; font-weight: 500; font-size: 14px; transition: all .3s;}
 .customSelectBox .selectList li .btn:hover{background-color: #4D8FFF; color: #fff;}
 input[type="checkbox"] + label,
