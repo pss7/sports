@@ -691,7 +691,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .programListWrap .programList li a.waitingRecruitment::after{background: url(../images/sub/icon02.svg)no-repeat center;}
 
 /* 마감 */
-.programListWrap .programList li a.deadline{background-color: #E8EBED; border: 0; pointer-events: none;}
+.programListWrap .programList li a.deadline{background-color: #E8EBED; border: 0; cursor: auto;}
 .programListWrap .programList li a.deadline .topInfoBox{background-color: #F7F8F9;}
 .programListWrap .programList li a.deadline .topInfoBox .text{color: #454C53; border: 1px solid #454C53;}
 .programListWrap .programList li a.deadline .topInfoBox .date01{color: #454C53;}
@@ -701,7 +701,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 
 /* 신청불가 */
 .programListWrap .programList li a.notPossible{background:linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(90deg, #F6503B, #9EA4AA) border-box; border: 2px solid transparent; pointer-events: none; }
+    linear-gradient(90deg, #F6503B, #9EA4AA) border-box; border: 2px solid transparent; cursor: auto;}
 .programListWrap .programList li a.notPossible .topInfoBox{background-color: #F7F8F9;}
 .programListWrap .programList li a.notPossible .topInfoBox .text{color: #F6503B; border: 1px solid #F6503B;}
 .programListWrap .programList li a.notPossible .topInfoBox .date01{color: #454C53;}
@@ -1001,6 +1001,9 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .detailBox .topInfoBox{position: relative; flex-wrap: wrap; margin-bottom: 40px; display: flex; align-items: center; gap: 10px 24px;}
 .detailBox .topInfoBox .date{display: flex; align-items: center; gap: 0 7px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
 .detailBox .topInfoBox .date::before{content: ''; width: 24px; height: 24px; background: url(../images/sub/calendar_icon02.svg)no-repeat center;}
+.detailBox .topInfoBox span{font-size: 14px; font-weight: 500; color: #9EA4AA;}
+.detailBox .topInfoBox .media{display: flex; align-items: center; gap: 0 5px;}
+.detailBox .topInfoBox .media::before{content: ''; width: 25px; height: 25px; background: url(../images/sub/document_icon01.svg)no-repeat center / contain;}
 .detailBox .topInfoBox .view{display: flex; align-items: center; gap: 0 10px; font-size: 14px; font-weight: 500; color: #9EA4AA;}
 .detailBox .topInfoBox .view::before{content: ''; width: 22px; height: 14px; background: url(../images/sub/view.svg)no-repeat center;}
 .detailBox .topInfoBox .authorBox{padding: 4px 16px 4px 4px; display: flex; align-items: center; gap: 0 8px; border-radius: 50px; background-color:#4682E8;}
@@ -1196,7 +1199,7 @@ input[type="radio"]:checked + label::before{ background: url(../images/sub/chk_o
 .pressReleaseList li a:hover .textBox h3{text-decoration: underline;}
 .pressReleaseList li a .textBox{display: flex; flex-direction: column; padding: 8px 0 0 0; overflow: hidden;}
 .pressReleaseList li a .textBox h3{margin-bottom: 20px; font-size: 24px; font-weight: 500; color: #1B1D1F; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
-.pressReleaseList li a .textBox p{font-size: 14px; font-weight: 500; color: #9EA4AA; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis;}
+.pressReleaseList li a .textBox p{font-size: 14px; font-weight: 500; color: #9EA4AA;}
 .pressReleaseList li a .textBox .box{display: flex; flex-wrap: wrap; align-items: center; gap:8px; margin-top: auto;}
 .pressReleaseList li a .textBox .box .text{padding: 4px 8px; font-size: 14px; font-weight: 700; color: #203C6B; background-color: #EDF4FF; border-radius: 4px;} 
 .pressReleaseList li a .textBox .box .date{font-size: 14px; font-weight: 700; color: #9EA4AA;}
