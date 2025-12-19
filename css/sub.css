@@ -1285,7 +1285,7 @@ input:disabled + label{outline: none;}
 
 /* 행사소식 */
 .eventNewsListBox{position: relative;}
-.eventNewsListBox .calendarLeftBox{flex-shrink: 0; display: flex; gap: 0 66px; position: relative; padding: 64px; width: 626px; height: 493px;
+.eventNewsListBox .calendarLeftBox{flex-shrink: 0; display: flex; gap: 0 66px; position: relative; padding: 64px; width: 626px; min-height: 493px;
   background: linear-gradient(to bottom,#E8EBED,#FFFFFF ); border-radius: 40px; overflow: hidden;}
 .eventNewsListBox .calendarLeftBox::before{content: ''; position: absolute; inset: 0; background: linear-gradient(
     to bottom,#FFFFFF 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,0) 80%,#FFFFFF 100%); pointer-events: none; z-index: 1;}
@@ -1311,12 +1311,12 @@ input:disabled + label{outline: none;}
     0 0 10px #FED6B9, inset 0 0 10px rgba(255,255,255,0.25);}
 .eventNewsListBox .calendarLeftBox .calendarBox .prevMonth,
 .eventNewsListBox .calendarLeftBox .calendarBox .nextMonth{color: #9EA4AA;}
-.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox{margin-top: 30px; flex-wrap: wrap; display: flex; justify-content: center; gap: 10px 16px;}
-.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span{display: flex; align-items: center; gap: 0 8px; font-size: 14px; font-weight: 500; color: #555;}
-.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span::before{content: '';}
-.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span.today::before{width: 12px; height: 12px; border-radius: 4px; background-color: #4D8FFF;}
-.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span.select::before{width: 12px; height: 12px; border-radius: 4px; background-color: #FC7C1D;}
-.eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox span.event::before{width: 4px; height: 4px; border-radius: 50%; background-color: #203C6B;}
+.eventNewsListBox .calendarLeftBox .calInfoBox{margin-top: 30px; flex-wrap: wrap; display: flex; justify-content: center; gap: 10px 16px;}
+.eventNewsListBox .calendarLeftBox .calInfoBox span{display: flex; align-items: center; gap: 0 8px; font-size: 14px; font-weight: 500; color: #555;}
+.eventNewsListBox .calendarLeftBox .calInfoBox span::before{content: '';}
+.eventNewsListBox .calendarLeftBox .calInfoBox span.today::before{width: 12px; height: 12px; border-radius: 4px; background-color: #4D8FFF;}
+.eventNewsListBox .calendarLeftBox .calInfoBox span.select::before{width: 12px; height: 12px; border-radius: 4px; background-color: #FC7C1D;}
+.eventNewsListBox .calendarLeftBox .calInfoBox span.event::before{width: 4px; height: 4px; border-radius: 50%; background-color: #203C6B;}
 .eventNewsListBox .newsListBox{width: 44.4%;}
 .eventNewsListBox .newsListBox .dateBox{margin-bottom: 12px; display: flex; align-items: center; gap: 0 40px;}
 .eventNewsListBox .newsListBox .dateBox span{display: block; font-size: 32px; color: #1B1D1F; font-family: 'Retrosans';}
@@ -1332,7 +1332,7 @@ input:disabled + label{outline: none;}
 .eventNewsListBox .newsListBox .newsList li a .textBox .text01{display: inline-block; margin-bottom: 12px; padding: 5px 9px; font-size: 14px; font-weight: 700; color: #203C6B; border-radius: 4px; background-color: #EDF4FF;}
 .eventNewsListBox .newsListBox .newsList li a .textBox h4{margin-bottom: 16px; font-size: 18px; font-weight: 700; color: #1B1D1F; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 .eventNewsListBox .newsListBox .newsList li a .textBox .text02{font-size: 14px; font-weight: 700; color: #797979;}
-.eventNewsListBox .eventNewsLayoutBox{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.eventNewsListBox .eventNewsLayoutBox{display: flex; align-items: flex-start; flex-wrap: wrap; justify-content: space-between;}
 .eventNewsListBox .noSchedule{margin-top: 4px; padding: 33px 10px; border-radius: 20px; background-color: #F7F8F9; text-align: center; font-weight: 700; color: #9EA4AA; font-size: 18px;}
 
 @media (max-width: 1280px){
@@ -1380,7 +1380,7 @@ input:disabled + label{outline: none;}
   .eventNewsListBox .newsListBox .newsList li a .textBox .text02{display: block; text-align: center;}
 
   .eventNewsListBox .calendarLeftBox{gap: 14px 0;}
-  .eventNewsListBox .calendarLeftBox .calendarBox .calInfoBox{margin-top: 20px;}
+  .eventNewsListBox .calendarLeftBox .calInfoBox{margin-top: 20px;}
   .eventNewsListBox .calendarLeftBox .calendarBox .calWeekdays span,
   .eventNewsListBox .calendarLeftBox .calendarBox .day{font-size: 14px; border-radius: 10px;}
   .eventNewsListBox .noSchedule{font-size: 14px;}
@@ -2450,3 +2450,55 @@ input:disabled + label{outline: none;}
   .programBox .programApplicationBox .sportInfoBox .dateInfoBox{padding: 15px 10px; flex-direction: column; gap: 10px 0;}
 
 }
+
+
+
+
+
+/* 캘린더 css */
+#fcCal .fc-daygrid-day-events,
+#fcCal .fc-daygrid-event-harness,
+#fcCal .fc-event{ display:none !important; }
+
+/* td 가운데정렬 */
+.fc .fc-daygrid-day-top{justify-content: center;}
+
+/* FC 기본 테두리 제거 */
+#fcCal .fc-scrollgrid, #fcCal table, #fcCal td, #fcCal th{ border: 0 !important; }
+
+/* 헤더 배경 */
+#fcCal .fc-scrollgrid-section-sticky > *{background: 0;}
+#fcCal .fc-col-header-cell-cushion{padding: 0; height: 48px; line-height: 48px; font-weight: 700; text-align: center; color: #454C53;}
+
+/* td */
+#fcCal td{cursor: pointer;}
+#fcCal td a{padding: 0; width:48px; height:48px; display:flex; align-items:center; justify-content:center; border-radius:16px; font-weight:500; color:#454C53;}
+
+/* 일정 있을 경우 */
+#fcCal td.event a{position: relative;}
+#fcCal td.event a::before{content: ''; position: absolute; top: 7px;
+  left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #203C6B;}
+
+/* 토, 일 */
+#fcCal th .fc-day-sun a{color: #F65F52;}
+#fcCal th .fc-day-sat a{color: #3D9EFF;}
+
+/* 오늘 */
+#fcCal td.today{background:0; cursor: auto;}
+#fcCal td.today a{background-color:#3E7BFD; font-weight:700;
+  color:#fff; box-shadow: 0 0 10px #C8DCFF, inset 0 0 10px rgba(255,255,255,0.25);}
+
+/* 선택일자 */
+#fcCal td.select a{background-color:#FC7C1D; font-weight:700; color:#fff;
+  box-shadow: 0 0 10px #FED6B9, inset 0 0 10px rgba(255,255,255,0.25);}
+
+/* 포커스 아웃라인 제거(버튼처럼) */
+#fcCal a:focus,
+#fcCal .fc-daygrid-day:focus{ outline:none; }
+
+/* FullCalendar 날짜 셀 내부 before/after 제거 */
+#fcCal .fc-daygrid-day-frame::before,
+#fcCal .fc-daygrid-day-frame::after,
+#fcCal .fc-scrollgrid-sync-inner::before,
+#fcCal .fc-scrollgrid-sync-inner::after{content: none !important; display: none !important;}
+

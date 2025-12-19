@@ -15,6 +15,10 @@
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/aos.css">
   <link rel="stylesheet" href="../css/slick.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
   <script src="../js/jquery-1.12.4.min.js"></script>
   <script src="../js/slick.min.js"></script>
   <script src="../js/aos.js"></script>
@@ -1496,7 +1500,19 @@
                     </div>
                   </div>
 
-                  <div class="calendarBox">
+                  <div class="calGrid">
+                    <div id="fcCal"></div>
+
+                    <div class="calInfoBox">
+                      <span class="today">오늘</span>
+                      <span class="select">선택일자</span>
+                      <span class="event">일정있음</span>
+                    </div>
+
+                  </div>
+
+
+                  <!-- <div class="calendarBox">
                     <div class="calWeekdays">
                       <span class="sun">일</span>
                       <span>월</span>
@@ -1555,13 +1571,7 @@
                       <span class="event">일정있음</span>
                     </div>
 
-                  </div>
-
-
-
-
-
-
+                  </div> -->
 
                 </div>
 
@@ -1743,6 +1753,109 @@
 
   </div>
   <!-- //wrap -->
+
+  <script>
+    // 예시 이벤트(점 표시용)
+    const events = [
+      { id: '1', title: '일정', start: '2025-09-05T12:20:00' },
+      { id: '2', title: '일정', start: '2025-09-10T12:20:00' },
+      { id: '3', title: '일정', start: '2025-09-11T12:20:00' },
+      { id: '4', title: '일정', start: '2025-09-23T12:20:00' },
+    ];
+
+    const yearEl = document.querySelector('.calendarLeftBox .leftBox .dateBox span:nth-child(1)');
+    const monthEl = document.querySelector('.calendarLeftBox .leftBox .dateBox span:nth-child(2)');
+    const prevBtn = document.querySelector('.calendarLeftBox .prevBtn');
+    const nextBtn = document.querySelector('.calendarLeftBox .nextBtn');
+
+    const pad2 = (n) => String(n).padStart(2, '0');
+
+    let currentYM = null;        // "YYYY-MM"
+    let selectedDateStr = null;  // "YYYY-MM-DD"
+
+    function syncHeaderFromTitle(title) {
+      // "2025년 9월"
+      const m = title.match(/(\d+)년\s+(\d+)월/);
+      if (!m) return;
+      yearEl.textContent = m[1];
+      monthEl.textContent = pad2(m[2]);
+      currentYM = `${m[1]}-${pad2(m[2])}`;
+    }
+
+    const cal = new FullCalendar.Calendar(document.getElementById('fcCal'), {
+      initialView: 'dayGridMonth',
+      locale: 'ko',
+      headerToolbar: false,
+      fixedWeekCount: false,
+      showNonCurrentDates: true,
+      height: 'auto',
+      events,
+
+      // ✅ 날짜 텍스트를 숫자만(1일 -> 1)
+      dayCellContent(arg) {
+        return { html: String(arg.date.getDate()) };
+      },
+
+      datesSet(info) {
+        syncHeaderFromTitle(info.view.title);
+      },
+
+      // ✅ 네 클래스(prevMonth/nextMonth/today/select)를 day cell에 부여
+      dayCellClassNames(arg) {
+        const classes = [];
+
+        // prev/next month
+        if (currentYM) {
+          const cellYM = `${arg.date.getFullYear()}-${pad2(arg.date.getMonth() + 1)}`;
+          if (cellYM < currentYM) classes.push('prevMonth');
+          else if (cellYM > currentYM) classes.push('nextMonth');
+        }
+
+        // today
+        const now = new Date();
+        if (
+          arg.date.getFullYear() === now.getFullYear() &&
+          arg.date.getMonth() === now.getMonth() &&
+          arg.date.getDate() === now.getDate()
+        ) {
+          classes.push('today');
+        }
+
+        // select
+        if (selectedDateStr && arg.dateStr === selectedDateStr) {
+          classes.push('select');
+        }
+
+        return classes;
+      },
+
+      dateClick(info) {
+        
+        //오늘 클릭 x
+        if (info.dayEl.classList.contains('today')) return;
+
+        selectedDateStr = info.dateStr;
+
+        // select 토글
+        document.querySelectorAll('#fcCal .fc-daygrid-day').forEach(el => el.classList.remove('select'));
+        info.dayEl.classList.add('select');
+
+        // ✅ 여기서 오른쪽 리스트 갱신 연결하면 됨
+        // renderRightList(info.dateStr);
+      },
+
+      // ✅ 이벤트가 있는 날: day cell에 event 클래스 추가(점 표시)
+      eventDidMount(info) {
+        info.el.closest('.fc-daygrid-day')?.classList.add('event');
+      },
+    });
+
+    cal.render();
+
+    prevBtn.addEventListener('click', () => cal.prev());
+    nextBtn.addEventListener('click', () => cal.next());
+  </script>
+
 
 </body>
 
