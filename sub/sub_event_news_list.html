@@ -11,15 +11,14 @@
   <title>춘천시체육회</title>
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/aos.css">
   <link rel="stylesheet" href="../css/slick.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
-
   <script src="../js/jquery-1.12.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
   <script src="../js/slick.min.js"></script>
   <script src="../js/aos.js"></script>
   <script src="../js/sub.js"></script>
@@ -1511,7 +1510,6 @@
 
                   </div>
 
-
                   <!-- <div class="calendarBox">
                     <div class="calWeekdays">
                       <span class="sun">일</span>
@@ -1755,6 +1753,7 @@
   <!-- //wrap -->
 
   <script>
+
     // 예시 이벤트(점 표시용)
     const events = [
       { id: '1', title: '일정', start: '2025-09-05T12:20:00' },
@@ -1791,7 +1790,7 @@
       height: 'auto',
       events,
 
-      // ✅ 날짜 텍스트를 숫자만(1일 -> 1)
+      //날짜 텍스트를 숫자만(1일 -> 1)
       dayCellContent(arg) {
         return { html: String(arg.date.getDate()) };
       },
@@ -1800,11 +1799,10 @@
         syncHeaderFromTitle(info.view.title);
       },
 
-      // ✅ 네 클래스(prevMonth/nextMonth/today/select)를 day cell에 부여
+      //클래스(prevMonth/nextMonth/today/select)를 day cell에 부여
       dayCellClassNames(arg) {
         const classes = [];
 
-        // prev/next month
         if (currentYM) {
           const cellYM = `${arg.date.getFullYear()}-${pad2(arg.date.getMonth() + 1)}`;
           if (cellYM < currentYM) classes.push('prevMonth');
@@ -1830,21 +1828,21 @@
       },
 
       dateClick(info) {
-        
+
         //오늘 클릭 x
         if (info.dayEl.classList.contains('today')) return;
 
         selectedDateStr = info.dateStr;
 
-        // select 토글
+        //select 토글
         document.querySelectorAll('#fcCal .fc-daygrid-day').forEach(el => el.classList.remove('select'));
         info.dayEl.classList.add('select');
 
-        // ✅ 여기서 오른쪽 리스트 갱신 연결하면 됨
+        //여기서 오른쪽 리스트 갱신 연결하면 됨
         // renderRightList(info.dateStr);
       },
 
-      // ✅ 이벤트가 있는 날: day cell에 event 클래스 추가(점 표시)
+      //event 클래스 추가(점 표시)
       eventDidMount(info) {
         info.el.closest('.fc-daygrid-day')?.classList.add('event');
       },
