@@ -1537,16 +1537,17 @@
 
                     <div class="fileUploadBox">
                       <div class="fileInputBox">
-                        <input type="file" id="fileInput" class="blind">
+                        <input type="file" id="fileInput" class="blind" multiple>
                         <label for="fileInput" class="fileInput">
                           <img src="../images/sub/file_icon02.svg" alt="파일 아이콘">
                           <span class="fileText">첨부파일을 업로드 해주세요</span>
                         </label>
                       </div>
-                      <div class="fileDelBtnBox">
-                        <button type="button" class="comBtn comBtnType02 fileDelBtn">삭제</button>
-                         <span id="fileNameText">선택된 파일이 없습니다.</span>
-                      </div>
+
+                      <!-- 파일 목록 -->
+                      <ul class="fileList" id="fileList">
+                        <!-- JS로 li 생성 -->
+                      </ul>
                     </div>
 
                     <div class="fileInfoTextBox">

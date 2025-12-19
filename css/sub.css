@@ -575,7 +575,15 @@ input:disabled + label{outline: none;}
 .viewBox .programBox .programList li .dayList{display: flex; flex-wrap: wrap; gap: 4px;}
 .viewBox .programBox .programList li .dayList li{width: 28px; height: 28px; line-height: 28px; font-weight: 700; font-size: 14px; color: #454C53; background-color: #E8EBED; border-radius: 8px; text-align: center;}
 .viewBox .operatingLocationBox h4{font-size: 18px; font-weight: 700; color: #454C53;}
-.viewBox .operatingLocationBox .map img{display: block; width: 100%;}
+.viewBox .operatingLocationBox .map{position: relative; margin-top: 16px; height: 381px; border: 8px solid #fff; border-radius: 64px; box-shadow: 10px 10px 40px rgba(0,0,0,.1); overflow: hidden;}
+.viewBox .operatingLocationBox .map img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.viewBox .operatingLocationBox .map .addressBox{display: flex; align-items: center; padding: 8px; position: absolute; left: 32px; right:32px; bottom: 32px; background-color: rgba(255,255,255, .8); border-radius: 8px;} 
+.viewBox .operatingLocationBox .map .addressBox img{width: 28px; margin-right: 16px;}
+.viewBox .operatingLocationBox .map .addressBox .position01{flex-shrink: 0; margin-right: 16px; font-weight: 700; color: #454C53;}
+.viewBox .operatingLocationBox .map .addressBox .position02{font-size: 14px; color: #454C53;}
+.viewBox .operatingLocationBox .map .marker{position: absolute; top:20px; left:20px; width: 40px; height: 40px; background-color: #4D8FFF; border-radius: 50%; z-index: 999;}
+.viewBox .operatingLocationBox .map .marker::after{content: ''; position: absolute; top :50%; left: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background-color: #fff; border-radius: 50%;}
+.viewBox .operatingLocationBox .map .marker::before{content: '';width: 20px; height: 14px; position: absolute; left: 50%; transform: translateX(-50%); bottom: -10px; background: url(../images/sub/marker_arrow.svg)no-repeat center / contain;}
 .viewBox aside .attendanceBox{margin-bottom: 8px; padding: 24px; background-color: #fff; border-radius: 40px; border: 1px solid #E8EBED;}
 .viewBox aside .attendanceBox h4{margin-bottom: 20px; color: #454C53; font-size: 18px; text-align: center;}
 .viewBox aside .attendanceBox .percentBox{margin-bottom: 22px;}
@@ -604,6 +612,8 @@ input:disabled + label{outline: none;}
 
 @media (max-width: 1199px){
 
+  .viewBox .operatingLocationBox .map{border-radius: 30px; border: 5px solid #fff;}
+
   .viewBox .topInfoBox{margin-bottom: 40px;}
   .viewBox .sportBox{flex-direction: column; gap: 30px 0;} 
   .viewBox .sportBox .sportInfoBox02{width: 100%;}
@@ -622,6 +632,11 @@ input:disabled + label{outline: none;}
 
   .viewBox .sportBox .sportInfoBox01 .sportTitle h4{font-size: 24px;}
   .viewBox .sportBox .sportInfoBox02 .recruitBox .box .recruitText01 strong{font-size: 22px;}
+  .viewBox .operatingLocationBox .map{border-radius: 20px;}
+  .viewBox .operatingLocationBox .map .marker{width: 30px; height: 30px;}
+  .viewBox .operatingLocationBox .map .marker::after{width: 18px; height: 18px;}
+  .viewBox .operatingLocationBox .map .marker::before{width: 13px; height: 13px; bottom: -7px;}
+  .viewBox .operatingLocationBox .map .addressBox{left: 20px; right: 20px; bottom: 20px;}
 
 }
 
@@ -632,6 +647,11 @@ input:disabled + label{outline: none;}
   .viewBox .sportBox .sportInfoBox01 .dateInfoBox .date{font-size: 14px;}
   .viewBox .programBox .programList > li{flex: none; width: calc((100% - 10px) / 2); border-radius: 10px;}
   .viewBox .programBox .programList li em{font-size: 14px;}
+
+  .viewBox .operatingLocationBox .map{height: 335px;}
+  .viewBox .operatingLocationBox .map .addressBox img{width: 22px; margin-right: 12px;}
+  .viewBox .operatingLocationBox .map .addressBox .position01,
+  .viewBox .operatingLocationBox .map .addressBox .position02{font-size: 12px;}
 
 }
 
@@ -1172,8 +1192,10 @@ input:disabled + label{outline: none;}
 .formWrap .fileBox .fileDropArea .fileDropInner{display: flex; flex-direction: column; align-items: center;}
 .formWrap .fileBox .fileDropArea .fileDropIcon{margin-bottom: 24px;}
 .formWrap .fileBox .fileDropArea p{font-size: 14px; color: #9EA4AA; font-weight: 500;}
-.formWrap .fileBox .fileDelBtnBox{display: flex; align-items: center; flex-wrap: wrap; gap: 8px;}
-.formWrap .fileBox .fileDelBtnBox #fileNameText{font-size: 14px; font-weight: 500; color: #454C53;}
+.formWrap .fileBox .fileList{display: flex; flex-wrap: wrap; gap: 8px;}
+.formWrap .fileBox .fileList .fileItem{margin-bottom: 5px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px;}
+.formWrap .fileBox .fileList .fileItem:last-child{margin-bottom: 0;}
+.formWrap .fileBox .fileList .fileItem #fileNameText{font-size: 14px; font-weight: 500; color: #454C53;}
 
 @media (max-width: 1199px){
 
@@ -1552,9 +1574,15 @@ input:disabled + label{outline: none;}
 }
 
 /* 찾아오시는 길 */
-.locationBox .mapBox{height: 598px; border: 8px solid #fff; border-radius: 64px; box-shadow: 10px 10px 40px rgba(0,0,0,.1);}
-.locationBox .map{margin-bottom: 28px;}
-.locationBox .map img{display: block; width: 100%; height: 100%; object-fit: cover;} 
+.locationBox .map{margin-bottom: 80px; position: relative; margin-top: 16px; height: 598px; border: 8px solid #fff; border-radius: 64px; box-shadow: 10px 10px 40px rgba(0,0,0,.1); overflow: hidden;}
+.locationBox .map img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.locationBox .map .addressBox{display: flex; align-items: center; padding: 8px; position: absolute; left: 32px; right:32px; bottom: 32px; background-color: rgba(255,255,255, .8); border-radius: 8px;} 
+.locationBox .map .addressBox img{width: 28px; margin-right: 16px;}
+.locationBox .map .addressBox .position01{flex-shrink: 0; margin-right: 16px; font-weight: 700; color: #454C53;}
+.locationBox .map .addressBox .position02{font-size: 14px; color: #454C53;}
+.locationBox .map .marker{position: absolute; top:20px; left:20px; width: 40px; height: 40px; background-color: #4D8FFF; border-radius: 50%; z-index: 999;}
+.locationBox .map .marker::after{content: ''; position: absolute; top :50%; left: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background-color: #fff; border-radius: 50%;}
+.locationBox .map .marker::before{content: '';width: 20px; height: 14px; position: absolute; left: 50%; transform: translateX(-50%); bottom: -10px; background: url(../images/sub/marker_arrow.svg)no-repeat center;}
 .locationBox .intoTextBox{display: flex; justify-content: space-between;}
 .locationBox .intoTextBox p{font-size: 32px; font-weight: 700; color: #1B1D1F;}
 .locationBox .intoTextBox .infoBox .layoutBox{width: 50%; display: flex; align-items: flex-start; gap: 0 24px;}
@@ -1570,7 +1598,7 @@ input:disabled + label{outline: none;}
 
 @media (max-width: 1199px){
 
-  .locationBox .mapBox{height: 500px; border-radius: 30px; border: 2px solid #fff;}
+  .locationBox .map{height: 500px; border-radius: 30px; border: 5px solid #fff;}
   .locationBox .intoTextBox p{font-size: 28px;}
   .locationBox .intoTextBox .infoBox span{font-size: 18px;}
 
@@ -1578,6 +1606,7 @@ input:disabled + label{outline: none;}
 
 @media (max-width: 1024px){
 
+  .locationBox .map{margin-bottom: 56px;}
   .locationBox .intoTextBox{flex-direction: column; gap: 30px 0;}
   .locationBox .intoTextBox p{margin-bottom: 25px; text-align: center;}
   .locationBox .intoTextBox .infoBox{padding-left: 54px; margin: 0 auto;}
@@ -1586,7 +1615,12 @@ input:disabled + label{outline: none;}
 
 @media (max-width: 767px){
 
-  .locationBox .mapBox{height: 400px; border-radius: 20px;}
+  .locationBox .map{height: 400px; border-radius: 20px;}
+  .locationBox .map .marker{width: 30px; height: 30px;}
+  .locationBox .map .marker::after{width: 18px; height: 18px;}
+  .locationBox .map .marker::before{width: 13px; height: 13px; bottom: -7px;}
+  .locationBox .map .addressBox{left: 20px; right: 20px; bottom: 20px;}
+
   .locationBox .intoTextBox p{margin-bottom: 20px; font-size: 24px;}
   .locationBox .intoTextBox .infoBox{width: 100%; padding: 0; gap: 50px 0;}
   .locationBox .intoTextBox .infoBox .layoutBox{flex-direction: column; gap: 10px 0; align-items: center;} 
@@ -1597,13 +1631,18 @@ input:disabled + label{outline: none;}
 
 @media (max-width: 480px){
 
-  .locationBox .mapBox{height: 335px;}
+  .locationBox .map{height: 335px;}
   .locationBox .intoTextBox p{margin-bottom: 8px; font-size: 20px;}
   .locationBox .intoTextBox .infoBox{gap: 35px 0;}
   .locationBox .intoTextBox .infoBox span::before{width: 20px; height: 20px;}
   .locationBox .intoTextBox .infoBox .layoutBox{gap: 5px 0;}
   .locationBox .intoTextBox .infoBox span{gap: 5px 0; font-size: 16px;}
   .locationBox .intoTextBox .infoBox .box em{margin-bottom: 0; font-size: 14px;}
+
+  .locationBox .map{height: 335px;}
+  .locationBox .map .addressBox img{width: 22px; margin-right: 12px;}
+  .locationBox .map .addressBox .position01,
+  .locationBox .map .addressBox .position02{font-size: 12px;}
 
 }
 

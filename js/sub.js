@@ -43,42 +43,41 @@ $(function () {
   });
 
   //첨부파일
+  let selectedFiles = [];
+
+  function drawFileList() {
+    $("#fileList").empty();
+
+    if (selectedFiles.length === 0) {
+      $("#fileList").append($("<li>").text("선택된 파일이 없습니다."));
+      return;
+    }
+
+    for (let i = 0; i < selectedFiles.length; i++) {
+      const $li = $("<li>").addClass("fileItem");
+      const $btn = $("<button>")
+        .attr("type", "button")
+        .addClass("comBtn comBtnType02 fileDelBtn")
+        .attr("data-index", i)
+        .text("삭제");
+      const $span = $("<span>").text(" - " + selectedFiles[i].name);
+
+      $li.append($btn).append($span);
+      $("#fileList").append($li);
+    }
+  }
+
   $("#fileInput").change(function () {
-    $("#fileNameText").text(this.files[0] ? this.files[0].name : "선택된 파일이 없습니다.");
+    const files = this.files;
+    for (let i = 0; i < files.length; i++) selectedFiles.push(files[i]);
+    drawFileList();
+    $(this).val("");
   });
 
-  $(".fileDelBtn").click(function () {
-    $("#fileInput").val('');
-    $("#fileNameText").text("선택된 파일이 없습니다.");
+  $("#fileList").delegate(".fileDelBtn", "click", function () {
+    selectedFiles.splice($(this).data("index"), 1);
+    drawFileList();
   });
-
-  // 개별 선택
-  // $('.fileImgList li .fileBtn').click(function () {
-  //   $(this).toggleClass('active');
-
-  //   let total = $('.fileImgList .fileBtn').length;
-  //   let selected = $('.fileImgList .fileBtn.active').length;
-
-  //   if (total === selected && total > 0) {
-  //     $('.checkAllBtn').addClass('active').text('전체 해제');
-  //   } else {
-  //     $('.checkAllBtn').removeClass('active').text('전체 선택');
-  //   }
-  // });
-
-  // 전체 선택
-  // $('.checkAllBtn').click(function () {
-  //   let total = $('.fileImgList .fileBtn').length;
-  //   let selected = $('.fileImgList .fileBtn.active').length;
-
-  //   if (total === selected && total > 0) {
-  //     $('.fileImgList .fileBtn').removeClass('active');
-  //     $(this).removeClass('active').text('전체 선택');
-  //   } else {
-  //     $('.fileImgList .fileBtn').addClass('active');
-  //     $(this).addClass('active').text('전체 해제');
-  //   }
-  // });
 
   //스크롤 시 해당 영역 active 클래스 적용
   $(window).scroll(function () {
