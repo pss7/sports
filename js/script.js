@@ -10,6 +10,7 @@ $(function () {
       'transform',
       `translateY(${y}px)`
     );
+    $('#searchContentBox').removeClass('active');
   });
 
   //헤더 
