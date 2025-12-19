@@ -1434,7 +1434,7 @@ input:disabled + label{outline: none;}
   .eventNewsListBox .noSchedule{font-size: 14px;}
 
   #fcCal th a,
-  #fcCal td a{font-size: 14px; border-radius: 7px; width: 36px; height: 36px;}
+  #fcCal td a{font-size: 14px; border-radius: 7px; width: 36px; height: 36px!important;}
 
 }
 
