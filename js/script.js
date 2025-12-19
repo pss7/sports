@@ -71,7 +71,6 @@ $(function () {
     $('body').removeClass('mobileNonScroll');
   });
 
-  $('#mobileMenuBox .mobileDepth01 > li').first().find('.mobileDepth02').show();
   $('#mobileMenuBox .mobileDepth01 > li').first().find('h2 > a').addClass('active');
   $('#mobileMenuBox .mobileDepth01 li h2 a').click(function () {
     $('#mobileMenuBox .mobileDepth01 > li > h2 > a').removeClass('active');
