@@ -711,16 +711,16 @@ input:disabled + label{outline: none;}
 .programListWrap aside .stateBtnBox .btn.active::before{content: ''; background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
 .programListWrap aside .stateBtnBox .btn:hover{color: #4D8FFF; font-weight: 700;}
 .programListWrap aside .stateBtnBox .btn:hover::before{content: ''; background: url(../images/sub/chk_on_icon.svg)no-repeat center;}
-.programListWrap .programListBox{padding-top: 30px;}
+.programListWrap .programListBox{width: 100%; padding-top: 30px;}
 .programListWrap .programList{display: flex; flex-wrap: wrap; gap: 80px 2.3%;}
 .programListWrap .programList li{width: 31.8%;}
-.programListWrap .programList li a{position: relative; padding: 40px 32px 32px; display: block; border-radius: 40px; background-color: #fff; border: 1px solid #E8EBED;}
+.programListWrap .programList li a{height: 363px; position: relative; padding: 40px 32px 32px; display: block; border-radius: 40px; background-color: #fff; border: 1px solid #E8EBED;}
 .programListWrap .programList li a .titleBox{margin-bottom: 17px; display: flex; align-items: center; gap: 0 8px;}
 .programListWrap .programList li a .titleBox h4{font-size: 24px; color: #1B1D1F;}
 .programListWrap .programList li a .titleBox span{padding: 4px 8px; font-weight: 700; font-size: 12px; border-radius: 4px; }
 .programListWrap .programList li a .topInfoBox{margin-bottom: 30px; display: flex; align-items: center; padding: 10px 20px 10px 8px; border-radius: 16px;}
 .programListWrap .programList li a .topInfoBox .text{flex-shrink: 0; margin-right: 8px; padding: 3px 8px;  background-color: #fff; font-size: 12px; font-weight: 500; border-radius: 8px;}
-.programListWrap .programList li a .topInfoBox .date01{margin-right: 8px; font-size: 14px; font-weight: 500; color: #4D8FFF;}
+.programListWrap .programList li a .topInfoBox .date01{flex-shrink: 0; margin-right: 8px; font-size: 14px; font-weight: 500; color: #4D8FFF;}
 .programListWrap .programList li a .topInfoBox .date02{font-weight: 500; font-size: 14px; color: #454C53;}
 .programListWrap .programList li a::after{content: ''; position: absolute; top:24px; right:24px; width: 12px; height: 12px;}
 
