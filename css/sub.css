@@ -714,7 +714,7 @@ input:disabled + label{outline: none;}
 .programListWrap .programListBox{width: 100%; padding-top: 30px;}
 .programListWrap .programList{display: flex; flex-wrap: wrap; gap: 80px 2.3%;}
 .programListWrap .programList li{width: 31.8%;}
-.programListWrap .programList li a{height: 363px; position: relative; padding: 40px 32px 32px; display: block; border-radius: 40px; background-color: #fff; border: 1px solid #E8EBED;}
+.programListWrap .programList li a{min-height: 363px; position: relative; padding: 40px 32px 32px; display: block; border-radius: 40px; background-color: #fff; border: 1px solid #E8EBED;}
 .programListWrap .programList li a .titleBox{margin-bottom: 17px; display: flex; align-items: center; gap: 0 8px;}
 .programListWrap .programList li a .titleBox h4{font-size: 24px; color: #1B1D1F;}
 .programListWrap .programList li a .titleBox span{padding: 4px 8px; font-weight: 700; font-size: 12px; border-radius: 4px; }
@@ -820,7 +820,7 @@ input:disabled + label{outline: none;}
 @media (max-width: 480px){
 
   .programListWrap aside h4{font-size: 22px;}
-  .programListWrap .programList li a{border-radius: 10px;}    
+  .programListWrap .programList li a{padding: 40px 20px 25px; border-radius: 10px;}    
   .programListWrap aside .sportBtnBox .btn{height: 40px;}
   .programListWrap aside .sportBtnBox .btn.sportBtn{padding: 0 10px 0 47px;}
   .programListWrap aside .sportBtnBox .btn.sportBtn::before{width: 24px; height: 24px;}
@@ -828,7 +828,16 @@ input:disabled + label{outline: none;}
   .programListWrap .programList li a .iconBox img{width: 26px;}
   .programListWrap .programInfoText{margin-bottom: 70px;}
   .programListWrap aside .sportBtnBox .btn.sportBtn::after{width: 26px; height: 26px;}
+  .programListWrap .programList li a .personnelBox .box{margin-bottom: 10px;}
+  .programListWrap .operateInfoBox .time{font-size: 14px;}
 
+}
+
+@media (max-width:414px){
+
+  .programListWrap .programList li a .topInfoBox .text,
+  .programListWrap .programList li a .topInfoBox .date01{margin: 0;}
+  
 }
 
 /* 프로그램 상세 */
