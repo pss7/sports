@@ -769,13 +769,13 @@ input:disabled + label{outline: none;}
 .programListWrap .programList li a.expected::after{background: url(../images/sub/icon04.svg)no-repeat center;}
 .programListWrap .programList li a .iconBox{position: absolute; top:-24px; left:32px; display: flex; align-items: center; justify-content: center; background-color: #fff; width: 48px; height: 48px; border: 1px solid #E8EBED; border-radius: 16px;}
 .programListWrap .programList li a .iconBox img{display: block;}
-.programListWrap .operateInfoBox{margin-bottom: 40px; display: flex; justify-content: space-between;}
+.programListWrap .operateInfoBox{margin-bottom: 40px; display: flex; align-items: center; justify-content: space-between; gap: 10px 20px;}
 .programListWrap .operateInfoBox h5{margin-bottom: 6px; font-size: 14px; color: #9EA4AA;}
 .programListWrap .operateInfoBox .time{font-weight: 500; color: #454C53;}
 .programListWrap .operateInfoBox .box .dayList{display: flex; flex-wrap: wrap; gap: 4px;}
 .programListWrap .operateInfoBox .box .dayList li{width: 28px; height: 28px; line-height: 28px; font-weight: 700; font-size: 14px; color: #454C53; background-color: #E8EBED; border-radius: 8px; text-align: center;}
 .programListWrap .programList li a .personnelBox{padding: 10px 20px 16px; border-radius: 16px; background: linear-gradient(to right, #1D1F21, #444B51);}
-.programListWrap .programList li a .personnelBox .box{margin-bottom: 5px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 5px;}
+.programListWrap .programList li a .personnelBox .box{margin-bottom: 5px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 3px 20px;}
 .programListWrap .programList li a .personnelBox .text01{display: flex; gap: 0 8px; align-items: center; font-weight: 500; color: #9EA4AA; font-size: 14px;}
 .programListWrap .programList li a .personnelBox .text01 strong{color: #fff; font-size: 20px;}
 .programListWrap .programList li a .personnelBox .text02{display: flex; align-items: center; gap: 0 4px; font-size: 14px; font-weight: 500; color: #fff;}
@@ -801,6 +801,7 @@ input:disabled + label{outline: none;}
   .programListWrap .programList li a .titleBox h4{font-size: 22px;}
   .programListWrap .programList{gap: 50px 2%;}
   .programListWrap .programList li{width: 49%;}
+  .programListWrap .operateInfoBox{justify-content: flex-start;}
 
 
 }
@@ -824,17 +825,23 @@ input:disabled + label{outline: none;}
   .programListWrap aside .sportBtnBox .btn{height: 40px;}
   .programListWrap aside .sportBtnBox .btn.sportBtn{padding: 0 10px 0 47px;}
   .programListWrap aside .sportBtnBox .btn.sportBtn::before{width: 24px; height: 24px;}
+  .programListWrap .programList li a{min-height: 329px;}
   .programListWrap .programList li a .iconBox{top: -20px; width: 40px; height: 40px; border-radius: 10px;}
   .programListWrap .programList li a .iconBox img{width: 26px;}
   .programListWrap .programInfoText{margin-bottom: 70px;}
   .programListWrap aside .sportBtnBox .btn.sportBtn::after{width: 26px; height: 26px;}
+  .programListWrap .programList li a .personnelBox{padding: 10px 15px 16px;}
   .programListWrap .programList li a .personnelBox .box{margin-bottom: 10px;}
+  .programListWrap .operateInfoBox{margin-bottom: 26px;}
   .programListWrap .operateInfoBox .time{font-size: 14px;}
+  .programListWrap .programList li a .topInfoBox{padding: 10px 15px; margin-bottom: 20px;}
 
 }
 
 @media (max-width:414px){
 
+  .programListWrap .operateInfoBox{flex-direction: column; gap: 12px 0; margin-bottom: 15px; text-align: center;}
+  .programListWrap .programList li a .topInfoBox{margin-bottom: 15px;}
   .programListWrap .programList li a .topInfoBox .text,
   .programListWrap .programList li a .topInfoBox .date01{margin: 0;}
   
