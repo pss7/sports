@@ -35,13 +35,15 @@ $(function () {
   $('#headerWrap .depth01 li h2 a').mouseover(function () {
     $('#headerWrap .depth01 li h2 a').removeClass('active');
     $(this).addClass('active');
-    $('.subMenuWrap').removeClass('active');
-    $(this).parents('li').find('.subMenuWrap').addClass('active');
+    $('.subMenuWrap').hide();
+    $('.submenuBG').show();
+    $(this).parents('li').find('.subMenuWrap').show();
   });
 
   $('#headerWrap .subMenuWrap').mouseleave(function () {
     $('#headerWrap .depth01 li h2 a').removeClass('active');
-    $('.subMenuWrap').removeClass('active');
+    $('.subMenuWrap').hide();
+    $('.submenuBG').hide();
   });
 
   $('#headerWrap .headerTopWrap').mouseover(function () {

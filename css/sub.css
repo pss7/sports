@@ -1339,7 +1339,7 @@ input:disabled + label{outline: none;}
 .eventNewsListBox .calendarLeftBox .calInfoBox span.event::before{width: 4px; height: 4px; border-radius: 50%; background-color: #203C6B;}
 .eventNewsListBox .newsListBox{width: 44.4%;}
 .eventNewsListBox .newsListBox .dateBox{margin-bottom: 12px; display: flex; align-items: center; gap: 0 40px;}
-.eventNewsListBox .newsListBox .dateBox span{display: block; font-size: 32px; color: #1B1D1F; font-family: 'Retrosans';}
+.eventNewsListBox .newsListBox .dateBox span{display: block; font-size: 32px; color: #1B1D1F; font-family: 'Retrosans'; text-align: right;}
 .eventNewsListBox .newsListBox .dateBox em{font-size: 96px; color: #1B1D1F; font-family: 'Retrosans';}
 .eventNewsListBox .newsListBox .newsList li{margin-bottom: 4px;}
 .eventNewsListBox .newsListBox .newsList li:last-child{margin-bottom: 0;}
