@@ -340,8 +340,8 @@
 #orgWrap .orgList li .title{margin-bottom: 16px; font-weight: 700; color: #fff;}
 #orgWrap .orgList li .orgInfoBox{padding: 4px 16px 4px 4px; gap: 0 8px; display: inline-flex; align-items: center;  border-radius: 16px; background-color: #4682E8;}
 #orgWrap .orgList li .orgInfoBox em{font-size: 14px; font-weight: 700; color: #fff;}
-#orgWrap .orgList li .orgInfoBox .logoBox{display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; background-color: #fff; border-radius: 50%;}
-#orgWrap .orgList li .orgInfoBox .logoBox img{display: block;}
+#orgWrap .orgList li .orgInfoBox .logoBox{padding: 3px; display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; background-color: #fff; border-radius: 50%; overflow: hidden;}
+#orgWrap .orgList li .orgInfoBox .logoBox img{display: block; width: 100%; height: 100%; object-fit: contain;}
 #orgWrap .organizationBox{display: flex; gap: 0 24px;}
 #orgWrap .organizationBox .box {display: flex; flex-direction: column; padding: 49px 32px 40px; width: 360px; min-height: 288px; background-color: #fff; border-radius: 35px;}
 #orgWrap .organizationBox .box .logoList{display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px;}
