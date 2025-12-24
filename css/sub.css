@@ -1008,7 +1008,8 @@ input:disabled + label{outline: none;}
 .comTable tbody tr td .link .file img{display: block;}
 .comTable tbody tr td .link .titleText{min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 500; color: #454C53;}
 .comTable tbody tr td .authorBox{display: flex; align-items: center; gap: 0 4px;}
-.comTable tbody tr td .authorBox .logoBox{display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border: 1px solid #E8EBED; background-color: #fff; border-radius: 8px;}
+.comTable tbody tr td .authorBox .logoBox{padding: 3px; display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border: 1px solid #E8EBED; background-color: #fff; border-radius: 8px; overflow: hidden;}
+.comTable tbody tr td .authorBox .logoBox img{display: block; width: 100%; height: 100%; object-fit: contain;}
 .comTable tbody tr td .authorBox .author{display: flex; align-items: center; gap: 0 4px; font-weight: 500; color: #454C53; font-size: 16px;}
 .comTable tbody tr td .date{font-size: 14px; font-weight: 500; color: #9EA4AA;}
 
